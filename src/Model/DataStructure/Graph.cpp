@@ -18,7 +18,7 @@ void Graph::addEdge(char from, char to, int weight)
 }
 
 // adhacency list getter method implementation
-const map<char, vector<pair<char, int>>> &Graph::getadjList() const
+const map<char, vector<pair<char, int>>> &Graph::getAdjList() const
 {
     return adjList;
 }

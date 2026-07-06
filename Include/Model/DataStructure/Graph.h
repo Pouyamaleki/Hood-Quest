@@ -17,7 +17,7 @@ public:
     Graph(); // constructor
     void addNode(char); // a method to add new node
     void addEdge(char , char , int); // a method tp connect two edges
-    const  map<char, vector<pair<char, int>>>& getadjList () const ; // adjacency list getter method
+    const  map<char, vector<pair<char, int>>>& getAdjList () const ; // adjacency list getter method
 };
 
 #endif GRAPH_H

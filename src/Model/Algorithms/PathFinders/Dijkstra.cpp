@@ -1,7 +1,21 @@
-#include <Dijkstra.h>
+#include "Dijkstra.h"
+
+// dijkstra result struct implementation
+struct dijkstraResult
+{
+    map<char, int> distance;
+    map<char, char> previous;
+};
+
+// path finder result struct implementation
+struct pathFinderResult
+{
+    vector<char> path;
+    int totalweight;
+};
 
 // dijkstra function implementation
-map<char, int> dijkstra(const Graph &graph, char from)
+dijkstraResult dijkstra(const Graph &graph, char from)
 {
     // get the graph from the getter method
     const auto &adjList = graph.getAdjList();
@@ -22,7 +36,7 @@ map<char, int> dijkstra(const Graph &graph, char from)
     distance[from] = 0;
 
     // priority queue
-    priority_queue<pair<int, char>, vector<pair<int, char>, greater<pair<int, char>>>> pq;
+    priority_queue<pair<int, char>, vector<pair<int, char>>, greater<pair<int, char>>> pq;
     pq.push({0, from}); // push the from node and the distance to the priority queue
 
     // dijkstra algorithm loop
@@ -62,5 +76,64 @@ map<char, int> dijkstra(const Graph &graph, char from)
         }
     }
 
-    return distance;
+    return {distance, previous};
+}
+
+// path finder function implementation
+pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode)
+{
+    // result variable to store and use the dijkstra data
+    dijkstraResult result = dijkstra(graph, from);
+
+    // check if the result does not exist
+    if (result.distance[destinationNode] == INT_MAX)
+    {
+        return {};
+    }
+
+    // create a path from the previous node
+    vector<char> path;
+    char current = destinationNode;
+
+    // a while loop to create the path
+    while (current != '\0')
+    {
+        path.push_back(current); // add the current node to the path
+        if (current == from)     // check if the destination node and the starting node are the same
+        {
+            break;
+        }
+        current = result.previous[current]; // current change to the previous node
+    }
+
+    reverse(path.begin(), path.end()); // reverse the path to make prioritization
+    return {path , result.distance[destinationNode]};
+}
+
+// print path function implementation
+void printPath(const Graph &graph, char from, char destinationNode)
+{
+    // initialize the needed variables
+    pathFinderResult result = pathFinder(graph, from, destinationNode); // get the pathfinder output
+    const vector<char> &path = result.path; // get the path
+    int totaldistance = result.totalweight; // get the total distance
+
+    // check if there is a path or no
+    if (path.empty())
+    {
+        cout << "there is not any possible path !!!!!!" << endl;
+        return;
+    }
+
+    // dijkstra output
+    cout << "dijkstra recomended path: " << endl;
+    for (size_t i = 0; i < path.size(); i++)
+    {
+        cout << path[i];
+        if (i < path.size() - 1)
+        {
+            cout << " -> ";
+        }
+    }
+    cout << endl << "total distance with the recommended path is :" << totaldistance << " meter" << endl;
 }

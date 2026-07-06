@@ -1,3 +1,6 @@
+#ifndef GRAPH_H
+#define GRAPH_H
+
 #include <string>
 #include <map>
 #include <vector>
@@ -15,3 +18,5 @@ public:
     void addNode(char); // a method to add new node
     void addEdge(char , char , int); // a method tp connect two edges
 };
+
+#endif GRAPH_H

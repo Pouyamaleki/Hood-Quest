@@ -1,3 +1,6 @@
+#ifndef STACK_H
+#define STACK_H
+
 #include <vector>
 
 class Stack
@@ -10,3 +13,5 @@ public:
     void push(int); // a method to add things to the stack
     int pop(); // a method to remove the last thing that has been add to the stack
 };
+
+#endif STACK_H

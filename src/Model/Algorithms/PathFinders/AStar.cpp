@@ -66,4 +66,49 @@ AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition, heu
         fScore[node.first] = INT_MAX;
         previous[node.first] = '\0';
     }
+
+    // initializing the origin node
+    gScore[from] = 0;
+    fScore[from] = heuristic(from, to);
+
+    // create the priority queue to store the nodes with ascending sort
+    priority_queue<pair<int, char>, vector<pair<int, char>>, greater<pair<int, char>>> pq;
+    pq.push({fScore[from], from}); // initialize the priority queue
+
+    // A* algorithm main loop
+    while (!pq.empty())
+    {
+        char currentNode = pq.top().second;
+        int currentFScore = pq.top().first;
+        pq.pop();
+
+        // skip the repeated nodes
+        if (currentFScore > fScore[currentNode])
+        {
+            continue;
+        }
+
+        // if the program reach the destination create the path
+        if (currentNode == to)
+        {
+            vector<char> path;
+            char current = to;
+
+            // a while loop to store the path
+            while (current != '\0')
+            {
+                path.push_back(current);
+                // check for the last node
+                if (current == from)
+                {
+                    break;
+                }
+                current = previous[current];
+            }
+
+            // revers the path to achive the right order
+            reverse(path.begin(), path.end());
+            return {path , gScore[to]};
+        }
+    }
 }

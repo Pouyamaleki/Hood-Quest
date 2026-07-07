@@ -108,7 +108,42 @@ AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition, heu
 
             // revers the path to achive the right order
             reverse(path.begin(), path.end());
-            return {path , gScore[to]};
+            return {path, gScore[to]};
+        }
+
+        // neighbor checking
+        auto it = adjList.find(currentNode);
+        // skip if current node is not in the adjacency list
+        if (it == adjList.end())
+        {
+            continue;
+        }
+
+        // a for loop for finfing the current node neighbors
+        for (const auto &neighbor : it->second)
+        {
+            char nextNode = neighbor.first;
+            int weight = neighbor.second;
+
+            // new distance from origin to neighbor
+            int newDistance = gScore[currentNode] + weight;
+
+            // check if the new way is shorter or no
+            if (newDistance < gScore[nextNode])
+            {
+                // update the vatiables
+                previous[nextNode] = currentNode;
+                gScore[nextNode] = newDistance;
+                fScore[nextNode] = newDistance + heuristic(nextNode, to);
+
+                // add a node to the priority queue
+                pq.push({fScore[nextNode], nextNode});
+            }
         }
     }
+
+    // if there is not any path
+    return {{} , -1};
 }
+
+// heuristic function

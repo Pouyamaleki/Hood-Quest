@@ -8,9 +8,10 @@ struct AstarResult
 };
 
 // heuristic function to estimate the distance
-int euclideanHeuristic(char from, char to)
+int heuristic(char from, char to)
 {
     // a map to store the cordinations
+    // this cordinates are not accurate
     map<char, pair<int, int>> nodeCordinates =
         {
             {'V', {0, 0}},

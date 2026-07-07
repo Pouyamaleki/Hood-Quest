@@ -45,4 +45,25 @@ AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition, heu
             }
         }
     }
+
+    // assign the adjacency list
+    const auto &adjList = newgraph.getAdjList();
+
+    // check for the from and to nodes validation
+    if (adjList.find(from) == adjList.end() || adjList.find(to) == adjList.end())
+    {
+        return {{}, -1};
+    }
+
+    map<char, int> gScore;    // real destination from the origin
+    map<char, int> fScore;    // gScore + heuristic
+    map<char, char> previous; // store the prevoius node
+
+    // innitialize every variable to maximum number they can store
+    for (const auto &node : adjList)
+    {
+        gScore[node.first] = INT_MAX;
+        fScore[node.first] = INT_MAX;
+        previous[node.first] = '\0';
+    }
 }

@@ -7,6 +7,35 @@ struct AstarResult
     int totalWeight;
 };
 
+// heuristic function to estimate the distance
+int euclideanHeuristic(char from, char to)
+{
+    // a map to store the cordinations
+    map<char , pair<int , int>> nodeCordinates;
+
+    // get the nodes from the map
+    auto itA = nodeCordinates.find(from);
+    auto itB = nodeCordinates.find(to);
+    
+    // check if the nodes are not in the map
+    if (itA == nodeCordinates.end() || itB == nodeCordinates.end())
+    {
+        return 0;
+    }
+    
+    // extract first and second node cordination
+    int x1 = itA->second.first;
+    int y1 = itA->second.second;
+    int x2 = itB->second.first;
+    int y2 = itB->second.second;
+    
+    // calculate the euclidean distance
+    int dx = x1 - x2;
+    int dy = y1 - y2;
+    
+    return static_cast<int>(sqrt(dx * dx + dy * dy));
+}
+
 // A* algorithm function implementation
 AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition, heuristicFunction heuristic)
 {
@@ -145,5 +174,3 @@ AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition, heu
     // if there is not any path
     return {{} , -1};
 }
-
-// heuristic function

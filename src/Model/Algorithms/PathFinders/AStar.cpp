@@ -59,7 +59,7 @@ int heuristic(char from, char to)
 }
 
 // A* algorithm function implementation
-AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition, heuristicFunction heuristic)
+AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition)
 {
     // create a new graph to remove the wolf position
     Graph newgraph;

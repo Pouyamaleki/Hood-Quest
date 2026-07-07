@@ -9,5 +9,6 @@
 struct AstarResult; // a struct to store the finall result of A* algorithm
 AstarResult AStar(const Graph &, char, char, char); // A* algorithm function
 int heuristic(char, char); // a function to calculate heauristic euclidean distance
+void printPath(const Graph & , char , char , char);
 
 #endif ASTAR_H

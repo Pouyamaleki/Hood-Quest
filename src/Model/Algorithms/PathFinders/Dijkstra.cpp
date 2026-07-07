@@ -29,6 +29,31 @@ dijkstraResult dijkstra(const Graph &graph, char from, char wolfposition)
         }
     }
 
+    // a for loop to copy every edge that is not connected to the wolf position
+    for (const auto& node : graph.getAdjList())
+    {
+        char from = node.first;
+
+        // skip the wolf position node
+        if(from == wolfposition)
+        {
+            continue;
+        }
+
+        // a second for loop to navigate the vector that contain the edges
+        for(const auto& edge : node.second)
+        {
+            char to = edge.first;
+            int weight = edge.second;
+
+            // skip the nodes that connect to the wolf position
+            if(to != wolfposition)
+            {
+                newgraph.addEdge(from , to , weight);
+            }
+        }
+    }
+
     // get the graph from the getter method
     const auto &adjList = newgraph.getAdjList();
 

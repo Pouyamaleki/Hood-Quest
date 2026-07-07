@@ -15,7 +15,7 @@ struct pathFinderResult
 };
 
 // dijkstra function implementation
-dijkstraResult dijkstra(const Graph &graph, char from, char wolfposition)
+dijkstraResult dijkstra(const Graph &graph, char playerPosition, char wolfposition)
 {
     // create a new graph to remove the wolf position
     Graph newgraph;
@@ -32,10 +32,10 @@ dijkstraResult dijkstra(const Graph &graph, char from, char wolfposition)
     // a for loop to copy every edge that is not connected to the wolf position
     for (const auto& node : graph.getAdjList())
     {
-        char from = node.first;
+        char playerPosition = node.first;
 
         // skip the wolf position node
-        if(from == wolfposition)
+        if(playerPosition == wolfposition)
         {
             continue;
         }
@@ -49,12 +49,12 @@ dijkstraResult dijkstra(const Graph &graph, char from, char wolfposition)
             // skip the nodes that connect to the wolf position
             if(to != wolfposition)
             {
-                newgraph.addEdge(from , to , weight);
+                newgraph.addEdge(playerPosition , to , weight);
             }
         }
     }
 
-    // get the graph from the getter method
+    // get the graph playerPosition the getter method
     const auto &adjList = newgraph.getAdjList();
 
     // create two maps to store the distance and the previous node
@@ -70,11 +70,11 @@ dijkstraResult dijkstra(const Graph &graph, char from, char wolfposition)
     }
 
     // the source node distance is equall to 0
-    distance[from] = 0;
+    distance[playerPosition] = 0;
 
     // priority queue
     priority_queue<pair<int, char>, vector<pair<int, char>>, greater<pair<int, char>>> pq;
-    pq.push({0, from}); // push the from node and the distance to the priority queue
+    pq.push({0, playerPosition}); // push the playerPosition node and the distance to the priority queue
 
     // dijkstra algorithm loop
     while (!pq.empty())
@@ -117,10 +117,10 @@ dijkstraResult dijkstra(const Graph &graph, char from, char wolfposition)
 }
 
 // path finder function implementation
-pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode)
+pathFinderResult pathFinder(const Graph &graph, char playerPosition, char destinationNode)
 {
     // result variable to store and use the dijkstra data
-    dijkstraResult result = dijkstra(graph, from);
+    dijkstraResult result = dijkstra(graph, playerPosition);
 
     // check if the result does not exist
     if (result.distance[destinationNode] == INT_MAX)
@@ -128,7 +128,7 @@ pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode)
         return {};
     }
 
-    // create a path from the previous node
+    // create a path playerPosition the previous node
     vector<char> path;
     char current = destinationNode;
 
@@ -136,7 +136,7 @@ pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode)
     while (current != '\0')
     {
         path.push_back(current); // add the current node to the path
-        if (current == from)     // check if the destination node and the starting node are the same
+        if (current == playerPosition)     // check if the destination node and the starting node are the same
         {
             break;
         }
@@ -148,10 +148,10 @@ pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode)
 }
 
 // print path function implementation
-void printPath(const Graph &graph, char from, char destinationNode)
+void printPath(const Graph &graph, char playerPosition, char destinationNode)
 {
     // initialize the needed variables
-    pathFinderResult result = pathFinder(graph, from, destinationNode); // get the pathfinder output
+    pathFinderResult result = pathFinder(graph, playerPosition, destinationNode); // get the pathfinder output
     const vector<char> &path = result.path;                             // get the path
     int totaldistance = result.totalweight;                             // get the total distance
 

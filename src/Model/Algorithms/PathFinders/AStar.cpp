@@ -32,8 +32,7 @@ int heuristic(char from, char to)
             {'C', {0, 6}},
             {'D', {3, 6}},
             {'E', {5, 5}},
-            {'G', {1, 4}}
-        };
+            {'G', {1, 4}}};
 
     // get the nodes from the map
     auto itA = nodeCordinates.find(from);
@@ -195,4 +194,21 @@ AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition)
 
     // if there is not any path
     return {{}, -1};
+}
+
+// print path function implementation
+void AStarprintPath(const Graph &graph, char from, char to, char wolfPosition)
+{
+    AstarResult result = AStar(graph, from, to, wolfPosition);
+    vector<char> path = result.path;
+    int distance = result.totalWeight;
+    
+    // check if there is a bath or no
+    if(path.empty())
+    {
+        cout << "there is not ant path possible" << endl;
+    }
+
+    // print output
+    cout << ""
 }

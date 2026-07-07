@@ -155,7 +155,7 @@ pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode 
 }
 
 // print path function implementation
-void printPath(const Graph &graph, char from, char destinationNode , bool player)
+void dijkstraPrintPath(const Graph &graph, char from, char destinationNode , bool player)
 {
     // initialize the needed variables
     pathFinderResult result = pathFinder(graph, from, destinationNode , player); // get the pathfinder output

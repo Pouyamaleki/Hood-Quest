@@ -16,5 +16,6 @@ public:
     User(string, size_t);
     ~User();
     string getUsername() { return Username; }
+    size_t getPassword() { return Password; }
 };
 #endif USER_H

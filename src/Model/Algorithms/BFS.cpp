@@ -87,4 +87,17 @@ vector<char> BFS(const Graph &graph, char playerPosition, char wolfPosition)
 }
 
 // wolf next postion implementation
-char wolfNextPosition(char, char);
+char wolfNextPosition(const Graph &graph ,char playerPosition, char wolfPosition)
+{
+    // store the BFS result
+    vector<char> path = BFS(graph , playerPosition , wolfPosition);
+
+    // if there is not any way
+    if(path.empty())
+    {
+        return wolfPosition;
+    }
+
+    // return the next node in the shortest way
+    return path[1];
+}

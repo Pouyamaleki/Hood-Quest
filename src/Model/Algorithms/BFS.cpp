@@ -86,7 +86,7 @@ vector<char> BFS(const Graph &graph, char playerPosition, char wolfPosition)
     return {};
 }
 
-// wolf next postion implementation
+// wolf next postion function implementation
 char wolfNextPosition(const Graph &graph ,char playerPosition, char wolfPosition)
 {
     // store the BFS result

@@ -83,9 +83,10 @@ dijkstraResult dijkstra(const Graph &graph, char from)
         {
             throw runtime_error("could not find any path to grand mother's house");
         }
-        catch(runtime_error x)
+
+        catch(runtime_error& x)
         {
-            cerr << x.what() << endl;
+            cerr << "Error: " << x.what() << endl;
         }
         
     }

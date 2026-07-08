@@ -163,9 +163,9 @@ AstarResult AStar(const Graph &graph, char from, char to)
         throw runtime_error("could not find any path right now");
     }
 
-    catch (runtime_error x)
+    catch (runtime_error& x)
     {
-        cerr << x.what() << endl;
+        cerr << "ٍError: " << x.what() << endl;
     }
 
     return {{}, -1};

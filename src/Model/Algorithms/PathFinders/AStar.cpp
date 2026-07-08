@@ -158,6 +158,16 @@ AstarResult AStar(const Graph &graph, char from, char to)
     }
 
     // if there is not any path
+    try
+    {
+        throw "could not find any path right now";
+    }
+
+    catch (const char *x)
+    {
+        cerr << x << endl;
+    }
+
     return {{}, -1};
 }
 
@@ -167,22 +177,23 @@ void AStarprintPath(const Graph &graph, char from, char to, char wolfPosition)
     AstarResult result = AStar(graph, from, to, wolfPosition);
     vector<char> path = result.path;
     int totalDistance = result.totalWeight;
-    
+
     // check if there is a bath or no
-    if(path.empty())
+    if (path.empty())
     {
         cout << "there is not ant path possible" << endl;
     }
 
     // print output
     cout << "A* recommended path:" << endl;
-    for(int i = 0 ; i < path.size() ; i++)
+    for (int i = 0; i < path.size(); i++)
     {
         cout << path[i];
-        if(i < path.size() - 1)
+        if (i < path.size() - 1)
         {
             cout << " -> ";
         }
     }
-    cout << endl << "total distance with the recommended path is :" << totalDistance << endl;
+    cout << endl
+         << "total distance with the recommended path is :" << totalDistance << endl;
 }

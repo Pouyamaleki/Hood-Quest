@@ -4,6 +4,7 @@
 #include "Graph.h"
 #include <queue>
 #include <algorithm>
+#include <exception>
 #include <iostream>
 
 struct dijkstraResult; // a struct to store the dijkstra result

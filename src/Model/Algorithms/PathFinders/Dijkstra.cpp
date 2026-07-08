@@ -76,6 +76,20 @@ dijkstraResult dijkstra(const Graph &graph, char from)
         }
     }
 
+    // if there is not any path
+    if(distance['V'] == INT_MAX)
+    {
+        try
+        {
+            throw runtime_error("could not find any path to grand mother's house");
+        }
+        catch(runtime_error x)
+        {
+            cerr << x.what() << endl;
+        }
+        
+    }
+
     return {distance, previous};
 }
 

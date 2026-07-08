@@ -5,6 +5,7 @@
 #include <functional>
 #include <queue>
 #include <cmath>
+#include <exception>
 #include <iostream>
 
 struct AstarResult; // a struct to store the finall result of A* algorithm

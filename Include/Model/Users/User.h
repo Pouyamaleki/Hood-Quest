@@ -14,6 +14,5 @@ private:
 
 public:
     User();
-    char *AddUser();
-    char *DelUser();
+    ~User();
 };

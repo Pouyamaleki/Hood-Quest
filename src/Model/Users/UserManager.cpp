@@ -10,6 +10,7 @@ void Usermanager::CreateUser(const string &username, const string &pass)
         size_t HPass = hasher.ConvertToHash(pass);
         User TempUser(username, HPass);
         Users.push_back(TempUser);
+        Usermanager::increaseNumofUser();
         cout << "User Created Successfully!" << endl;
     }
     cout << "User Already Exists!" << endl;

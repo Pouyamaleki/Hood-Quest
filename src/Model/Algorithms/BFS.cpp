@@ -75,25 +75,25 @@ vector<char> BFS(const Graph &graph, char playerPosition, char wolfPosition)
     // if there is not any possible path
     try
     {
-        throw "could not find any path for wolf movement";
+        throw runtime_error("could not find any path for wolf movement");
     }
 
-    catch (const char *x)
+    catch (runtime_error &x)
     {
-        cout << x << endl;
+        cout << "Error: " << x.what() << endl;
     }
 
     return {};
 }
 
 // wolf next postion function implementation
-char wolfNextPosition(const Graph &graph ,char playerPosition, char wolfPosition)
+char wolfNextPosition(const Graph &graph, char playerPosition, char wolfPosition)
 {
     // store the BFS result
-    vector<char> path = BFS(graph , playerPosition , wolfPosition);
+    vector<char> path = BFS(graph, playerPosition, wolfPosition);
 
     // if there is not any way
-    if(path.empty())
+    if (path.empty())
     {
         return wolfPosition;
     }

@@ -11,7 +11,7 @@ private:
     int score;
 
 public:
-    player(std::string, char); // player class constructor
+    player(std::string, char, int); // player class constructor
     void setPlayer(std::string, char, int); // setter method to initialize the variables
     void setPosition(char); // setter method for player position
     void setPosition(int); // setter method for player score

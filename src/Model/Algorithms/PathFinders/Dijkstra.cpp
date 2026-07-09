@@ -15,10 +15,47 @@ struct pathFinderResult
 };
 
 // dijkstra function implementation
-dijkstraResult dijkstra(const Graph &graph, char from)
+dijkstraResult dijkstra(const Graph &graph, char from, char wolfPosition)
 {
+    // create a new graph to remove the wolf position
+    Graph newgraph;
+
+    // a for loop to copy every node in the new graph except the wolf position
+    for (const auto &node : graph.getAdjList())
+    {
+        if (node.first != wolfPosition)
+        {
+            newgraph.addNode(node.first);
+        }
+    }
+
+    // a for loop to copy every edge that is not connected to the wolf position
+    for (const auto &node : graph.getAdjList())
+    {
+        char from = node.first;
+
+        // skip the wolf position node
+        if (from == wolfPosition)
+        {
+            continue;
+        }
+
+        // a second for loop to navigate the vector that contain the edges
+        for (const auto &edge : node.second)
+        {
+            char to = edge.first;
+            int weight = edge.second;
+
+            // skip the nodes that connect to the wolf position
+            if (to != wolfPosition)
+            {
+                newgraph.addEdge(from, to, weight);
+            }
+        }
+    }
+
     // assign an adjacecy list
-    const auto &adjList = graph.getAdjList();
+    const auto &adjList = newgraph.getAdjList();
 
     // create two maps to store the distance and the previous node
     map<char, int> distance;  // map for distance
@@ -77,28 +114,27 @@ dijkstraResult dijkstra(const Graph &graph, char from)
     }
 
     // if there is not any path
-    if(distance['V'] == INT_MAX)
+    if (distance['V'] == INT_MAX)
     {
         try
         {
             throw runtime_error("could not find any path to grand mother's house");
         }
 
-        catch(runtime_error& x)
+        catch (runtime_error &x)
         {
             cerr << "Error: " << x.what() << endl;
         }
-        
     }
 
     return {distance, previous};
 }
 
 // path finder function implementation
-pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode)
+pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode, char wolfPosition)
 {
     // result variable to store and use the dijkstra data
-    dijkstraResult result = dijkstra(graph, from);
+    dijkstraResult result = dijkstra(graph, from, wolfPosition);
 
     // check if the result does not exist
     if (result.distance[destinationNode] == INT_MAX)
@@ -114,7 +150,7 @@ pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode)
     while (current != '\0')
     {
         path.push_back(current); // add the current node to the path
-        if (current == from) // check if the destination node and the starting node are the same
+        if (current == from)     // check if the destination node and the starting node are the same
         {
             break;
         }
@@ -126,12 +162,12 @@ pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode)
 }
 
 // print path function implementation
-void dijkstraPrintPath(const Graph &graph, char from, char destinationNode)
+void dijkstraPrintPath(const Graph &graph, char from, char destinationNode, char wolfPosition)
 {
     // initialize the needed variables
-    pathFinderResult result = pathFinder(graph, from, destinationNode); // get the pathfinder output
-    const vector<char> &path = result.path; // get the path
-    int totalDistance = result.totalweight; // get the total distance
+    pathFinderResult result = pathFinder(graph, from, destinationNode, wolfPosition); // get the pathfinder output
+    const vector<char> &path = result.path;                             // get the path
+    int totalDistance = result.totalweight;                             // get the total distance
 
     // check if there is a path or no
     if (path.empty())
@@ -150,5 +186,6 @@ void dijkstraPrintPath(const Graph &graph, char from, char destinationNode)
             cout << " -> ";
         }
     }
-    cout << endl << "total distance with the recommended path is :" << totalDistance << endl;
+    cout << endl
+         << "total distance with the recommended path is :" << totalDistance << endl;
 }

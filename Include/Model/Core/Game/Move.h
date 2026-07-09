@@ -17,7 +17,7 @@ private:
 
 public:
     void movePlayer(const Graph &, Player &, char); // move player method
-    void moveWolf(Wolf & , char); // move wolf method
+    void moveWolf(const Graph &, Wolf & , Player &); // move wolf method
 };
 
 #endif

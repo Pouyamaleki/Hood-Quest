@@ -68,10 +68,21 @@ bool Move::diceMove()
 void Move::movePlayer(const Graph &graph, Player &player, char nextPosition)
 {
     // an if condition to check that the player can move or no
-    if(validMove(graph, player, nextPosition))
+    if (validMove(graph, player, nextPosition))
     {
         player.setPosition(nextPosition);
         return;
     }
 }
 
+// move wolf mathod implemenation
+void Move::moveWolf(const Graph &graph, Wolf &wolf, Player &player)
+{
+    // if condition to check for the wolf move validation
+    if (diceMove())
+    {
+        char nextMove = wolfNextPosition(graph, player.getPosition(), wolf.getPosition());
+        wolf.setPosition(nextMove);
+        return;
+    }
+}

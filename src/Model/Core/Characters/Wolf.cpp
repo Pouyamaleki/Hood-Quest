@@ -1,19 +1,19 @@
 #include "Wolf.h"
 
 // wolf calss constructor implementation
-wolf::wolf(char position)
+Wolf::Wolf(char position)
 {
     setPosition(position);
 }
 
 // set positoin implementation
-void wolf::setPosition(char position)
+void Wolf::setPosition(char position)
 {
     wolfPosition = position;
 }
 
 // get position method implementation
-char wolf::getPosition() const
+char Wolf::getPosition() const
 {
     return wolfPosition;
 }

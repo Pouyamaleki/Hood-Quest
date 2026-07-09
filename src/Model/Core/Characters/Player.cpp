@@ -1,13 +1,13 @@
 #include "Player.h"
 
-// player constructor implementation
-player::player(std::string playerName, char playerPosition , int score)
+// Player constructor implementation
+Player::Player(std::string PlayerName, char PlayerPosition , int score)
 {
-    setPlayer(playerName , playerPosition , score);
+    setPlayer(PlayerName , PlayerPosition , score);
 }
 
-// set player method implementation
-void player::setPlayer(std::string name, char position, int score)
+// set Player method implementation
+void Player::setPlayer(std::string name, char position, int score)
 {
     setName(name);
     setPosition(position);
@@ -15,37 +15,37 @@ void player::setPlayer(std::string name, char position, int score)
 }
 
 // name setter method implementation
-void player::setName(std::string name)
+void Player::setName(std::string name)
 {
     playerName = name;
 }
 
 // position setter implememntation
-void player::setPosition(char Position)
+void Player::setPosition(char Position)
 {
     playerPosition = Position;
 }
 
 // score setter implementation
-void player::setScore(int score)
+void Player::setScore(int score)
 {
     playerScore = score;
 }
 
-// player name getter impleementation
-std::string player::getName() const
+// Player name getter impleementation
+std::string Player::getName() const
 {
     return playerName;   
 }
 
-// player position getter implementation
-char player::getPosition() const
+// Player position getter implementation
+char Player::getPosition() const
 {
     return playerPosition;
 }
 
-// player score getter implementation
-int player::getScore() const
+// Player score getter implementation
+int Player::getScore() const
 {
     return playerScore;
 }

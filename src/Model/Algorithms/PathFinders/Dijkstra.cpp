@@ -66,7 +66,7 @@ dijkstraResult dijkstra(const Graph &graph, char from, char wolfPosition)
     {
         // the new members will be add to the maps and initialize at the same time
         distance[i.first] = INT_MAX; // initialize the intiger to it's maximum number
-        previous[i.first] = '\0';    // initialize every character to \0 or nothing
+        previous[i.first] = '\0'; // initialize every character to \0 or nothing
     }
 
     // the source node distance is equall to 0
@@ -150,7 +150,7 @@ pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode,
     while (current != '\0')
     {
         path.push_back(current); // add the current node to the path
-        if (current == from)     // check if the destination node and the starting node are the same
+        if (current == from) // check if the destination node and the starting node are the same
         {
             break;
         }
@@ -166,8 +166,8 @@ void dijkstraPrintPath(const Graph &graph, char from, char destinationNode, char
 {
     // initialize the needed variables
     pathFinderResult result = pathFinder(graph, from, destinationNode, wolfPosition); // get the pathfinder output
-    const vector<char> &path = result.path;                             // get the path
-    int totalDistance = result.totalweight;                             // get the total distance
+    const vector<char> &path = result.path; // get the path
+    int totalDistance = result.totalweight; // get the total distance
 
     // check if there is a path or no
     if (path.empty())
@@ -186,6 +186,5 @@ void dijkstraPrintPath(const Graph &graph, char from, char destinationNode, char
             cout << " -> ";
         }
     }
-    cout << endl
-         << "total distance with the recommended path is :" << totalDistance << endl;
+    cout << endl << "total distance with the recommended path is :" << totalDistance << endl;
 }

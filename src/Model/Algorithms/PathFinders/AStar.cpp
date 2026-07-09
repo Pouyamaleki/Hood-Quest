@@ -54,50 +54,15 @@ int heuristic(char from, char to)
     int dx = x1 - x2;
     int dy = y1 - y2;
 
+    // cast the sqrt in to a intiger
     return static_cast<int>(sqrt(dx * dx + dy * dy));
 }
 
 // A* algorithm function implementation
-AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition)
+AstarResult AStar(const Graph &graph, char from, char to)
 {
-    // create a new graph to remove the wolf position
-    Graph newgraph;
-
-    // a for loop to create the nodes in filtered graph
-    for (const auto &node : graph.getAdjList())
-    {
-        if (node.first != wolfPosition)
-        {
-            newgraph.addNode(node.first);
-        }
-    }
-
-    // a for loop to copy the valid edges
-    for (const auto &node : graph.getAdjList())
-    {
-        char fromNode = node.first;
-        // skip the wolf position node
-        if (fromNode == wolfPosition)
-        {
-            continue;
-        }
-
-        // a for loop to navigate the edges of every node
-        for (const auto &edge : node.second)
-        {
-            char toNode = edge.first;
-            int weight = edge.second;
-
-            // skip the edges that connect to wolf position
-            if (toNode != wolfPosition)
-            {
-                newgraph.addEdge(fromNode, toNode, weight);
-            }
-        }
-    }
-
     // assign the adjacency list
-    const auto &adjList = newgraph.getAdjList();
+    const auto &adjList = graph.getAdjList();
 
     // check for the from and to nodes validation
     if (adjList.find(from) == adjList.end() || adjList.find(to) == adjList.end())
@@ -193,6 +158,16 @@ AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition)
     }
 
     // if there is not any path
+    try
+    {
+        throw runtime_error("could not find any path right now");
+    }
+
+    catch (runtime_error& x)
+    {
+        cerr << "ٍError: " << x.what() << endl;
+    }
+
     return {{}, -1};
 }
 
@@ -202,22 +177,23 @@ void AStarprintPath(const Graph &graph, char from, char to, char wolfPosition)
     AstarResult result = AStar(graph, from, to, wolfPosition);
     vector<char> path = result.path;
     int totalDistance = result.totalWeight;
-    
+
     // check if there is a bath or no
-    if(path.empty())
+    if (path.empty())
     {
         cout << "there is not ant path possible" << endl;
     }
 
     // print output
     cout << "A* recommended path:" << endl;
-    for(int i = 0 ; i < path.size() ; i++)
+    for (int i = 0; i < path.size(); i++)
     {
         cout << path[i];
-        if(i < path.size() - 1)
+        if (i < path.size() - 1)
         {
             cout << " -> ";
         }
     }
-    cout << endl << "total distance with the recommended path is :" << totalDistance << endl;
+    cout << endl
+         << "total distance with the recommended path is :" << totalDistance << endl;
 }

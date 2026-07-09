@@ -1,5 +1,6 @@
 #include "Hash.h"
 
+// convert to hash method implementation
 size_t ConvertToHash(const string &pass)
 {
     size_t hash = 0;

@@ -15,10 +15,10 @@ private:
     int Numofuser = 0;
 
 public:
-    void CreateUser(const string &, const string &);
-    bool LoginUser(const string &, const string &);
-    int SearchUser(const string &);
-    void increaseNumofUser() { Numofuser++; }
-    void PrintScore(const string &);
+    void CreateUser(const string &, const string &); // craete user method to create new users
+    bool LoginUser(const string &, const string &); // login method
+    int SearchUser(const string &); // a method to search between the users
+    void increaseNumofUser(){ Numofuser++; } // increase the number of users 
+    void PrintScore(const string &); // print score function
 };
 #endif USERMANAGER_H

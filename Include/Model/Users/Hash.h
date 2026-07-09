@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+// hash class
 class Hash
 {
 private:

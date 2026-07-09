@@ -13,7 +13,7 @@ bool Move::validMove(const Graph &graph, Player &player, char nextPosition)
         // exception handling to check the node
         try
         {
-            throw invalid_argument("wrong node! please ctry again!");
+            throw invalid_argument("wrong node! please try again!");
         }
         catch(const invalid_argument &x)
         {

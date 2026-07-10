@@ -8,7 +8,7 @@ class Cliview
 {
 private:
 public:
-    void displayGraph();
+    void displayGraph(char, char);
     void PrintMainMenu();
     // void PrintLeaderboard();
 };

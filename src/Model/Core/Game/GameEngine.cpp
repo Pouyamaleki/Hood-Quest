@@ -55,7 +55,9 @@ void Gameengine::GameLoop()
             case 'T':
             case 'U':
             case 'V':
-                // move.moveplayer(CurrentOrder , CurrentUser);
+                // move.moveplayer(graph ,player ,CurrentOrder);
+            default:
+                cout << "Invalid order selected\n";
             }
         }
     }

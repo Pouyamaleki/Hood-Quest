@@ -9,6 +9,25 @@ void MaxHeap::heapifyUp(int i)
     }
 }
 
+void MaxHeap::heapifyDown(int i)
+{
+    int largest = i;
+    int left = leftChild(i);
+    int right = rightChild(i);
+
+    if (left < (int)heapArr.size() && heapArr[left].second > heapArr[largest].second)
+        largest = left;
+
+    if (right < (int)heapArr.size() && heapArr[right].second > heapArr[largest].second)
+        largest = right;
+
+    if (largest != i)
+    {
+        swap(heapArr[i], heapArr[largest]);
+        heapifyDown(largest);
+    }
+}
+
 void MaxHeap::insert(const string &username, long int score)
 {
     heapArr.push_back({username, score});

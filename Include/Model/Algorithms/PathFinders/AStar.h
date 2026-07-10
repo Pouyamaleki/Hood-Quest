@@ -3,6 +3,7 @@
 
 #include "Graph.h"
 #include <functional>
+#include <vector>
 #include <queue>
 #include <cmath>
 #include <exception>

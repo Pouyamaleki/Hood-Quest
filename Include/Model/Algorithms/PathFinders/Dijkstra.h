@@ -4,6 +4,7 @@
 #include "Graph.h"
 #include <queue>
 #include <algorithm>
+#include <climits>
 #include <exception>
 #include <iostream>
 

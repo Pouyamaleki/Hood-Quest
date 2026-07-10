@@ -12,7 +12,7 @@
 class GameState
 {
 private:
-    char setPosition(); // a method to set a position for player and wolf
+    char getRandomNode(); // a method to set a position for player and wolf
 public:
     GameState(Player &, Wolf &); // game state constructor
     void undo(Player &, Wolf & , Stack &); // undo method

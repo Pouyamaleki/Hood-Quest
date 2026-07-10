@@ -1,7 +1,7 @@
 #include "GameState.h"
 
 // set position method implementation
-char GameState::setPosition()
+char GameState::getRandomNode()
 {
     // create a random number
     srand(time(0));
@@ -54,16 +54,27 @@ char GameState::setPosition()
 GameState::GameState(Player &player, Wolf &wolf)
 {
     // create a variable for faster run time
-    char playerPosition = setPosition();
-    char wolfPosition = setPosition();
+    char playerPosition = getRandomNode();
+    char wolfPosition = getRandomNode();
 
     // set wolf and player position
     player.setPosition(playerPosition);
     wolf.setPosition(wolfPosition);
 
     // while loop to compare player and wolf positions
-    while(playerPosition == wolfPosition)
+    while (playerPosition == wolfPosition)
     {
-        wolf.setPosition(setPosition());
+        wolf.setPosition(getRandomNode());
     }
+}
+
+// undo method implementation
+void GameState::undo(Player &player, Wolf &wolf, Stack &stack)
+{
+    // get the previos positiob of player and wolf
+    std::pair<char,char> previousPosition = stack.pop();
+
+    // assign player and wolf position woth their prevoius positions
+    player.setPosition(previousPosition.first);
+    wolf.setPosition(previousPosition.second);
 }

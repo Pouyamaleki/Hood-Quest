@@ -21,6 +21,7 @@ private:
 public:
     void insert(const string &, long int);
     int search(const string &) const;
+    void updateScore(const string &, long int);
 };
 
 #endif

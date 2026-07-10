@@ -43,3 +43,22 @@ int MaxHeap::search(const string &username) const
     }
     return -1;
 }
+
+void MaxHeap::updateScore(const string &username, long int newScore)
+{
+    int index = search(username);
+
+    if (index == -1)
+    {
+        insert(username, newScore);
+        return;
+    }
+
+    long int oldScore = heap[index].second;
+    heap[index].second = newScore;
+
+    if (newScore > oldScore)
+        heapifyUp(index);
+    else if (newScore < oldScore)
+        heapifyDown(index);
+}

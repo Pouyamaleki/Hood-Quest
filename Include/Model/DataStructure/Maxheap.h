@@ -22,6 +22,9 @@ public:
     void insert(const string &, long int);
     int search(const string &) const;
     void updateScore(const string &, long int);
+
+    bool isEmpty() const;
+    pair<string, long int> getTop() const;
 };
 
 #endif

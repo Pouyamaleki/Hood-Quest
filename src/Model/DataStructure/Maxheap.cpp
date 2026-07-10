@@ -62,3 +62,12 @@ void MaxHeap::updateScore(const string &username, long int newScore)
     else if (newScore < oldScore)
         heapifyDown(index);
 }
+
+bool MaxHeap::isEmpty() const
+{
+    return heap.empty();
+}
+pair<string, long int> MaxHeap::getTop() const
+{
+    return heap[0];
+}

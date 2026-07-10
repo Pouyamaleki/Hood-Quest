@@ -20,6 +20,7 @@ private:
 
 public:
     void insert(const string &, long int);
+    int search(const string &) const;
 };
 
 #endif

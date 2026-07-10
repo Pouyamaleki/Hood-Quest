@@ -33,3 +33,13 @@ void MaxHeap::insert(const string &username, long int score)
     heapArr.push_back({username, score});
     heapifyUp((int)heapArr.size() - 1);
 }
+
+int MaxHeap::search(const string &username) const
+{
+    for (int i = 0; i < (int)heapArr.size(); i++)
+    {
+        if (heapArr[i].first == username)
+            return i;
+    }
+    return -1;
+}

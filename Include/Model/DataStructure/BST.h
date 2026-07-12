@@ -21,6 +21,7 @@ private:
     BSTNode *root;
 
     BSTNode *insertHelper(BSTNode *, const string &, long int);
+    BSTNode *searchHelper(BSTNode *, const string &) const;
 
 public:
     BST();

@@ -27,6 +27,7 @@ public:
     BST();
 
     void insert(const string &, long int);
+    BSTNode *search(const string &) const;
 };
 
 #endif

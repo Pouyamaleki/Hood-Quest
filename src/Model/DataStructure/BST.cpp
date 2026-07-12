@@ -33,3 +33,8 @@ void BST::insert(const string &username, long int score)
 {
     root = insertHelper(root, username, score);
 }
+
+BSTNode *BST::search(const string &username) const
+{
+    return searchHelper(root, username);
+}

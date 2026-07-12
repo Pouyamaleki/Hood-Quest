@@ -38,3 +38,14 @@ BSTNode *BST::search(const string &username) const
 {
     return searchHelper(root, username);
 }
+
+bool BST::updateScore(const string &username, long int newScore)
+{
+    BSTNode *node = search(username);
+
+    if (node == nullptr)
+        return false;
+
+    node->score = newScore;
+    return true;
+}

@@ -28,6 +28,7 @@ public:
 
     void insert(const string &, long int);
     BSTNode *search(const string &) const;
+    bool updateScore(const string &, long int);
 };
 
 #endif

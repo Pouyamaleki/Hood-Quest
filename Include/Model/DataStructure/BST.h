@@ -18,7 +18,12 @@ struct BSTNode
 class BST
 {
 private:
+    BSTNode *root;
+
+    BSTNode *insertHelper(BSTNode *, const string &, long int);
+
 public:
+    BST();
 };
 
 #endif

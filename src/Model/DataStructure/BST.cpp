@@ -17,3 +17,8 @@ BSTNode *BST::insertHelper(BSTNode *node, const string &username, long int score
 
     return node;
 }
+
+void BST::insert(const string &username, long int score)
+{
+    root = insertHelper(root, username, score);
+}

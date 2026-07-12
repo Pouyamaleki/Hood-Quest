@@ -24,6 +24,8 @@ private:
 
 public:
     BST();
+
+    void insert(const string &, long int);
 };
 
 #endif

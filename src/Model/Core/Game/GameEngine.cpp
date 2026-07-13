@@ -4,14 +4,18 @@ void Gameengine::GameLoop()
 {
     Cliview cli;
     InputHandler input;
+    Move move;
+
     Graph graph;
     Stack stack;
-    // Move move;
+
     cli.PrintMainMenu();
     string CurrentUser = input.MainHandler();
+
     Player player1(CurrentUser, 'a', 0);
     Wolf wolf('d');
     GameState gamestate(player1, wolf);
+
     if (CurrentUser != "Exit")
     {
         bool mode;
@@ -58,7 +62,7 @@ void Gameengine::GameLoop()
             case 'T':
             case 'U':
             case 'V':
-                // move.moveplayer(graph ,player ,CurrentOrder);
+                move.movePlayer(graph, player1, CurrentOrder);
             default:
                 cout << "Invalid order selected\n";
             }

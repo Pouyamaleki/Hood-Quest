@@ -17,6 +17,7 @@ void Usermanager::CreateUser(const string &username, const string &pass)
         // create a new user with the username and hashed password
         User TempUser(username, HPass);
         Users.push_back(TempUser);
+        bstuser.insert(username, 0);
 
         // increase the number of users
         Usermanager::increaseNumofUser();
@@ -57,33 +58,6 @@ int Usermanager::SearchUser(const string &username)
         if (Users[i].getUsername() == username)
         {
             return i;
-        }
-    }
-}
-
-void Usermanager::ShowLeaderBoard()
-{
-    // print the leaderboard
-    // to display all users by rating. Not just the top player.
-    cout << "================== Leaderboard ==================\n";
-    cout << "Rank\t\tUsername\t\tScore\n";
-    for (int i = 0; i < Users.size(); i++)
-    {
-        cout << (i + 1) << "\t" << Users[i].getUsername() << "\t\t" << Users[i].getUserScore() << "\n";
-    }
-    cout << "=================================================\n";
-}
-// print score function implementation
-void Usermanager::PrintScore(const string &username)
-{
-    // a for loop to navigate the users
-    for (int i = 0; i < Users.size(); i++)
-    {
-        // check if the user has been found or no
-        if (Users[i].getUsername() == username)
-        {
-            cout << "Score: " << Users[i].getUserScore() << endl;
-            return;
         }
     }
 }

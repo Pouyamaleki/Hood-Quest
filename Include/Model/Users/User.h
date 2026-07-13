@@ -18,6 +18,6 @@ public:
 
     string getUsername() { return Username; }
     size_t getPassword() { return Password; }
-    long int getUserScore() { return Score; }
+    long int getCurrentScore() { return Score; }
 };
 #endif USER_H

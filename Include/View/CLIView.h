@@ -10,7 +10,8 @@ private:
 public:
     void displayGraph(char, char);
     void PrintMainMenu();
-    // void PrintLeaderboard();
+    void PrintLeaderboard();
+    void PrintScore(string); // display the score of a desired player with linear search or BST DataType
 };
 
 #endif CLIVIEW_H

@@ -69,7 +69,7 @@ void Gameengine::GameLoop()
                 //     cout << "game is finish.";
                 //     int idx = usermanager.SearchUser(CurrentUser);
                 //     usermanager.SetUserScore(CurrentUser, player.getScore() + usermanager.GetUserScore(CurrentUser));
-                //     bst.updateScore(CurrentUser, player.getScore() + usermanager.GetUserScore(CurrentUser));
+                //     bst.updateScore(CurrentUser, player.getScore() + usermanager.GetUserScore(idx));
                 //     cli.PrintLeaderboard();
                 // }
             default:

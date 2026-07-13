@@ -34,9 +34,12 @@ string InputHandler::MainHandler()
                 break;
             }
         case 3:
-            userManager.ShowLeaderBoard();
+            // userManager.ShowLeaderBoard();
             break;
         case 4:
+            InputHandler::ScoreUser();
+            break;
+        case 5:
             cout << "Exiting the program\n";
             return "Exit";
         default:

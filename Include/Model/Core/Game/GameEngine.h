@@ -4,6 +4,8 @@
 #include "CLIView.h"
 #include "InputHandler.h"
 #include "Player.h"
+#include "Graph.h"
+#include "WOlf.h"
 #include "Dijkstra.h"
 #include "AStar.h"
 

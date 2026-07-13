@@ -4,31 +4,19 @@ void Gameengine::GameLoop()
 {
     Cliview cli;
     InputHandler input;
+    Graph graph;
     // Gamestate gamestate;
     // Move move;
     cli.PrintMainMenu();
     string CurrentUser = input.MainHandler();
-    player player1(CurrentUser, 0, 0);
+    Player player1(CurrentUser, 'a', 0);
+    Wolf wolf('d');
     if (CurrentUser != "Exit")
     {
         bool mode;
         while (true)
         {
-            cli.displayGraph(player1.getPosition(), 'C'); // موقت
-            mode = input.SelectModeofAlghorithms();
-            switch (mode)
-            {
-            case true:
-                cout << "Dijkstra selected\n";
-                // dijkstraPrintPath();
-                break;
-            case false:
-                cout << "A* selected\n";
-                // AStarprintPath();
-                break;
-            default:
-                cout << "Invalid mode selected\n";
-            }
+            cli.displayGraph(player1.getPosition(), wolf.getPosition());
             char CurrentOrder = input.CurrentHandler();
             switch (CurrentOrder)
             {
@@ -58,6 +46,20 @@ void Gameengine::GameLoop()
                 // move.moveplayer(graph ,player ,CurrentOrder);
             default:
                 cout << "Invalid order selected\n";
+            }
+            mode = input.SelectModeofAlghorithms();
+            switch (mode)
+            {
+            case true:
+                cout << "Dijkstra selected\n";
+                dijkstraPrintPath(graph, player1.getPosition(), CurrentOrder, wolf.getPosition());
+                break;
+            case false:
+                cout << "A* selected\n";
+                AStarprintPath(graph, player1.getPosition(), CurrentOrder, wolf.getPosition());
+                break;
+            default:
+                cout << "Invalid mode selected\n";
             }
         }
     }

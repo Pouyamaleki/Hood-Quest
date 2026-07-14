@@ -10,7 +10,7 @@ void Cliview::PrintMainMenu()
     cout << " Print score of desired user: 4\n";
     cout << " exit: 5\n";
 }
-void Cliview::PrintScore(string username)
+void Cliview::PrintScore(string username) // display the score of a desired player with linear search or BST DataType
 {
     int searchmode;
     cout << "please select an mode: Linear Search (1) or BST Search (2)\n";

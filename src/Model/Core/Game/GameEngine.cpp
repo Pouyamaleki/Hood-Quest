@@ -10,6 +10,7 @@ void Gameengine::GameLoop()
     Stack stack;
     Usermanager usermanager;
     BST bst;
+    MaxHeap maxheap;
 
     cli.PrintMainMenu();
     string CurrentUser = input.MainHandler();
@@ -68,12 +69,15 @@ void Gameengine::GameLoop()
                 // {
                 //     cout << "game is finish.";
                 //     int idx = usermanager.SearchUser(CurrentUser);
-                //     usermanager.SetUserScore(CurrentUser, player.getScore() + usermanager.GetUserScore(CurrentUser));
-                //     bst.updateScore(CurrentUser, player.getScore() + usermanager.GetUserScore(idx));
+                //     long int newscore = player.getScore() + usermanager.GetUserScore(idx);
+                //     usermanager.SetUserScore(CurrentUser,newscore );
+                //     bst.updateScore(CurrentUser,newscore );
+                //     maxheap.updateScore(CurrentUser,newscore );
                 //     cli.PrintLeaderboard();
                 // }
             default:
-                cout << "Invalid order selected\n";
+                cout
+                    << "Invalid order selected\n";
             }
         }
     }

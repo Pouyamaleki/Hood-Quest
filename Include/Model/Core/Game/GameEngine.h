@@ -8,6 +8,7 @@
 #include "User.h"
 #include "UserManager.h"
 #include "BST.h"
+#include "Maxheap.h"
 #include "Player.h"
 #include "WOlf.h"
 #include "Graph.h"

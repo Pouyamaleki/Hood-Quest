@@ -79,4 +79,27 @@ void Cliview::displayGraph(char playerpos, char wolfpos)
     cout << "  " << RED << "[Red Riding Hood: " << playerpos << "]" << RESET
          << "   " << BLUE << "[Wolf: " << wolfpos << "]" << RESET << "\n";
     cout << "===========================================================\n\n";
+
+    cout << "         " << GetColorNude('B', playerpos, wolfpos) << " -------- 2 -------- " << GetColorNude('C', playerpos, wolfpos) << " -------- 5 -------- " << GetColorNude('D', playerpos, wolfpos) << "\n";
+    cout << "       //                                                               \\\n";
+    cout << "      /3                                                                 1\n";
+    cout << "     //                                                                   \\\n";
+    cout << " " << GetColorNude('A', playerpos, wolfpos) << " -------------- 6 ------------- " << GetColorNude('F', playerpos, wolfpos) << " ----------- 4 ----------- " << GetColorNude('G', playerpos, wolfpos) << " ----------- 3 ----------- " << GetColorNude('E', playerpos, wolfpos) << "\n";
+    cout << "                                     //                            |             \\\n";
+    cout << "                                    /6                             5              4\n";
+    cout << "                                   //                              |               \\\n";
+    cout << "                           " << GetColorNude('J', playerpos, wolfpos) << " ----- 3 ----- " << GetColorNude('K', playerpos, wolfpos) << " ----- 2 ----- " << GetColorNude('W', playerpos, wolfpos) << " ----- 3 ----- " << GetColorNude('M', playerpos, wolfpos) << "\n";
+    cout << "                            \\              \\                                      /\n";
+    cout << "                             5              3                                    1\n";
+    cout << "                              \\              \\                                  /\n";
+    cout << "   " << GetColorNude('O', playerpos, wolfpos) << " ----- 3 ----- " << GetColorNude('P', playerpos, wolfpos) << " ----- 1 ----- " << GetColorNude('R', playerpos, wolfpos) << " ----------- 2 ----------- " << GetColorNude('S', playerpos, wolfpos) << "\n";
+    cout << "     \\                                       |                                    \\\n";
+    cout << "      2                                      4                                     6\n";
+    cout << "       \\                                     |                                      \\\n";
+    cout << "       " << GetColorNude('Q', playerpos, wolfpos) << " ----------------- 5 ---------------- " << GetColorNude('T', playerpos, wolfpos) << " ----------- 2 ----------- " << GetColorNude('U', playerpos, wolfpos) << "\n";
+    cout << "         \\                                                                        /\n";
+    cout << "          5                                                                      3\n";
+    cout << "           \\                                                                    /\n";
+    cout << "            \\--------------------------------- " << GetColorNude('V', playerpos, wolfpos) << " --------------------------/\n\n";
+    cout << "===========================================================\n";
 }

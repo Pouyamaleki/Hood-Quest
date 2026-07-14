@@ -21,6 +21,7 @@ public:
     bool LoginUser(const string &, const string &);  // login method
     int SearchUser(const string &);                  // a method to search between the users
     void SetUserScore(const string &, long int);
+    
     long int GetUserScore(int idx) { Users[idx].getCurrentScore(); }
     void increaseNumofUser() { Numofuser++; } // increase the number of users
 };

@@ -69,4 +69,14 @@ string Cliview::GetColorNude(char currentNude, char playerpos, char wolfpos)
 
 void Cliview::displayGraph(char playerpos, char wolfpos)
 {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+
+    cout << "====================== HOODQUEST MAP ======================\n";
+    cout << "  " << RED << "[Red Riding Hood: " << playerpos << "]" << RESET
+         << "   " << BLUE << "[Wolf: " << wolfpos << "]" << RESET << "\n";
+    cout << "===========================================================\n\n";
 }

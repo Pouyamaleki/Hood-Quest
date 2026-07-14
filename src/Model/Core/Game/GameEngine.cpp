@@ -8,30 +8,33 @@ void Gameengine::GameLoop()
 
     Graph graph;
     Stack stack;
+    Usermanager usermanager;
+    BST bst;
+    MaxHeap maxheap;
 
     cli.PrintMainMenu();
     string CurrentUser = input.MainHandler();
 
-    Player player1(CurrentUser, 'a', 0);
+    Player player(CurrentUser, 'a', 0);
     Wolf wolf('d');
-    GameState gamestate(player1, wolf);
+    GameState gamestate(player, wolf);
 
     if (CurrentUser != "Exit")
     {
         bool mode;
         while (true)
         {
-            cli.displayGraph(player1.getPosition(), wolf.getPosition());
+            cli.displayGraph(player.getPosition(), wolf.getPosition());
             mode = input.SelectModeofAlghorithms();
             switch (mode)
             {
             case true:
                 cout << "Dijkstra selected\n";
-                dijkstraPrintPath(graph, player1.getPosition(), 'V', wolf.getPosition());
+                dijkstraPrintPath(graph, player.getPosition(), 'V', wolf.getPosition());
                 break;
             case false:
                 cout << "A* selected\n";
-                AStarprintPath(graph, player1.getPosition(), 'V', wolf.getPosition());
+                AStarprintPath(graph, player.getPosition(), 'V', wolf.getPosition());
                 break;
             default:
                 cout << "Invalid mode selected\n";
@@ -41,7 +44,7 @@ void Gameengine::GameLoop()
             {
             case '0':
                 cout << "Undo selected\n";
-                gamestate.undo(player1, wolf, stack);
+                gamestate.undo(player, wolf, stack);
                 break;
             case 'A':
             case 'B':
@@ -62,9 +65,19 @@ void Gameengine::GameLoop()
             case 'T':
             case 'U':
             case 'V':
-                move.movePlayer(graph, player1, CurrentOrder);
+                // if (move.movePlayer(graph, player, CurrentOrder))
+                // {
+                //     cout << "game is finish.";
+                //     int idx = usermanager.SearchUser(CurrentUser);
+                //     long int newscore = player.getScore() + usermanager.GetUserScore(idx);
+                //     usermanager.SetUserScore(CurrentUser,newscore );
+                //     bst.updateScore(CurrentUser,newscore );
+                //     maxheap.updateScore(CurrentUser,newscore );
+                //     cli.PrintLeaderboard();
+                // }
             default:
-                cout << "Invalid order selected\n";
+                cout
+                    << "Invalid order selected\n";
             }
         }
     }

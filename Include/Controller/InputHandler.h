@@ -11,5 +11,6 @@ public:
     string MainHandler();
     char CurrentHandler();
     bool SelectModeofAlghorithms();
+    void ScoreUser(); // We get both the username and the search type
 };
 #endif INPUTHANDLER_H

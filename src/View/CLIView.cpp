@@ -54,8 +54,17 @@ void Cliview::PrintLeaderboard()
     cout << " The name of top user is " << maxuser.first << "and its score: " << maxuser.second << endl;
 }
 
-void Cliview::GetColorNude(char currentNude, char playerpos, char wolfpos)
+string Cliview::GetColorNude(char currentNude, char playerpos, char wolfpos)
 {
+    if (currentNude == playerpos)
+    {
+        return RED + "(" + currentNude + ")" + RESET;
+    }
+    else if (currentNude == wolfpos)
+    {
+        return BLUE + "(" + currentNude + ")" + RESET;
+    }
+    return WHITE + "(" + currentNude + ")" + RESET;
 }
 
 void Cliview::displayGraph(char playerpos, char wolfpos)

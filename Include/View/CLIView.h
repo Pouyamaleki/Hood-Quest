@@ -7,6 +7,8 @@ using namespace std;
 class Cliview
 {
 private:
+    Usermanager usermanager;
+
 public:
     void displayGraph(char, char);
     void PrintMainMenu();

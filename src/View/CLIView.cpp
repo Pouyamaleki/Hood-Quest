@@ -10,6 +10,7 @@ void Cliview::PrintMainMenu()
     cout << " Print score of desired user: 4\n";
     cout << " exit: 5\n";
 }
+
 void Cliview::PrintScore(string username) // display the score of a desired player with linear search or BST DataType
 {
     int searchmode;
@@ -44,4 +45,11 @@ void Cliview::PrintScore(string username) // display the score of a desired play
         break;
     }
     }
+}
+
+void Cliview::PrintLeaderboard()
+{
+    pair<string, long int> maxuser;
+    maxuser = maxheapview.getTop();
+    cout << " The name of top user is " << maxuser.first << "and its score: " << maxuser.second << endl;
 }

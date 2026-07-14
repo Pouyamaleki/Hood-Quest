@@ -4,12 +4,14 @@
 #include <iostream>
 #include "UserManager.h"
 #include "BST.h"
+#include "Maxheap.h"
 using namespace std;
 class Cliview
 {
 private:
     Usermanager usermanager;
     BST bstview;
+    MaxHeap maxheapview;
 
 public:
     void displayGraph(char, char);

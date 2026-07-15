@@ -7,18 +7,17 @@ bool Move::validMove(const Graph &graph, Player &player, Wolf &wolf, char nextPo
     char currentPosition = player.getPosition(); // get the player position
 
     // check if the player and wolf are not in the same Block
-    if(nextPosition == wolf.getPosition())
+    if (nextPosition == wolf.getPosition())
     {
         try
         {
             throw invalid_argument("the wolf and the player can not be in the same Block!");
         }
-        catch(const invalid_argument &x)
+        catch (const invalid_argument &x)
         {
             std::cerr << x.what() << endl;
         }
         return false;
-        
     }
 
     // check if the node is in the graph or no

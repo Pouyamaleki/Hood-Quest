@@ -5,6 +5,8 @@
 #include "BFS.h"
 #include "Player.h"
 #include "Wolf.h"
+#include "Dijkstra.h"
+#include "AStar.h"
 #include <cstdlib>
 #include <ctime>
 #include <exception>

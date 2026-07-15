@@ -85,6 +85,23 @@ void Move::movePlayer(const Graph &graph, Player &player, Wolf &wolf, char nextP
     if (validMove(graph, player, wolf, nextPosition))
     {
         player.setPosition(nextPosition);
+
+        // get player and wolf position
+        char playerPosition = player.getPosition();
+        char wolfPosition = wolf.getPosition();
+
+        // check if the player used suggested path or no
+        char dijkstraAlgorithm = pathFinder(graph, playerPosition, 'V', wolfPosition).path.front();
+        char AStarAlgorithm = AStar(graph, playerPosition, 'V', wolfPosition).path.front();
+
+        // if consition to campare the Blocks
+        if(playerPosition == dijkstraAlgorithm || playerPosition == AStarAlgorithm)
+        {
+            player.addScore(3);
+            return;
+        }
+
+        // when the player does not use the suggested path
         player.addScore(1);
         return;
     }

@@ -77,4 +77,7 @@ void GameState::undo(Player &player, Wolf &wolf, Stack &stack)
     // assign player and wolf position woth their prevoius positions
     player.setPosition(previousPosition.first);
     wolf.setPosition(previousPosition.second);
+
+    // change the player score
+    player.addScore(-2);
 }

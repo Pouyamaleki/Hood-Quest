@@ -161,6 +161,12 @@ dijkstra::pathFinderResult dijkstra::pathFinder(const Graph &graph, char from, c
     return {path, result.distance[destinationNode]};
 }
 
+// get path method implementation
+vector<char> dijkstra::getPath() const
+{
+    return dijkstraPath;
+}
+
 // print path function implementation
 void dijkstra::dijkstraPrintPath(const Graph &graph, char from, char destinationNode, char wolfPosition)
 {

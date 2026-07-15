@@ -168,6 +168,7 @@ void dijkstra::dijkstraPrintPath(const Graph &graph, char from, char destination
     pathFinderResult result = pathFinder(graph, from, destinationNode, wolfPosition); // get the pathfinder output
     const vector<char> &path = result.path; // get the path
     int totalDistance = result.totalweight; // get the total distance
+    dijkstraPath = result.path; // copy the path in a variable
 
     // check if there is a path or no
     if (path.empty())

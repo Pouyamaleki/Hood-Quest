@@ -85,6 +85,7 @@ void Move::movePlayer(const Graph &graph, Player &player, Wolf &wolf, char nextP
     if (validMove(graph, player, wolf, nextPosition))
     {
         player.setPosition(nextPosition);
+        player.setScore();
         return;
     }
 }

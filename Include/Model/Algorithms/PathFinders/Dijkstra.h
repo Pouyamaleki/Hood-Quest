@@ -9,6 +9,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <functional>
 
 class dijkstra
 {

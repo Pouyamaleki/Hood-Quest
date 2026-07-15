@@ -15,7 +15,7 @@ struct pathFinderResult
 };
 
 // dijkstra function implementation
-dijkstraResult dijkstra(const Graph &graph, char from, char wolfPosition)
+dijkstraResult dijkstraAlgorithm(const Graph &graph, char from, char wolfPosition)
 {
     // create a new graph to remove the wolf position
     Graph newgraph;
@@ -134,7 +134,7 @@ dijkstraResult dijkstra(const Graph &graph, char from, char wolfPosition)
 pathFinderResult pathFinder(const Graph &graph, char from, char destinationNode, char wolfPosition)
 {
     // result variable to store and use the dijkstra data
-    dijkstraResult result = dijkstra(graph, from, wolfPosition);
+    dijkstraResult result = dijkstraAlgorithm(graph, from, wolfPosition);
 
     // check if the result does not exist
     if (result.distance[destinationNode] == INT_MAX)

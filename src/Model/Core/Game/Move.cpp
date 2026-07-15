@@ -1,10 +1,25 @@
 #include "Move.h"
 
 // valid move method imlementation
-bool Move::validMove(const Graph &graph, Player &player, char nextPosition)
+bool Move::validMove(const Graph &graph, Player &player, Wolf &wolf, char nextPosition)
 {
     const auto &adjList = graph.getAdjList();    // create the adjacency list
     char currentPosition = player.getPosition(); // get the player position
+
+    // check if the player and wolf are not in the same Block
+    if(nextPosition == wolf.getPosition())
+    {
+        try
+        {
+            throw invalid_argument("the wolf and the player can not be in the same Block!");
+        }
+        catch(const invalid_argument &x)
+        {
+            std::cerr << x.what() << endl;
+        }
+        return false;
+        
+    }
 
     // check if the node is in the graph or no
     auto it = adjList.find(currentPosition);
@@ -68,7 +83,7 @@ bool Move::diceMove()
 void Move::movePlayer(const Graph &graph, Player &player, Wolf &wolf, char nextPosition)
 {
     // an if condition to check that the player can move or no
-    if (validMove(graph, player, nextPosition))
+    if (validMove(graph, player, wolf, nextPosition))
     {
         player.setPosition(nextPosition);
         return;

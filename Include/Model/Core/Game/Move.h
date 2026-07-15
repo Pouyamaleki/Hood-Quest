@@ -12,7 +12,7 @@
 class Move
 {
 private:
-    bool validMove(const Graph &, Player &, char); // check the validation of every move
+    bool validMove(const Graph &, Player &, Wolf &, char); // check the validation of every move
     bool diceMove(); // dice simulator method for wolf move
 
 public:

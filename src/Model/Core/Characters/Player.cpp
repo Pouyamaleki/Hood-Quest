@@ -32,6 +32,12 @@ void Player::setScore(int score)
     playerScore = score;
 }
 
+// Player add score method implementation
+void Player::addScore(int amount)
+{
+    playerScore += amount;
+}
+
 // Player name getter impleementation
 std::string Player::getName() const
 {

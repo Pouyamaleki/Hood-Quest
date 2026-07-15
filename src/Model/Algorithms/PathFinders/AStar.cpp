@@ -1,14 +1,14 @@
 #include "AStar.h"
 
 // A* result struct implementation
-struct AstarResult
+struct AStar::AstarResult
 {
     vector<char> path;
     int totalWeight;
 };
 
 // heuristic function to estimate the distance
-int heuristic(char from, char to)
+int AStar::heuristic(char from, char to)
 {
     // a map to store the cordinations
     // this cordinates are not accurate
@@ -59,7 +59,7 @@ int heuristic(char from, char to)
 }
 
 // A* algorithm function implementation
-AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition)
+AStar::AstarResult AStar::AStarAlgorithm(const Graph &graph, char from, char to, char wolfPosition)
 {
     // create a new graph to remove the wolf position
     Graph newgraph;
@@ -208,9 +208,9 @@ AstarResult AStar(const Graph &graph, char from, char to, char wolfPosition)
 }
 
 // print path function implementation
-void AStarprintPath(const Graph &graph, char from, char to, char wolfPosition)
+void AStar::AStarprintPath(const Graph &graph, char from, char to, char wolfPosition)
 {
-    AstarResult result = AStar(graph, from, to, wolfPosition);
+    AstarResult result = AStarAlgorithm(graph, from, to, wolfPosition);
     vector<char> path = result.path;
     int totalDistance = result.totalWeight;
 

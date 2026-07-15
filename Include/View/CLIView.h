@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "UserManager.h"
+#include "InputHandler.h"
 #include "BST.h"
 #include "Maxheap.h"
 using namespace std;
@@ -10,7 +11,7 @@ class Cliview
 {
 private:
     Usermanager usermanager;
-    BST bstview;
+    InputHandler inputhandler;
     MaxHeap maxheapview;
 
     const string RESET = "\033[0m";
@@ -24,7 +25,7 @@ public:
     void displayGraph(char, char);
     void PrintMainMenu();
     void PrintLeaderboard();
-    void PrintScore(string);
+    void PrintScore();
 };
 
 #endif CLIVIEW_H

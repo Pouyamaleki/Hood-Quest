@@ -2,7 +2,6 @@
 
 string InputHandler::MainHandler()
 {
-    Usermanager userManager;
     int choice;
     while (true)
     {
@@ -37,7 +36,7 @@ string InputHandler::MainHandler()
             cliinput.PrintLeaderboard();
             break;
         case 4:
-            // InputHandler::ScoreUser();
+            cliinput.PrintScore();
             break;
         case 5:
             cout << "Exiting the program\n";
@@ -73,5 +72,42 @@ bool InputHandler::SelectModeofAlghorithms()
     default:
         cout << "Invalid mode selected. Defaulting to Dijkstra.\n";
         return true; // Default to Dijkstra
+    }
+}
+
+void InputHandler::ScoreUser(int searchmode)
+{
+    string username;
+    cout << "Enter the Username:\n";
+    cin >> username;
+
+    switch (searchmode)
+    {
+    case 1:
+    {
+        int idx, finalscore;
+        idx = userManager.SearchUser(username);
+        finalscore = userManager.GetUserScore(idx);
+        cout << "Score of " << username << ": " << finalscore << endl;
+        break;
+    }
+    case 2:
+    {
+        BSTNode *foundNode = bstview.search(username);
+        if (foundNode != nullptr)
+        {
+            cout << "Score of " << username << ": " << foundNode->score << endl;
+        }
+        else
+        {
+            cout << username << " was not found in BST.\n";
+        }
+        break;
+    }
+    default:
+    {
+        cout << "Invalid mode selected. Defaulting to Linear Search.\n";
+        break;
+    }
     }
 }

@@ -11,40 +11,12 @@ void Cliview::PrintMainMenu()
     cout << " exit: 5\n";
 }
 
-void Cliview::PrintScore(string username) // display the score of a desired player with linear search or BST DataType
+void Cliview::PrintScore() // display the score of a desired player with linear search or BST DataType
 {
     int searchmode;
     cout << "please select an mode: Linear Search (1) or BST Search (2)\n";
     cin >> searchmode;
-    switch (searchmode)
-    {
-    case 1:
-    {
-        int idx, finalscore;
-        idx = usermanager.SearchUser(username);
-        finalscore = usermanager.GetUserScore(idx);
-        cout << "Score of " << username << ": " << finalscore << endl;
-        break;
-    }
-    case 2:
-    {
-        BSTNode *foundNode = bstview.search(username);
-        if (foundNode != nullptr)
-        {
-            cout << "Score of " << username << ": " << foundNode->score << endl;
-        }
-        else
-        {
-            cout << username << " was not found in BST.\n";
-        }
-        break;
-    }
-    default:
-    {
-        cout << "Invalid mode selected. Defaulting to Linear Search.\n";
-        break;
-    }
-    }
+    inputhandler.ScoreUser(searchmode);
 }
 
 void Cliview::PrintLeaderboard()

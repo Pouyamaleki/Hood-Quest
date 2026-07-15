@@ -216,22 +216,22 @@ vector<char> AStar::getPath() const
 // print path function implementation
 void AStar::AStarprintPath(const Graph &graph, char from, char to, char wolfPosition)
 {
-    AstarResult result = AStarAlgorithm(graph, from, to, wolfPosition);
-    vector<char> path = result.path;
-    int totalDistance = result.totalWeight;
+    AstarResult result = AStarAlgorithm(graph, from, to, wolfPosition); // get the result of the A* algorithm
+    int totalDistance = result.totalWeight; // get the total weight
+    AStarpath = result.path; // store the algorithm path in a variable
 
     // check if there is a bath or no
-    if (path.empty())
+    if (AStarpath.empty())
     {
         cout << "there is not ant path possible" << endl;
     }
 
     // print output
     cout << "A* recommended path:" << endl;
-    for (int i = 0; i < path.size(); i++)
+    for (int i = 0; i < AStarpath.size(); i++)
     {
-        cout << path[i];
-        if (i < path.size() - 1)
+        cout << AStarpath[i];
+        if (i < AStarpath.size() - 1)
         {
             cout << " -> ";
         }

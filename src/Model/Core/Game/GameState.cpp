@@ -68,11 +68,33 @@ GameState::GameState(Player &player, Wolf &wolf)
     }
 }
 
+// wolf block method implementation
+bool wolfBlock(Player &player, Wolf &wolf)
+{
+    if(player.getPosition() == wolf.getPosition())
+    {
+        std::cout << "The wolf caught you" << std::endl;
+        return true;
+    }
+    return false;
+}
+
+// reached destination method implementation
+bool reachedDestinatio(Player &player)
+{
+    if(player.getPosition() == 'V')
+    {
+        std::cout << "you reached the grandmother's house" << std::endl;
+        return true;
+    }
+    return false;
+}
+
 // undo method implementation
 void GameState::undo(Player &player, Wolf &wolf, Stack &stack)
 {
     // get the previos positiob of player and wolf
-    std::pair<char,char> previousPosition = stack.pop();
+    std::pair<char, char> previousPosition = stack.pop();
 
     // assign player and wolf position woth their prevoius positions
     player.setPosition(previousPosition.first);

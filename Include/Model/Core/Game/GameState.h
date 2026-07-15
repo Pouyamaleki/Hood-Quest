@@ -14,8 +14,10 @@ class GameState
 private:
     char getRandomNode(); // a method to set a position for player and wolf
 public:
-    GameState(Player &, Wolf &); // game state constructor
-    void undo(Player &, Wolf & , Stack &); // undo method
+    GameState(Player &, Wolf &);          // game state constructor
+    bool wolfBlock(Player &, Wolf &);     // check if the player and wold are in the same block
+    bool reachedDestinatio(Player &);              // check if the player has reach the destination
+    void undo(Player &, Wolf &, Stack &); // undo method
 };
 
 #endif

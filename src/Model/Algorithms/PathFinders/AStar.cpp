@@ -201,7 +201,7 @@ AStar::AstarResult AStar::AStarAlgorithm(const Graph &graph, char from, char to,
 
     catch (runtime_error &x)
     {
-        cerr << "ٍError: " << x.what() << endl;
+        cerr << "Error: " << x.what() << endl;
     }
 
     return {{}, -1};

@@ -7,6 +7,8 @@
 #include <climits>
 #include <exception>
 #include <iostream>
+#include <map>
+#include <vector>
 
 class dijkstra
 {

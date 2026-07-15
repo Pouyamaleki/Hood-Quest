@@ -207,6 +207,12 @@ AStar::AstarResult AStar::AStarAlgorithm(const Graph &graph, char from, char to,
     return {{}, -1};
 }
 
+// get path method implementation
+vector<char> AStar::getPath() const
+{
+    return AStarpath;
+}
+
 // print path function implementation
 void AStar::AStarprintPath(const Graph &graph, char from, char to, char wolfPosition)
 {

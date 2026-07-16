@@ -22,9 +22,9 @@ set(SOURCES
 ${SOURCE_DIR}/main.cpp
 ${SOURCE_DIR}/src/Controller/InputHandler.cpp
 ${SOURCE_DIR}/src/Controller/SaveLoadManager.cpp
-${SOURCE_DIR}/src/Model/Algorithm/PathFinders/AStar.cpp
-${SOURCE_DIR}/src/Model/Algorithm/PathFinders/Dijkstra.cpp
-${SOURCE_DIR}/src/Model/Algorithm/BFS.cpp
+${SOURCE_DIR}/src/Model/Algorithms/PathFinders/AStar.cpp
+${SOURCE_DIR}/src/Model/Algorithms/PathFinders/Dijkstra.cpp
+${SOURCE_DIR}/src/Model/Algorithms/BFS.cpp
 ${SOURCE_DIR}/src/Model/Core/Characters/Player.cpp
 ${SOURCE_DIR}/src/Model/Core/Characters/Wolf.cpp
 ${SOURCE_DIR}/src/Model/Core/Game/GameEngine.cpp

@@ -16,7 +16,7 @@ private:
 public:
     GameState(Player &, Wolf &);          // game state constructor
     bool wolfBlock(Player &, Wolf &);     // check if the player and wold are in the same block
-    bool reachedDestinatio(Player &);              // check if the player has reach the destination
+    bool reachedDestination(Player &);              // check if the player has reach the destination
     void undo(Player &, Wolf &, Stack &); // undo method
 };
 

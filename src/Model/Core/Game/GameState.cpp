@@ -69,7 +69,7 @@ GameState::GameState(Player &player, Wolf &wolf)
 }
 
 // wolf block method implementation
-bool wolfBlock(Player &player, Wolf &wolf)
+bool GameState::wolfBlock(Player &player, Wolf &wolf)
 {
     if(player.getPosition() == wolf.getPosition())
     {
@@ -80,7 +80,7 @@ bool wolfBlock(Player &player, Wolf &wolf)
 }
 
 // reached destination method implementation
-bool reachedDestination(Player &player)
+bool GameState::reachedDestination(Player &player)
 {
     if(player.getPosition() == 'V')
     {

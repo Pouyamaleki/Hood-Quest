@@ -8,6 +8,6 @@
 using namespace std;
 
 void save(const Usermanager &, const string &);
-void load(const Usermanager &, const string &);
+void load(Usermanager &, const string &);
 
 #endif SAVELOADMANAGER_H

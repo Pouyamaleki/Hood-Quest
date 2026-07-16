@@ -18,6 +18,7 @@ private:
     int Numofuser = 0;
 
     friend void save(const Usermanager &, const string &);
+    friend void load(Usermanager &, const string &);
 
 public:
     void CreateUser(const string &, const string &); // craete user method to create new users

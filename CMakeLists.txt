@@ -76,7 +76,7 @@ target_include_directories(Hood_Quest
     ${INCLUDE_DIR}/Model/Core
     ${INCLUDE_DIR}/Model/Core/Characters
     ${INCLUDE_DIR}/Model/Core/Game
-    ${INCLUDE_DIR}/Model/DataStrucure
+    ${INCLUDE_DIR}/Model/DataStructure
     ${INCLUDE_DIR}/Model/Users
     ${INCLUDE_DIR}/view
 )

@@ -65,6 +65,7 @@ bool BST::updateScore(const string &username, long int newScore)
     return true;
 }
 
+// clear method implementation
 void BST::clear()
 {
     destroyHelper(root);

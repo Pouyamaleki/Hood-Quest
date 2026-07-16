@@ -72,3 +72,9 @@ pair<string, long int> MaxHeap::getTop() const
 {
     return heap[0];
 }
+
+// max heap clear method implementation
+void MaxHeap::clear()
+{
+    heap.clear();
+}

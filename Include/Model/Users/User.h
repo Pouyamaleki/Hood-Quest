@@ -22,4 +22,4 @@ public:
     size_t getPassword() const { return Password; }
     long int getCurrentScore() const { return Score; }
 };
-#endif USER_H
+#endif

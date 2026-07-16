@@ -11,4 +11,4 @@ private:
 public:
     size_t ConvertToHash(const string &);
 };
-#endif HASH_H
+#endif

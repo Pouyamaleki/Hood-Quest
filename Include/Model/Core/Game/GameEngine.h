@@ -17,7 +17,8 @@
 #include "AStar.h"
 
 using namespace std;
-class Gameengine
+
+class gameEngine
 {
 private:
 public:

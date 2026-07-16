@@ -3,9 +3,9 @@
 int main()
 {
     // create engine of the game
-    Gameengine engine;
+    gameEngine engine;
     // start the game loop
     engine.GameLoop();
-    
+
     return 0;
 }

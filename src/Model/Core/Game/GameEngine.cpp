@@ -1,7 +1,7 @@
 #include "GameEngine.h"
 #include "SaveLoadManager.h"
 
-void Gameengine::GameLoop()
+void gameEngine::GameLoop()
 {
     Usermanager usermanager;
 

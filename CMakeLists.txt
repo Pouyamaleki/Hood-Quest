@@ -32,3 +32,25 @@ ${SOURCE_DIR}/Model/Users/User.cpp
 ${SOURCE_DIR}/Model/Users/UserManager.cpp
 ${SOURCE_DIR}/view/CLIView.cpp
 )
+
+#initialize the haeder files
+set(HEADERS
+${INCLUDE_DIR}/Controller/InputHandler.h
+${INCLUDE_DIR}/Controller/SaveLoadManager.h
+${INCLUDE_DIR}/Model/Algorithm/PathFinders/AStar.h
+${INCLUDE_DIR}/Model/Algorithm/PathFinders/Dijkstra.h
+${INCLUDE_DIR}/Model/Algorithm/BFS.h
+${INCLUDE_DIR}/Model/Core/Characters/Player.h
+${INCLUDE_DIR}/Model/Core/Characters/Wolf.h
+${INCLUDE_DIR}/Model/Core/Game/GameEngine.h
+${INCLUDE_DIR}/Model/Core/Game/GameState.h
+${INCLUDE_DIR}/Model/Core/Game/Move.h
+${INCLUDE_DIR}/Model/DataStrucure/BST.h
+${INCLUDE_DIR}/Model/DataStrucure/Graph.h
+${INCLUDE_DIR}/Model/DataStrucure/Maxheap.h
+${INCLUDE_DIR}/Model/DataStrucure/Stack.h
+${INCLUDE_DIR}/Model/Users/Hash.h
+${INCLUDE_DIR}/Model/Users/User.h
+${INCLUDE_DIR}/Model/Users/UserManager.h
+${INCLUDE_DIR}/view/CLIView.h
+)

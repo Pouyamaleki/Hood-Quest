@@ -24,4 +24,4 @@ public:
     vector<char> getPath() const; // AStarPath getter method
 };
 
-#endif ASTAR_H
+#endif

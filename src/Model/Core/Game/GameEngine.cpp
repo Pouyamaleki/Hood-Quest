@@ -77,7 +77,7 @@ void gameEngine::GameLoop()
             case 'V':
                 if (move.movePlayer(graph, player, wolf, CurrentOrder, path))
                 {
-                    if (gamestate.reachedDestinatio(player) || gamestate.wolfBlock(player, wolf))
+                    if (gamestate.reachedDestination(player) || gamestate.wolfBlock(player, wolf))
                     {
                         cout << "game is finish.";
                         int idx = usermanager.SearchUser(CurrentUser);

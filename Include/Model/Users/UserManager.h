@@ -27,7 +27,7 @@ public:
     int SearchUser(const string &);                  // a method to search between the users
     void SetUserScore(const string &, long int);
 
-    long int GetUserScore(int idx) { Users[idx].getCurrentScore(); }
+    long int GetUserScore(int idx) { return Users[idx].getCurrentScore(); }
     void increaseNumofUser() { Numofuser++; } // increase the number of users
 
     BST &GetBST() { return bstuser; }

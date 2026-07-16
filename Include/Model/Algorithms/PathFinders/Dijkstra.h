@@ -24,4 +24,4 @@ public:
     vector<char> getPath() const; // a getter method to return the suggested path
 };
 
-#endif DIJKSTRA_H
+#endif

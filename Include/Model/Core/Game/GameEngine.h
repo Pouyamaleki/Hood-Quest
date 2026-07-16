@@ -25,4 +25,4 @@ public:
     void GameLoop();
 };
 
-#endif GAMEENGINE_H
+#endif

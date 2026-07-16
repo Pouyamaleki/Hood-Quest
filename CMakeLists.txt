@@ -65,8 +65,18 @@ ${INCLUDE_DIR}/view/CLIView.h
 # create the executable file
 add_executable(Hood_Quest ${SOURCES} ${HEADERS})
 
-# add header pathes for the compiler
+# add header paths for the compiler
 target_include_directories(Hood_Quest
     PRIVATE 
     ${INCLUDE_DIR}
+    ${INCLUDE_DIR}/Controller
+    ${INCLUDE_DIR}/Model
+    ${INCLUDE_DIR}/Model/Algorithm
+    ${INCLUDE_DIR}/Model/Algorithm/PathFinders
+    ${INCLUDE_DIR}/Model/Core
+    ${INCLUDE_DIR}/Model/Core/Characters
+    ${INCLUDE_DIR}/Model/Core/Game
+    ${INCLUDE_DIR}/Model/DataStrucure
+    ${INCLUDE_DIR}/Model/Users
+    ${INCLUDE_DIR}/view
 )

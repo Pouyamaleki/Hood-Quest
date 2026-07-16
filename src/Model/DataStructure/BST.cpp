@@ -64,3 +64,9 @@ bool BST::updateScore(const string &username, long int newScore)
     node->score = newScore;
     return true;
 }
+
+void BST::clear()
+{
+    destroyHelper(root);
+    root = nullptr;
+}

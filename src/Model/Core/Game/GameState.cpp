@@ -80,7 +80,7 @@ bool wolfBlock(Player &player, Wolf &wolf)
 }
 
 // reached destination method implementation
-bool reachedDestinatio(Player &player)
+bool reachedDestination(Player &player)
 {
     if(player.getPosition() == 'V')
     {

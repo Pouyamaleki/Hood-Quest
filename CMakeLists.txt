@@ -14,30 +14,30 @@ set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -g")
 
 # initialize the directories for source and header files 
-set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # initialize the source files
 set(SOURCES
 ${SOURCE_DIR}/main.cpp
-${SOURCE_DIR}/Controller/InputHandler.cpp
-${SOURCE_DIR}/Controller/SaveLoadManager.cpp
-${SOURCE_DIR}/Model/Algorithm/PathFinders/AStar.cpp
-${SOURCE_DIR}/Model/Algorithm/PathFinders/Dijkstra.cpp
-${SOURCE_DIR}/Model/Algorithm/BFS.cpp
-${SOURCE_DIR}/Model/Core/Characters/Player.cpp
-${SOURCE_DIR}/Model/Core/Characters/Wolf.cpp
-${SOURCE_DIR}/Model/Core/Game/GameEngine.cpp
-${SOURCE_DIR}/Model/Core/Game/GameState.cpp
-${SOURCE_DIR}/Model/Core/Game/Move.cpp
-${SOURCE_DIR}/Model/DataStrucure/BST.cpp
-${SOURCE_DIR}/Model/DataStrucure/Graph.cpp
-${SOURCE_DIR}/Model/DataStrucure/Maxheap.cpp
-${SOURCE_DIR}/Model/DataStrucure/Stack.cpp
-${SOURCE_DIR}/Model/Users/Hash.cpp
-${SOURCE_DIR}/Model/Users/User.cpp
-${SOURCE_DIR}/Model/Users/UserManager.cpp
-${SOURCE_DIR}/view/CLIView.cpp
+${SOURCE_DIR}/src/Controller/InputHandler.cpp
+${SOURCE_DIR}/src/Controller/SaveLoadManager.cpp
+${SOURCE_DIR}/src/Model/Algorithm/PathFinders/AStar.cpp
+${SOURCE_DIR}/src/Model/Algorithm/PathFinders/Dijkstra.cpp
+${SOURCE_DIR}/src/Model/Algorithm/BFS.cpp
+${SOURCE_DIR}/src/Model/Core/Characters/Player.cpp
+${SOURCE_DIR}/src/Model/Core/Characters/Wolf.cpp
+${SOURCE_DIR}/src/Model/Core/Game/GameEngine.cpp
+${SOURCE_DIR}/src/Model/Core/Game/GameState.cpp
+${SOURCE_DIR}/src/Model/Core/Game/Move.cpp
+${SOURCE_DIR}/src/Model/DataStrucure/BST.cpp
+${SOURCE_DIR}/src/Model/DataStrucure/Graph.cpp
+${SOURCE_DIR}/src/Model/DataStrucure/Maxheap.cpp
+${SOURCE_DIR}/src/Model/DataStrucure/Stack.cpp
+${SOURCE_DIR}/src/Model/Users/Hash.cpp
+${SOURCE_DIR}/src/Model/Users/User.cpp
+${SOURCE_DIR}/src/Model/Users/UserManager.cpp
+${SOURCE_DIR}/src/view/CLIView.cpp
 )
 
 # initialize the header files

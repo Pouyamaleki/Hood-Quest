@@ -5,6 +5,13 @@ project(MyProject VERSION 1.0.0)
 # C++ settings
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# build type for debug or release
+set(CMAKE_BUILD_TYPE Debug)
+
+# compiler flags for debugging
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -g")
 
 # initialize the directories for source and header files 
 set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
@@ -33,7 +40,7 @@ ${SOURCE_DIR}/Model/Users/UserManager.cpp
 ${SOURCE_DIR}/view/CLIView.cpp
 )
 
-# initialize the haeder files
+# initialize the header files
 set(HEADERS
 ${INCLUDE_DIR}/Controller/InputHandler.h
 ${INCLUDE_DIR}/Controller/SaveLoadManager.h
@@ -59,7 +66,7 @@ ${INCLUDE_DIR}/view/CLIView.h
 add_executable(Hood_Quest ${SOURCES} ${HEADERS})
 
 # add header pathes for the compiler
-target_include_directories(my_program 
+target_include_directories(Hood_Quest
     PRIVATE 
     ${INCLUDE_DIR}
 )

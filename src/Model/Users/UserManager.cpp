@@ -40,7 +40,6 @@ bool Usermanager::LoginUser(const string &username, const string &pass)
     // check if the password is right
     if (Users[index].getPassword() == HPass)
     {
-        cout << "Login Successful!" << endl;
         return true;
     }
 

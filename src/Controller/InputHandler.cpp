@@ -19,6 +19,15 @@ string InputHandler::MainHandler()
             cout << "Enter password: ";
             cin >> password;
             userManager.CreateUser(username, password);
+
+            // auto automaticlly login thse user after creating account
+            if (userManager.LoginUser(username, password))
+            {
+                cout << "Login Successful!\n";
+                return username;
+            }
+            
+            cerr << "Auto login failed please login manually!\n";
             break;
         case 2:
             cout << "Enter username: ";
@@ -32,8 +41,7 @@ string InputHandler::MainHandler()
             }
             else
             {
-                cout << "Login Failed!\n"
-                     << endl;
+                cout << "Login Failed!\n" << endl;
                 break;
             }
         case 3:

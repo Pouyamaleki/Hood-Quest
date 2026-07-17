@@ -86,11 +86,7 @@ bool Move::movePlayer(const Graph &graph, Player &player, Wolf &wolf, char nextP
     {
         player.setPosition(nextPosition);
 
-        // get player and wolf position
-        char playerPosition = player.getPosition();
-        char wolfPosition = wolf.getPosition();
-
-        // createpath algorithm variable
+        // create path algorithm variable
         char pathAlgorithm = ' ';
 
         // if condition to check the path is empty or no
@@ -100,7 +96,7 @@ bool Move::movePlayer(const Graph &graph, Player &player, Wolf &wolf, char nextP
         }
 
         // if consition to campare the Blocks
-        if (playerPosition == pathAlgorithm)
+        if (player.getPosition() == pathAlgorithm)
         {
             player.addScore(3);
             return true;

@@ -24,7 +24,7 @@ void gameEngine::GameLoop()
     cli.PrintMainMenu();
     string CurrentUser = input.MainHandler();
 
-    Player player(CurrentUser, 'a', 0);
+    Player player(CurrentUser, 'a');
     Wolf wolf('d');
     GameState gamestate(player, wolf);
 
@@ -97,8 +97,8 @@ void gameEngine::GameLoop()
                     break;
                 }
             default:
-                cout
-                    << "Invalid order selected\n";
+                cout<< "Invalid order selected\n";
+                break;
             }
         }
     }

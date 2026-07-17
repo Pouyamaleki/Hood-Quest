@@ -9,7 +9,7 @@ void save(const Usermanager &usermanager, const string &file)
         return;
     }
 
-    for (int i = 0; i < usermanager.Users.size(); i++)
+    for (size_t i = 0; i < usermanager.Users.size(); i++)
     {
         ofs << usermanager.Users[i].getUsername() << "\n";
         ofs << usermanager.Users[i].getPassword() << "\n";
@@ -46,7 +46,7 @@ void load(Usermanager &usermanager, const string &file)
     usermanager.bstuser.clear();
     usermanager.maxheapuser.clear();
 
-    for (int i = 0; i < usermanager.Users.size(); i++)
+    for (size_t i = 0; i < usermanager.Users.size(); i++)
     {
         const string &uname = usermanager.Users[i].getUsername();
         long int uscore = usermanager.Users[i].getCurrentScore();

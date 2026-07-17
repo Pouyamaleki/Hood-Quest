@@ -228,7 +228,7 @@ void AStar::AStarprintPath(const Graph &graph, char from, char to, char wolfPosi
 
     // print output
     cout << "A* recommended path:" << endl;
-    for (int i = 0; i < AStarpath.size(); i++)
+    for (size_t i = 0; i < AStarpath.size(); i++)
     {
         cout << AStarpath[i];
         if (i < AStarpath.size() - 1)

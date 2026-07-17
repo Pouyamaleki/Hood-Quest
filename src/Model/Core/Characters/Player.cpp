@@ -1,13 +1,13 @@
 #include "Player.h"
 
 // Player constructor implementation
-Player::Player(std::string PlayerName, char PlayerPosition , int score)
+Player::Player(std::string PlayerName, char PlayerPosition)
 {
-    setPlayer(PlayerName , PlayerPosition , score);
+    setPlayer(PlayerName , PlayerPosition);
 }
 
 // set Player method implementation
-void Player::setPlayer(std::string name, char position, int score)
+void Player::setPlayer(std::string name, char position)
 {
     setName(name);
     setPosition(position);

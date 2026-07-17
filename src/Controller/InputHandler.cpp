@@ -59,13 +59,15 @@ string InputHandler::MainHandler()
         }
     }
 }
-char InputHandler::CurrentHandler()
+string InputHandler::CurrentHandler()
 {
-    char node;
-    cout << "Which node do you want to go to (node name = char) or do you want to return (Undo = 0):\n";
-    cin >> node; // take the input from the user
-                 // but cliview only disply the graph and the selection of options
-                 // name of node (char) or undo (0)
+    string order;
+    cout << "destination node (Type node name).\n"
+         << "Undo (Type Undo).\n";
+
+    cin >> order; // take the input from the user
+                  // but cliview only disply the graph and the selection of options
+                  // name of node (char) or undo (0)
 
     // if the input was not valid
     if (cin.fail())
@@ -75,7 +77,7 @@ char InputHandler::CurrentHandler()
         cout << "Invalid input! Please enter a character.\n";
         return '\0'; // invalid value
     }
-    return node;
+    return order;
 }
 
 bool InputHandler::SelectModeofAlghorithms()

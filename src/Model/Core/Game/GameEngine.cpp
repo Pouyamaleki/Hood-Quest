@@ -3,7 +3,7 @@
 
 void gameEngine::GameLoop()
 {
-    if(!fileChecker())
+    if (!fileChecker())
     {
         cerr << "Save file could not be created.\n";
         return;
@@ -55,34 +55,20 @@ void gameEngine::GameLoop()
                 path = astar.getPath();
                 break;
             }
-            char CurrentOrder = input.CurrentHandler();
-            switch (CurrentOrder)
+            string CurrentOrder = input.CurrentHandler();
+            if (CurrentOrder == "Undo")
             {
-            case '0':
                 cout << "Undo selected\n";
                 gamestate.undo(player, wolf, stack);
-                break;
-            case 'A':
-            case 'B':
-            case 'C':
-            case 'D':
-            case 'E':
-            case 'F':
-            case 'G':
-            case 'J':
-            case 'K':
-            case 'M':
-            case 'W':
-            case 'O':
-            case 'P':
-            case 'Q':
-            case 'R':
-            case 'S':
-            case 'T':
-            case 'U':
-            case 'V':
+            }
+            else if (CurrentOrder == "A" || CurrentOrder == "B" || CurrentOrder == "C" || CurrentOrder == "D" || 
+                     CurrentOrder == "E" || CurrentOrder == "F" || CurrentOrder == "G" || CurrentOrder == "J" || 
+                     CurrentOrder == "K" || CurrentOrder == "M" || CurrentOrder == "W" || CurrentOrder == "O" || 
+                     CurrentOrder == "P" || CurrentOrder == "Q" || CurrentOrder == "R" || CurrentOrder == "S" || 
+                     CurrentOrder == "T" || CurrentOrder == "U" || CurrentOrder == "V")
+            {
                 stack.push(player.getPosition(), wolf.getPosition());
-                if (move.movePlayer(graph, player, wolf, CurrentOrder, path))
+                if (move.movePlayer(graph, player, wolf, CurrentOrder[0], path))
                 {
                     move.moveWolf(graph, wolf, player);
 
@@ -103,11 +89,10 @@ void gameEngine::GameLoop()
                     }
 
                     cout << "The move was successful.\n";
-
-                    break;
                 }
-                break;
-            default:
+            }
+            else
+            {
                 cout << "Invalid order selected\n";
             }
         }

@@ -96,9 +96,9 @@ void gameEngine::GameLoop()
                     cout << "The move was successful.\n";
                     break;
                 }
-            default:
-                cout<< "Invalid order selected\n";
                 break;
+            default:
+                cout << "Invalid order selected\n";
             }
         }
     }

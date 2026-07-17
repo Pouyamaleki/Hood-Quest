@@ -90,7 +90,7 @@ bool Move::movePlayer(const Graph &graph, Player &player, Wolf &wolf, char nextP
         char pathAlgorithm = ' ';
 
         // if condition to check the path is empty or no
-        if (path.empty())
+        if (!path.empty())
         {
             pathAlgorithm = path.front();
         }

@@ -11,7 +11,7 @@ void gameEngine::GameLoop()
 
     Usermanager usermanager;
 
-    load(usermanager, "save.txt");
+    load(usermanager, "..\\src\\Controller\\save.txt");
 
     BST &bst = usermanager.GetBST();
     MaxHeap &maxheap = usermanager.GetMaxHeap();
@@ -93,7 +93,7 @@ void gameEngine::GameLoop()
                         bst.updateScore(CurrentUser, newscore);
                         maxheap.updateScore(CurrentUser, newscore);
 
-                        save(usermanager, "save.txt");
+                        save(usermanager, "..\\src\\Controller\\save.txt");
 
                         cli.PrintLeaderboard();
                         return;

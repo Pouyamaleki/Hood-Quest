@@ -65,6 +65,15 @@ char InputHandler::CurrentHandler()
     cin >> node; // take the input from the user
                  // but cliview only disply the graph and the selection of options
                  // name of nude (char) or undo (0)
+
+    // if the input was not valid
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid input! Please enter a character.\n";
+        return '\0';  // invalid value
+    }
     return node;
 }
 

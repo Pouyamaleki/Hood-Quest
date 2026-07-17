@@ -41,28 +41,25 @@ void gameEngine::GameLoop()
         while (true)
         {
             cli.displayGraph(player.getPosition(), wolf.getPosition());
-
+            mode = input.SelectModeofAlghorithms();
+            switch (mode)
+            {
+            case true:
+                cout << "Dijkstra selected\n";
+                dijkstraa.dijkstraPrintPath(graph, player.getPosition(), 'V', wolf.getPosition());
+                path = dijkstraa.getPath();
+                break;
+            case false:
+                cout << "A* selected\n";
+                astar.AStarprintPath(graph, player.getPosition(), 'V', wolf.getPosition());
+                path = astar.getPath();
+                break;
+            }
             string CurrentOrder = input.CurrentHandler();
-            if (CurrentOrder == "Undo")
+            if (CurrentOrder == "UNDO")
             {
                 cout << "Undo selected\n";
                 gamestate.undo(player, wolf, stack);
-            }
-            else if (CurrentOrder == "Dijk" || CurrentOrder == "Astar")
-            {
-                if (CurrentOrder == "Dijk")
-                {
-                    cout << "Dijkstra selected\n";
-                    dijkstraa.dijkstraPrintPath(graph, player.getPosition(), 'V', wolf.getPosition());
-                    path = dijkstraa.getPath();
-                }
-                else if (CurrentOrder == "Astar")
-                {
-                    cout << "A* selected\n";
-                    astar.AStarprintPath(graph, player.getPosition(), 'V', wolf.getPosition());
-                    path = astar.getPath();
-                    break;
-                }
             }
             else if (CurrentOrder == "A" || CurrentOrder == "B" || CurrentOrder == "C" || CurrentOrder == "D" ||
                      CurrentOrder == "E" || CurrentOrder == "F" || CurrentOrder == "G" || CurrentOrder == "J" ||
@@ -90,11 +87,11 @@ void gameEngine::GameLoop()
                         cli.PrintLeaderboard();
                         return;
                     }
-                    
+
                     cout << "The move was successful.\n";
                 }
             }
-            else if (CurrentOrder == "Exit")
+            else if (CurrentOrder == "EXIT")
             {
                 cout << "Exiting the game\n";
                 return;

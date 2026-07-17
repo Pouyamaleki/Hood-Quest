@@ -82,6 +82,25 @@ string InputHandler::CurrentHandler()
     return order;
 }
 
+bool InputHandler::SelectModeofAlghorithms()
+{
+    char mode;
+    cout << "Select the mode of algorithms: Dijkstra: D or A*: A\n";
+    cin >> mode;
+    switch (mode)
+    {
+    case 'D':
+    case 'd':
+        return true; // Dijkstra mode
+    case 'A':
+    case 'a':
+        return false; // A* mode
+    default:
+        cout << "Invalid mode selected. Defaulting to Dijkstra.\n";
+        return true; // Default to Dijkstra
+    }
+}
+
 void InputHandler::ScoreUser(int searchmode)
 {
     string username;

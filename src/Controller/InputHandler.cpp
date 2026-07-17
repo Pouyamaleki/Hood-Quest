@@ -64,12 +64,9 @@ string InputHandler::CurrentHandler()
     string order;
     cout << "destination node (Type node name).\n"
          << "Undo (Type Undo).\n"
-         << "Exit (Type Exit).\n"
-         << "select the algorithm (Type Dijk for Dijkstra or Astar for A*).\n";
+         << "Exit (Type Exit).\n";
 
-    cin >> order; // take the input from the user
-                  // but cliview only disply the graph and the selection of options
-                  // name of node (char) or undo (0)
+    cin >> order;
 
     // if the input was not valid
     if (cin.fail())
@@ -79,6 +76,12 @@ string InputHandler::CurrentHandler()
         cout << "Invalid input! Please enter a character.\n";
         return '\0'; // invalid value
     }
+
+    for (char &c : order)
+    {
+        c = toupper(c); // Convert to uppercase
+    }
+
     return order;
 }
 

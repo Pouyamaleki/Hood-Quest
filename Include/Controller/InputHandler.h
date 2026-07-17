@@ -2,6 +2,7 @@
 #define INPUTHANDLER_H
 
 #include <iostream>
+#include <cctype>
 #include "UserManager.h"
 #include "BST.h"
 using namespace std;

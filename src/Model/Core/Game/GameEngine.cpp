@@ -93,6 +93,16 @@ void gameEngine::GameLoop()
             }
             else if (CurrentOrder == "EXIT")
             {
+                int idx = usermanager.SearchUser(CurrentUser);
+                long int newscore = player.getScore() + usermanager.GetUserScore(idx);
+
+                usermanager.SetUserScore(CurrentUser, newscore);
+                bst.updateScore(CurrentUser, newscore);
+                maxheap.updateScore(CurrentUser, newscore);
+
+                save(usermanager, "..\\src\\Controller\\save.txt");
+
+                cout << "Game state saved successfully.\n";
                 cout << "Exiting the game\n";
                 return;
             }

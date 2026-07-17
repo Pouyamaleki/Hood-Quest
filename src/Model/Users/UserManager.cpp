@@ -1,4 +1,5 @@
 #include "UserManager.h"
+#include "SaveLoadManager.h"
 
 // create user method implementation
 void Usermanager::CreateUser(const string &username, const string &pass)
@@ -22,6 +23,8 @@ void Usermanager::CreateUser(const string &username, const string &pass)
         // increase the number of users
         Usermanager::increaseNumofUser();
         cout << "User Created Successfully!" << endl;
+
+        save(*this, "..\\src\\Controller\\save.txt");
     }
     else
     {

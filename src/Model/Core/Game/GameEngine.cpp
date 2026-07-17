@@ -81,6 +81,7 @@ void gameEngine::GameLoop()
             case 'T':
             case 'U':
             case 'V':
+                stack.push(player.getPosition(), wolf.getPosition());
                 if (move.movePlayer(graph, player, wolf, CurrentOrder, path))
                 {
                     if (gamestate.reachedDestination(player) || gamestate.wolfBlock(player, wolf))
@@ -100,12 +101,12 @@ void gameEngine::GameLoop()
                     }
 
                     cout << "The move was successful.\n";
-                    
+
                     // wolf movment
                     move.moveWolf(graph, wolf, player);
                     if(gamestate.wolfBlock(player , wolf))
                     {
-                        cout << "============ GAME OVER+++++++++++++++++++\n";
+                        cout << "============== GAME OVER ==============\n";
                         cout << "The wolf caught You!\n";
 
                         // calculate the total score and save it

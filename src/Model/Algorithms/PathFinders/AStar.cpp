@@ -61,44 +61,8 @@ int AStar::heuristic(char from, char to)
 // A* algorithm function implementation
 AStar::AstarResult AStar::AStarAlgorithm(const Graph &graph, char from, char to, char wolfPosition)
 {
-    // create a new graph to remove the wolf position
-    Graph newgraph;
-
-    // a for loop to create the nodes in filtered graph
-    for (const auto &node : graph.getAdjList())
-    {
-        if (node.first != wolfPosition)
-        {
-            newgraph.addNode(node.first);
-        }
-    }
-
-    // a for loop to copy the valid edges
-    for (const auto &node : graph.getAdjList())
-    {
-        char fromNode = node.first;
-        // skip the wolf position node
-        if (fromNode == wolfPosition)
-        {
-            continue;
-        }
-
-        // a for loop to navigate the edges of every node
-        for (const auto &edge : node.second)
-        {
-            char toNode = edge.first;
-            int weight = edge.second;
-
-            // skip the edges that connect to wolf position
-            if (toNode != wolfPosition)
-            {
-                newgraph.addEdge(fromNode, toNode, weight);
-            }
-        }
-    }
-
     // assign the adjacency list
-    const auto &adjList = newgraph.getAdjList();
+    const auto &adjList = graph.getAdjList();
 
     // check for the from and to nodes validation
     if (adjList.find(from) == adjList.end() || adjList.find(to) == adjList.end())
@@ -132,6 +96,12 @@ AStar::AstarResult AStar::AStarAlgorithm(const Graph &graph, char from, char to,
         char currentNode = pq.top().second;
         int currentFScore = pq.top().first;
         pq.pop();
+
+        // ignore the wolf position
+        if(currentNode == wolfPosition)
+        {
+            continue;
+        }
 
         // skip the repeated nodes
         if (currentFScore > fScore[currentNode])
@@ -175,6 +145,12 @@ AStar::AstarResult AStar::AStarAlgorithm(const Graph &graph, char from, char to,
         {
             char nextNode = neighbor.first;
             int weight = neighbor.second;
+
+            // ignore the wolf position
+            if(nextNode == wolfPosition)
+            {
+                continue;
+            }
 
             // new distance from origin to neighbor
             int newDistance = gScore[currentNode] + weight;

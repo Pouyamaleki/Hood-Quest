@@ -17,45 +17,8 @@ struct dijkstra::pathFinderResult
 // dijkstra algorithm function implementation
 dijkstra::dijkstraResult dijkstra::dijkstraAlgorithm(const Graph &graph, char from, char wolfPosition)
 {
-    // create a new graph to remove the wolf position
-    Graph newgraph;
-
-    // a for loop to copy every node in the new graph except the wolf position
-    for (const auto &node : graph.getAdjList())
-    {
-        if (node.first != wolfPosition)
-        {
-            newgraph.addNode(node.first);
-        }
-    }
-
-    // a for loop to copy every edge that is not connected to the wolf position
-    for (const auto &node : graph.getAdjList())
-    {
-        char from = node.first;
-
-        // skip the wolf position node
-        if (from == wolfPosition)
-        {
-            continue;
-        }
-
-        // a second for loop to navigate the vector that contain the edges
-        for (const auto &edge : node.second)
-        {
-            char to = edge.first;
-            int weight = edge.second;
-
-            // skip the nodes that connect to the wolf position
-            if (to != wolfPosition)
-            {
-                newgraph.addEdge(from, to, weight);
-            }
-        }
-    }
-
     // assign an adjacecy list
-    const auto &adjList = newgraph.getAdjList();
+    const auto &adjList = graph.getAdjList();
 
     // create two maps to store the distance and the previous node
     map<char, int> distance;  // map for distance
@@ -83,6 +46,12 @@ dijkstra::dijkstraResult dijkstra::dijkstraAlgorithm(const Graph &graph, char fr
         char currentNode = pq.top().second;
         pq.pop();
 
+        // ignore the wolf position
+        if(currentNode == wolfPosition)
+        {
+            continue;
+        }
+
         // ignore the old inputs
         if (currentDistance > distance[currentNode])
         {
@@ -101,6 +70,12 @@ dijkstra::dijkstraResult dijkstra::dijkstraAlgorithm(const Graph &graph, char fr
         {
             char nextNode = neighbor.first;
             int weight = neighbor.second;
+
+            // ignore the the wolf position
+            if(nextNode == wolfPosition)
+            {
+                continue;
+            }
 
             // check if the new shortest path valid or no
             if (distance[currentNode] + weight < distance[nextNode])

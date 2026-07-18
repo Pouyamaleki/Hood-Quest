@@ -10,6 +10,7 @@ string InputHandler::MainHandler()
     while (true)
     {
         string username, password;
+        cliinput.PrintMainMenu();
         cin >> choice;
         switch (choice)
         {

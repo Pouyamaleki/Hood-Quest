@@ -27,7 +27,6 @@ void gameEngine::GameLoop()
     Dijkstra dijkstra;
     AStar astar;
 
-    cli.PrintMainMenu();
     string CurrentUser = input.MainHandler();
 
     Player player(CurrentUser, 'a');

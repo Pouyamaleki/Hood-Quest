@@ -74,13 +74,8 @@ void gameEngine::GameLoop()
 
                     if (gamestate.reachedDestination(player) || gamestate.wolfBlock(player, wolf))
                     {
-                    #ifdef _WIN32
-                        system("cls");
-                    #else
-                        system("clear");
-                    #endif
                         cli.displayGraph(player.getPosition(), wolf.getPosition());
-                        
+
                         cout << "game is finish.\n";
                         int idx = usermanager.SearchUser(CurrentUser);
                         long int newscore = player.getScore() + usermanager.GetUserScore(idx);
@@ -109,8 +104,8 @@ void gameEngine::GameLoop()
 
                 save(usermanager, "..\\src\\Controller\\save.txt");
 
-                cout << "Game state saved successfully.\n";
-                cout << "Exiting the game\n";
+                cout << "=========Game state saved successfully=========.\n";
+                cout << "================Exiting the game===============\n";
                 return;
             }
             else

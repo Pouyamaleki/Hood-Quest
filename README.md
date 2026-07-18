@@ -386,7 +386,16 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 ---
 
+<a id="development-team"></a>
 
+### 👥 Development Team
+
+| Developer | Role | Contributions |
+|-----------|------|---------------|
+| [**Pouya Maleki**](https://github.com/Pouyamaleki) 
+ 
+
+---
 
 ### Windows Installation
 

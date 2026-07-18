@@ -58,8 +58,15 @@ void gameEngine::GameLoop()
             string CurrentOrder = input.CurrentHandler();
             if (CurrentOrder == "UNDO")
             {
-                cout << "Undo selected\n";
-                gamestate.undo(player, wolf, stack);
+                if (stack.isEmpty())
+                {
+                    cout << "You have not done any move in the game \n";
+                }
+                else
+                {
+                    cout << "Undo selected\n";
+                    gamestate.undo(player, wolf, stack);
+                }
             }
             else if (CurrentOrder == "A" || CurrentOrder == "B" || CurrentOrder == "C" || CurrentOrder == "D" ||
                      CurrentOrder == "E" || CurrentOrder == "F" || CurrentOrder == "G" || CurrentOrder == "J" ||

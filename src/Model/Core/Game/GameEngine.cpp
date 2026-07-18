@@ -81,7 +81,7 @@ void gameEngine::GameLoop()
                     #endif
                         cli.displayGraph(player.getPosition(), wolf.getPosition());
                         
-                        cout << "game is finish.";
+                        cout << "game is finish.\n";
                         int idx = usermanager.SearchUser(CurrentUser);
                         long int newscore = player.getScore() + usermanager.GetUserScore(idx);
 

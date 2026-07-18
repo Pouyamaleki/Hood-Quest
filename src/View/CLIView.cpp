@@ -35,7 +35,7 @@ void Cliview::PrintLeaderboard()
 {
     pair<string, long int> maxuser;
     maxuser = maxheapview.getTop();
-    cout << " The name of top user is " << maxuser.first << "and its score: " << maxuser.second << endl;
+    cout << " Top Player: " << maxuser.first << "\n Score = " << maxuser.second << endl;
 }
 
 string Cliview::GetColorNode(char currentNode, char playerpos, char wolfpos)

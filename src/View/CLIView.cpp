@@ -57,6 +57,7 @@ string Cliview::GetColorNode(char currentNode, char playerpos, char wolfpos)
 
 void Cliview::displayGraph(char playerpos, char wolfpos)
 {
+    cout << "\033[H";
     cout << "====================== HOODQUEST MAP ======================\n";
     cout << "  " << RED << "[Red Riding Hood: " << playerpos << "]" << RESET
          << "   " << BLUE << "[Wolf: " << wolfpos << "]" << RESET << "\n";

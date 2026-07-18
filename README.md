@@ -21,7 +21,7 @@ This project was developed as the final project for the **"Data Structures & Alg
 - Earn the highest score by following optimal paths
 - Compete with other players through the leaderboard system
 
-<br>
+---
 
 ## 📋 Table of Contents
 
@@ -128,6 +128,8 @@ HOOD_QUEST/
 │
 ├── 📜CMakeLists.txt
 │
+├── 📜LICENSE
+│
 ├── 📄main.cpp
 │
 └── 📜README.md
@@ -144,7 +146,7 @@ HOOD_QUEST/
 - **Persistent Storage**: User data automatically saved to `save.txt`
 - **Score Tracking**: Individual player scores maintained across sessions
 
-<br>
+---
 
 ### 🧠 Advanced Algorithms
 
@@ -179,6 +181,8 @@ HOOD_QUEST/
 - **Interactive Map**: Color-coded display showing player and wolf positions
 
 ---
+
+<br>
 
 <a id="game-map"></a>
 
@@ -251,16 +255,9 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 
 ### Windows Installation
 
-#### Clone the Repository
-
 ```bash
 git clone <repository url>
 cd Hood_Quest
-```
-
-#### How To Run the Code:
-
-```bash
 mkdir build                    # Create the build Folder
 cd build                       # Move to build Folder
 cmake .. -G "MinGW Makefiles"  # Generate make files in build Folder
@@ -278,6 +275,8 @@ make             # Compile the code
 ./Hood_Quest     # Run the executable
 ```
 ---
+
+<br>
 
 <a id="game-guide"></a>
 
@@ -400,8 +399,6 @@ Total distance: 18
 
 ```
 
-<br>
-
 <a id="technical-details"></a>
 
 ## 🔧 Technical Details
@@ -417,6 +414,8 @@ A* (A-Star) is a heuristic-based pathfinding algorithm that extends Dijkstra's a
 ### 📐 BFS Algorithm
 
 Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes level by level, guaranteeing the shortest path in terms of the number of edges (unweighted). In HoodQuest, BFS is specifically utilized for the enemy AI (Wolf movement). When activated (based on a dice roll), the wolf uses BFS to find the shortest edge-based path to the player's current position. It returns the immediate next node the wolf should move to, ensuring the wolf relentlessly chases the player step-by-step through the forest. This creates a challenging dynamic where the player must constantly outmaneuver the pursuing wolf.
+
+---
 
 <br>
 
@@ -435,14 +434,16 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 ---
 
+<br>
+
 <a id="development-team"></a>
 
 ### 👥 Development Team
 
 | Developer | Role | Contributions |
 |-----------|------|---------------|
-| **[Pouya Maleki]** | Game Engine & Algorithms | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Graph and Stack systems |
-| **[Abbas Ashoury]** | UI & Data Management | • CLI interface design<br>• BST & MaxHeap implementation<br>• Save/Load system<br>• Map visualization |
+| **Pouya Maleki** | Game Engine & Algorithms | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Graph and Stack systems |
+| **Abbas Ashoury** | UI & Data Management | • CLI interface design<br>• BST & MaxHeap implementation<br>• Save/Load system<br>• Map visualization |
 
 ---
 
@@ -450,10 +451,15 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 <a id="license"></a>
 
-## License
+## 📝 License
 
-📝 License
-This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/MIT_License) - see the LICENSE file for details.
+This project is licensed under the MIT License  
+Feel Free to:  
+- Use
+- Modify
+- Distribute
+The program under the conditions of MIT License
+see the [LICENSE]() text more for details.
 
 ---
 

@@ -29,6 +29,7 @@ This project was developed as the final project for the **"Data Structures & Alg
 - [Project Structure](#project-structure)
 - [Key Features](#key-features)
 - [Game Map](#game-map)
+- [Leaderboard](#leaderboard)
 - [Installation & Setup](#installation-setup)
 - [Game Guide](#game-guide)
 - [How It Works](#how-it-work)
@@ -211,6 +212,16 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 |------|----------|
 | **V** | 🏠 Grandma's House (Destination) |
 | **A-U** | Forest Nodes (Paths) |
+
+---
+
+<a id="leaderboard"></a>
+
+## 🏆 Leaderboard Preview
+
+![Leaderboard](screenshots/Leaderboard.png)
+
+*The leaderboard displays the player with the highest score, fetched efficiently using the MaxHeap data structure.*
 
 ---
 

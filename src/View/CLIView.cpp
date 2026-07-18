@@ -7,12 +7,12 @@ CliView::CliView(Usermanager &usermanager, MaxHeap &maxheap)
 void CliView::PrintMainMenu()
 {
     std::cout << " ====================== welcome to this game ======================\n";
-    std::cout << " >> please select an option:\n";
-    std::cout << " >>> 1: crate a new user:\n";
-    std::cout << " >>> 2: login:\n";
-    std::cout << " >>> 3: Show leaderboard:\n"; // to display all users by rating. Not just the top player.
-    std::cout << " >>> 4: Print score of desired user:\n";
-    std::cout << " >>> 5: exit:\n";
+    std::cout << " >> please select an option\n";
+    std::cout << " >>> 1: crate a new user\n";
+    std::cout << " >>> 2: login\n";
+    std::cout << " >>> 3: Show leaderboard\n"; // to display all users by rating. Not just the top player.
+    std::cout << " >>> 4: Print score of desired user\n";
+    std::cout << " >>> 5: exit\n";
 }
 
 void CliView::PrintScore() // display the score of a desired player with linear search or BST DataType

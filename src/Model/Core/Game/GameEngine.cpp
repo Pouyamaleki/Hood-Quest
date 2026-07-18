@@ -3,6 +3,8 @@
 
 void gameEngine::GameLoop()
 {
+    system("cls");
+    
     if (!fileChecker())
     {
         cerr << "<<<< Save file could not be created.\n";

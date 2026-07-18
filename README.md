@@ -34,8 +34,8 @@ This project was developed as the final project for the **"Data Structures & Alg
 - [How It Works](#how-it-work)
 - [Technical Details](#technical-details)
 - [Development Team](#development-team)
-- [Licence](#licence)
-- [Acknowlegment](#acknowledgment)
+- [License](#license)
+- [Acknowledgment](#acknowledgment)
 - [Show Your Support](#show-your-support)
 
 
@@ -44,6 +44,8 @@ This project was developed as the final project for the **"Data Structures & Alg
 
 ## 📂 Project Structure
 
+__
+
 ```
 HOOD_QUEST/
 │
@@ -51,7 +53,7 @@ HOOD_QUEST/
 │   │
 │   ├──📂Controller/
 │   │   ├── 📄InputHandler.h
-│   │   └── 📄InputHandler.h
+│   │   └── 📄SaveLoadManager.h
 │   │
 │   ├── 📂Model/
 │   │   │
@@ -85,13 +87,11 @@ HOOD_QUEST/
 │       └── 📄CLIView.h
 │
 ├── 📂src/
-│
-├── 📂Include/
 │   │
 │   ├──📂Controller/
 │   │   ├── 📄InputHandler.cpp
 │   │   ├── 📜save.txt
-│   │   └── 📄InputHandler.cpp
+│   │   └── 📄SaveLoadManager.cpp
 │   │
 │   ├── 📂Model/
 │   │   │
@@ -164,7 +164,7 @@ HOOD_QUEST/
 |-----------|-------|
 | **BST** | Fast user search and score updates |
 | **MaxHeap** | Leaderboard (top player display) |
-| **Hash Table** | Secure password storage |
+| **Password Hashing** | Secure password storage |
 | **Stack** | Undo functionality (move history) |
 
 ---
@@ -194,27 +194,6 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 
 ---
 
-### 🧠 Advanced Algorithms
-
-| Algorithm | Purpose | Application |
-|-----------|---------|-------------|
-| **Dijkstra** | Shortest path finding | Recommends optimal route to destination |
-| **A*** | Heuristic-based pathfinding | Smarter route recommendation with estimated distances |
-| **BFS** | Breadth-first search | Wolf movement towards player |
-
----
-
-### 📊 Data Structures
-
-| Structure | Usage |
-|-----------|-------|
-| **BST** | Fast user search and score updates |
-| **MaxHeap** | Leaderboard (top player display) |
-| **Hash Table** | Secure password storage |
-| **Stack** | Undo functionality (move history) |
-
----
-
 ### 🗺️ Map Legend
 
 | Color | Entity |
@@ -222,7 +201,7 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 | 🔴 **Red** | Red Riding Hood (Player) |
 | 🔵 **Blue** | The Wolf |
 | ⚪ **White** | Empty/Regular Node |
-| 🟡 **Yellow** | Hit Node (Wolf and Player are in the same Node)|
+| 🟡 **Yellow** | Hit Node (When the Wolf catch the Player)|
 
 ---
 
@@ -234,8 +213,6 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 | **A-U** | Forest Nodes (Paths) |
 
 ---
-
-<br>
 
 <a id="installation-setup"></a>
 
@@ -274,13 +251,11 @@ make             # Compile the code
 ```
 ---
 
-<br>
-
 <a id="game-guide"></a>
 
 ## 🎮 Game Guide
 
-### 🎮 Main Menu Options
+### 📋 Main Menu Options
 
 | Option | Description |
 |--------|-------------|
@@ -302,15 +277,6 @@ make             # Compile the code
 
 ---
 
-### 🧩 Algorithm Selection
-
-| Option | Algorithm | Best For |
-|--------|-----------|----------|
-| **D** | Dijkstra | Guaranteed shortest path |
-| **A** | A* | Faster pathfinding with heuristic |
-
----
-
 ### Game Flow
 
 1️⃣ **Login/Create** an account  
@@ -321,8 +287,6 @@ make             # Compile the code
 6️⃣ **Avoid** the wolf at all costs!
 
 ---  
-
-<br>
 
 <a id="how-it-work"></a>
 
@@ -415,8 +379,6 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 ---
 
-<br>
-
 <a id="data-structure-operations"></a>
 
 ## ⚡Data Structure Operations
@@ -432,8 +394,6 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 ---
 
-<br>
-
 <a id="development-team"></a>
 
 ### 👥 Development Team
@@ -445,8 +405,6 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 ---
 
-<br>
-
 <a id="license"></a>
 
 ## 📝 License
@@ -457,20 +415,20 @@ Feel Free to:
 - Modify
 - Distribute
 The program under the conditions of MIT License
-see the [LICENSE](https://github.com/Pouyamaleki/Hood-Quest/tree/master?tab=MIT-1-ov-file) text more for details.
+see the [LICENSE](LICENSE) text more for details.
 
 ---
 
 <a id="acknowledgment"></a>
 
-## 🧠 Acknowlegment
+## 🧠 Acknowledgment
 
 - **Professor**: Dr. Ali Javidani - Data Structure and Algorithms course  
-- **Univercity**: [Bu-Ali Sina](www.basu.ac.ir) Univercity  
+- **University**: [Bu-Ali Sina](https://www.basu.ac.ir) 
 - **Resources**:  
-    - [GeeksforGeeks](https://www.geeksforgeeks.org) - Algorithms refrences  
-    - [cpp Refrence](https://en.cppreference.com) - Documentation  
-    - [Stack Oveflow](https://stackoverflow.com) - Programing resources  
+    - [GeeksforGeeks](https://www.geeksforgeeks.org) - Algorithms references  
+    - [cpp Reference](https://en.cppreference.com) - Documentation  
+    - [Stack Overflow](https://stackoverflow.com) - Programming resources  
 
 
 ---

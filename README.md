@@ -141,6 +141,8 @@ HOOD_QUEST/
 - **Persistent Storage**: User data automatically saved to `save.txt`
 - **Score Tracking**: Individual player scores maintained across sessions
 
+<br>
+
 ### 🧠 Advanced Algorithms
 
 | Algorithm | Purpose | Application |
@@ -159,6 +161,7 @@ HOOD_QUEST/
 | **Hash Table** | Secure password storage |
 | **Stack** | Undo functionality (move history) |
 
+<br>
 
 ### 🎮 Game Mechanics
 
@@ -183,6 +186,8 @@ HOOD_QUEST/
 
 _The map displays all 19 nodes with weighted edges connecting them. Red indicates Red Riding Hood's position, and Blue indicates the Wolf's position._
 
+<br>
+
 ### 🧠 Advanced Algorithms
 
 | Algorithm | Purpose | Application |
@@ -191,6 +196,7 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 | **A*** | Heuristic-based pathfinding | Smarter route recommendation with estimated distances |
 | **BFS** | Breadth-first search | Wolf movement towards player |
 
+<br>
 
 ### 📊 Data Structures
 
@@ -201,6 +207,7 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 | **Hash Table** | Secure password storage |
 | **Stack** | Undo functionality (move history) |
 
+<br>
 
 ### 🗺️ Map Legend
 
@@ -209,7 +216,9 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 | 🔴 **Red** | Red Riding Hood (Player) |
 | 🔵 **Blue** | The Wolf |
 | ⚪ **White** | Empty/Regular Node |
+| 🟡 **Yellow** | Hit Node (Wolf and Player are in the same Node)|
 
+<br>
 
 ### 📍 Node Information
 
@@ -218,25 +227,32 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 | **V** | 🏠 Grandma's House (Destination) |
 | **A-U** | Forest Nodes (Paths) |
 
+<br>
+
 <a id="installation-setup"></a>
 
 ## 🚀 Installation & Setup
 
 ### Prerequisites
 
-- [**MinGW32**](https://sourceforge.net/projects/mingw/) or any other c++ compiler
-- [**CMake**](https://cmake.org/download/) for easier run
-- [**Git**](https://git-scm.com/install/)
+- [**MinGW32**](https://sourceforge.net/projects/mingw/) - or any other C++ Compiler
+- [**CMake**](https://cmake.org/download/) - for easier Run
+- [**Git**](https://git-scm.com/install/) - to clone the codes
 - Any code editor like [**VSCode**](https://code.visualstudio.com/download)
-- **Terminal/Command Prompt** with ANSI color support (for colored display)
+- **Terminal/Command Prompt** with ANSI color support - for colored display
+
+<br>
 
 ### Windows Installation
 
+#### Clone the Repository
+
 ```bash
-# Clone the repository
 git clone <repository url>
-cd Hood_Quest # Move to Hood_Quest Folder
+cd Hood_Quest
 ```
+
+#### Run the Code
 
 ```bash
 mkdir build                    # Create the build Folder
@@ -255,6 +271,7 @@ cmake ..         # Generate Makefiles
 make             # Compile the code
 ./Hood_Quest     # Run the executable
 ```
+---
 
 <a id="game-guide"></a>
 
@@ -270,6 +287,7 @@ make             # Compile the code
 | **4** | Check User Score |
 | **5** | Exit Game |
 
+<br>
 
 ### 🕹️ Game Controls
 
@@ -279,6 +297,7 @@ make             # Compile the code
 | **UNDO** | Revert to previous position (-2 points) |
 | **EXIT** | Save progress and exit game |
 
+<br>
 
 ### 🧩 Algorithm Selection
 
@@ -286,6 +305,8 @@ make             # Compile the code
 |--------|-----------|----------|
 | **D** | Dijkstra | Guaranteed shortest path |
 | **A** | A* | Faster pathfinding with heuristic |
+
+<br>
 
 ### Game Flow
 
@@ -295,6 +316,8 @@ make             # Compile the code
 4️⃣ **Move** to adjacent nodes or use **Undo**  
 5️⃣ **Reach** Grandmother's house (V) to win  
 6️⃣ **Avoid** the wolf at all costs!
+
+---  
 
 <a id="how-it-work"></a>
 
@@ -367,25 +390,29 @@ Total distance: 18
 
 ```
 
+<br>
+
 <a id="technical-details"></a>
 
 ## 🔧 Technical Details
 
-### Dijkstra's Algorithm
+### 📐 Dijkstra's Algorithm
 
 Dijkstra's algorithm is a classic graph search algorithm that solves the single-source shortest path problem for a graph with non-negative edge weights. In HoodQuest, it is used to calculate the guaranteed shortest path from the player's current position to Grandma's house (Node V). It explores all reachable nodes, systematically assigning cumulative distances to each vertex until the destination is reached. This ensures that the recommended path provided to the player has the absolute minimum total weight (distance), regardless of the wolf's position, giving the player a safe and optimal route to follow.
 
-### A* Algorithm
+### 📐 A* Algorithm
 
 A* (A-Star) is a heuristic-based pathfinding algorithm that extends Dijkstra's approach by using an evaluation function to estimate the cost from a given node to the destination. In HoodQuest, it uses the Euclidean distance as a heuristic to prioritize nodes that are geographically closer to Grandma's house. By combining the actual traveled cost (gScore) with the estimated remaining cost (heuristic), A* often converges to the optimal solution much faster than Dijkstra. This makes it ideal for providing quick, intelligent route recommendations to the player while still guaranteeing the shortest path under the admissible heuristic.
 
-### BFS Algorithm
+### 📐 BFS Algorithm
 
 Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes level by level, guaranteeing the shortest path in terms of the number of edges (unweighted). In HoodQuest, BFS is specifically utilized for the enemy AI (Wolf movement). When activated (based on a dice roll), the wolf uses BFS to find the shortest edge-based path to the player's current position. It returns the immediate next node the wolf should move to, ensuring the wolf relentlessly chases the player step-by-step through the forest. This creates a challenging dynamic where the player must constantly outmaneuver the pursuing wolf.
 
+<br>
+
 <a id="data-structure-operations"></a>
 
-## Data Structure Operations
+## ⚡Data Structure Operations
 
 ### 📊 Data Structure Operations Complexity
 
@@ -396,9 +423,9 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 | **Hash** | O(1) avg | O(1) avg | O(1) avg | O(n) |
 | **Stack** | O(n) | O(1) | O(1) | O(n) |
 
-<a id="development-team"></a>
+---
 
-## Development Team
+<a id="development-team"></a>
 
 ### 👥 Development Team
 
@@ -407,27 +434,31 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 | **[Your Name]** | Game Engine & Algorithms | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Score system |
 | **[Partner's Name]** | UI & Data Management | • CLI interface design<br>• BST & MaxHeap implementation<br>• Save/Load system<br>• Map visualization |
 
-<a id="license"k></a>
+---
+
+<a id="license"></a>
 
 ## License
 
 📝 License
 This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/MIT_License) - see the LICENSE file for details.
 
+---
+
 <a id="contact-us"></a>
 
-## Contact Us
-
-### 📧 Contact & Social Links
+## 📧 Contact & Social Links
 
 | Developer        | Links |
 |------------------|-------|
 | **Pouya Maleki** | [GitHub](https://github.com/Pouyamaleki)<br>[Email](mailto:pouyamaleki85@gmail.com)<br>[LinkedIn](https://www.linkedin.com/in/pouya-maleki-7982b2360/) |
 | **Abbas Ashoury** | [GitHub](https://github.com/Abbasashoury)<br>[Email](mailto:abbasashoury84@gmail.com)<br>[LinkedIn](https://www.linkedin.com/in/abbas-ashoury-2a7259288/) |
 
+---
+
 <a id="acknowledgment"></a>
 
-## Acknowlegment
+## 🧠 Acknowlegment
 
 - **Professor**: Dr. Ali Javidani - Data Structure and Algorithms course  
 - **Univercity**: [bu-ali sina](www.basu.ac.ir) Univercity  
@@ -436,6 +467,8 @@ This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/M
     - [cpp Refrence](https://en.cppreference.com) - Documentation  
     - [Stack Oveflow](https://stackoverflow.com) - Programing resources  
 
+
+---
 
 <a id="show-your-support"></a>
 

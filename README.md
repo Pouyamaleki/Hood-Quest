@@ -30,11 +30,11 @@ This project was developed as the final project for the **"Data Structures & Alg
 - [Key Features](#key-features)
 - [Game Map](#game-map)
 - [Leaderboard](#leaderboard)
-- [Installation & Setup](#installation-setup)
 - [Game Guide](#game-guide)
 - [How It Works](#how-it-work)
 - [Technical Details](#technical-details)
 - [Development Team](#development-team)
+- [Installation & Setup](#installation-setup)
 - [License](#license)
 - [Acknowledgment](#acknowledgment)
 - [Show Your Support](#show-your-support)
@@ -45,7 +45,6 @@ This project was developed as the final project for the **"Data Structures & Alg
 
 ## 📂 Project Structure
 
-__
 
 ```
 HOOD_QUEST/
@@ -239,29 +238,6 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 
 ---
 
-### Windows Installation
-
-```bash
-git clone <repository url>
-cd Hood_Quest
-mkdir build                    # Create the build Folder
-cd build                       # Move to build Folder
-cmake .. -G "MinGW Makefiles"  # Generate make files in build Folder
-mingw32-make                   # compile the codes and make the Hood_Quest.exe in build folder
-./Hood_Quest                   # run Hood_Quest.exe file
-```
-
-### Linux Installation
-
-```bash
-mkdir build      # Create the build Folder
-cd build         # Move to build Folder
-cmake ..         # Generate Makefiles
-make             # Compile the code
-./Hood_Quest     # Run the executable
-```
----
-
 <a id="game-guide"></a>
 
 ## 🎮 Game Guide
@@ -405,15 +381,29 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 ---
 
-<a id="development-team"></a>
 
-### 👥 Development Team
 
-| Developer | Role | Contributions |
-|-----------|------|---------------|
-| **Pouya Maleki** | Game Engine & Algorithms | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Graph and Stack systems |
-| **Abbas Ashoury** | UI & Data Management | • CLI interface design<br>• BST & MaxHeap implementation<br>• Save/Load system<br>• Map visualization |
+### Windows Installation
 
+```bash
+git clone <repository url>
+cd Hood_Quest
+mkdir build                    # Create the build Folder
+cd build                       # Move to build Folder
+cmake .. -G "MinGW Makefiles"  # Generate make files in build Folder
+mingw32-make                   # compile the codes and make the Hood_Quest.exe in build folder
+./Hood_Quest                   # run Hood_Quest.exe file
+```
+
+### Linux Installation
+
+```bash
+mkdir build      # Create the build Folder
+cd build         # Move to build Folder
+cmake ..         # Generate Makefiles
+make             # Compile the code
+./Hood_Quest     # Run the executable
+```
 ---
 
 <a id="license"></a>

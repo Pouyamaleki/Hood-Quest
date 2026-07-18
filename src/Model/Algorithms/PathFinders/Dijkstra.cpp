@@ -162,5 +162,5 @@ void Dijkstra::dijkstraPrintPath(const Graph &graph, char from, char destination
             cout << " -> ";
         }
     }
-    cout << RESET << endl << "total distance with the recommended path is :" << totalDistance << endl;
+    cout << RESET << endl << "total distance with the recommended path is: " << totalDistance << endl;
 }

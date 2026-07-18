@@ -15,7 +15,9 @@ class AStar
 {
 private:
     vector<char> AStarpath;
-
+    
+    const string RESET = "\033[0m";
+    const string GREEN = "\033[1;32m";
 public:
     struct AstarResult; // a struct to store the finall result of A* algorithm
     AstarResult AStarAlgorithm(const Graph &, char, char, char); // A* algorithm function

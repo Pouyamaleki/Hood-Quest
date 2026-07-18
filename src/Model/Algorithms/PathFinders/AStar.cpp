@@ -197,7 +197,7 @@ void AStar::AStarprintPath(const Graph &graph, char from, char to, char wolfPosi
     }
 
     // print output
-    cout << "A* recommended path:" << endl;
+    cout << GREEN << "A* recommended path:" << endl;
     for (size_t i = 0; i < AStarpath.size(); i++)
     {
         cout << AStarpath[i];
@@ -206,5 +206,5 @@ void AStar::AStarprintPath(const Graph &graph, char from, char to, char wolfPosi
             cout << " -> ";
         }
     }
-    cout << endl << "total distance with the recommended path is :" << totalDistance << endl;
+    cout << RESET << endl << "total distance with the recommended path is: " << totalDistance << endl;
 }

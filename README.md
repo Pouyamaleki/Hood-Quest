@@ -1265,7 +1265,7 @@ This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/M
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoodQuest - Contact Links</title>
+    <title>HoodQuest - Developer Contacts</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -1331,9 +1331,10 @@ This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/M
             background-color: #1c2128;
         }
 
-        .highlight {
+        .user-name {
             color: #f0f6fc;
             font-weight: 600;
+            font-size: 15px;
         }
 
         /* Link Styles */
@@ -1341,11 +1342,28 @@ This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/M
             color: #58a6ff;
             text-decoration: none;
             transition: color 0.2s ease;
+            display: inline-block;
+            margin: 2px 0;
         }
 
         a:hover {
             text-decoration: underline;
             color: #79c0ff;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .contact-links a {
+            display: inline-block;
+        }
+
+        /* Separator line */
+        .separator {
+            border-bottom: 1px solid #21262d;
         }
 
         @media (max-width: 600px) {
@@ -1364,28 +1382,39 @@ This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/M
 </head>
 <body>
 
-    <h2>📧 Contact &amp; Social Links</h2>
+    <h2>👥 Developer Contacts</h2>
 
     <div class="table-container">
         <table>
             <thead>
                 <tr>
-                    <th>Platform</th>
-                    <th>Link</th>
+                    <th style="width: 30%;">User</th>
+                    <th style="width: 70%;">Contacts</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- First Developer: Pouya Maleki -->
                 <tr>
-                    <td><span class="highlight">GitHub</span></td>
-                    <td><a href="https://github.com/Pouyamaleki" target="_blank">github.com/Pouyamaleki</a></td>
+                    <td><span class="user-name">Pouya Maleki</span></td>
+                    <td>
+                        <div class="contact-links">
+                            <a href="https://github.com/Pouyamaleki" target="_blank">📌 GitHub: github.com/Pouyamaleki</a>
+                            <a href="mailto:pouyamaleki85@gmail.com">📧 Email: pouyamaleki85@gmail.com</a>
+                            <a href="https://www.linkedin.com/in/pouya-maleki-7982b2360/" target="_blank">💼 LinkedIn: linkedin.com/in/pouya-maleki-7982b2360</a>
+                        </div>
+                    </td>
                 </tr>
+
+                <!-- Second Developer: Abbas Ashoury -->
                 <tr>
-                    <td><span class="highlight">Email</span></td>
-                    <td><a href="mailto:pouyamaleki85@gmail.com">pouyamaleki85@gmail.com</a></td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">LinkedIn</span></td>
-                    <td><a href="https://www.linkedin.com/in/pouya-maleki-7982b2360/" target="_blank">www.linkedin.com/in/pouya-maleki-7982b2360/</a></td>
+                    <td><span class="user-name">Abbas Ashoury</span></td>
+                    <td>
+                        <div class="contact-links">
+                            <a href="https://github.com/your-username" target="_blank">📌 GitHub: github.com/your-username</a>
+                            <a href="abbasashoury84@gmail.com">📧 Email: your-email@example.com</a>
+                            <a href="https://linkedin.com/in/your-profile" target="_blank">💼 LinkedIn: linkedin.com/in/your-profile</a>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>

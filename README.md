@@ -138,7 +138,7 @@ HOOD_QUEST/
 
 <a id="key-features"></a>
 
-## ✨ Key Features
+# ✨ Key Features
 
 ### 🔐 User Management
 
@@ -182,11 +182,9 @@ HOOD_QUEST/
 
 ---
 
-<br>
-
 <a id="game-map"></a>
 
-## 🗺️ Game Map
+# 🗺️ Game Map
 
 ### In-Game Map Display
 
@@ -194,7 +192,7 @@ HOOD_QUEST/
 
 _The map displays all 19 nodes with weighted edges connecting them. Red indicates Red Riding Hood's position, and Blue indicates the Wolf's position._
 
-<br>
+---
 
 ### 🧠 Advanced Algorithms
 
@@ -459,7 +457,7 @@ Feel Free to:
 - Modify
 - Distribute
 The program under the conditions of MIT License
-see the [LICENSE]() text more for details.
+see the [LICENSE](https://github.com/Pouyamaleki/Hood-Quest/tree/master?tab=MIT-1-ov-file) text more for details.
 
 ---
 

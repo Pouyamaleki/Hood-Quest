@@ -89,7 +89,7 @@ bool Move::movePlayer(const Graph &graph, Player &player, Wolf &wolf, char nextP
         char pathAlgorithm = ' ';
 
         // if condition to check the path is bigger than 1 or no
-        if (!path.size() > 1)
+        if (path.size() > 1)
         {
             pathAlgorithm = path[1];
         }

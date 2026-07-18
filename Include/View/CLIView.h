@@ -20,6 +20,7 @@ private:
     const string RED = "\033[1;31m";
     const string BLUE = "\033[1;34m";
     const string WHITE = "\033[1;37m";
+    const string YELLOW = "\033[1;33m";
 
     string GetColorNode(char, char, char);
 
@@ -28,7 +29,7 @@ public:
 
     void SetInputHandler(InputHandler &handler) { inputhandler = &handler; }
 
-    void displayGraph(char, char);
+    void displayGraph(char, char, const string &, long int);
     void PrintMainMenu();
     void PrintLeaderboard();
     void PrintScore();

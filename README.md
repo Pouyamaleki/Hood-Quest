@@ -1403,8 +1403,8 @@ This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/M
 - **Univercity**: [bu-ali sina](www.basu.ac.ir) Univercity  
 - **Resources**:  
     - [GeeksforGeeks](https://www.geeksforgeeks.org) - Algorithms refrences  
-    - [cpp Refrence](https://en.cppreference.com) - Documents  
-    - [Stack Oveflow](https://stackoverflow.com) - Documents  
+    - [cpp Refrence](https://en.cppreference.com) - Documentation  
+    - [Stack Oveflow](https://stackoverflow.com) - Programing resources  
 
 
 <a id="show-your-support"></a>

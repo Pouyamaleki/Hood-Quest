@@ -141,7 +141,7 @@ AStar::AstarResult AStar::AStarAlgorithm(const Graph &graph, char from, char to,
             int weight = neighbor.second;
 
             // ignore the wolf position
-            if(nextNode == wolfPosition)
+            if (nextNode == wolfPosition)
             {
                 continue;
             }
@@ -171,7 +171,7 @@ AStar::AstarResult AStar::AStarAlgorithm(const Graph &graph, char from, char to,
 
     catch (runtime_error &x)
     {
-        cerr << "Error: " << x.what() << endl;
+        cerr << "<<<< Error: " << x.what() << endl;
     }
 
     return {{}, -1};
@@ -187,17 +187,17 @@ vector<char> AStar::getPath() const
 void AStar::AStarprintPath(const Graph &graph, char from, char to, char wolfPosition)
 {
     AstarResult result = AStarAlgorithm(graph, from, to, wolfPosition); // get the result of the A* algorithm
-    int totalDistance = result.totalWeight; // get the total weight
-    AStarpath = result.path; // store the algorithm path in a variable
+    int totalDistance = result.totalWeight;                             // get the total weight
+    AStarpath = result.path;                                            // store the algorithm path in a variable
 
     // check if there is a bath or no
     if (AStarpath.empty())
     {
-        cout << "there is not ant path possible" << endl;
+        cout << "<<<< there is not ant path possible" << endl;
     }
 
     // print output
-    cout << "A* recommended path:" << endl;
+    cout << GREEN << "> A* recommended path: (total distance = " << totalDistance << ")\n";
     for (size_t i = 0; i < AStarpath.size(); i++)
     {
         cout << AStarpath[i];
@@ -206,5 +206,5 @@ void AStar::AStarprintPath(const Graph &graph, char from, char to, char wolfPosi
             cout << " -> ";
         }
     }
-    cout << endl << "total distance with the recommended path is :" << totalDistance << endl;
+    cout << RESET << endl;
 }

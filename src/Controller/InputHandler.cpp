@@ -15,29 +15,29 @@ string InputHandler::MainHandler()
         switch (choice)
         {
         case 1:
-            cout << "Enter username: ";
+            cout << ">> Enter username: ";
             cin >> username;
-            cout << "Enter password: ";
+            cout << ">> Enter password: ";
             cin >> password;
             userManager.CreateUser(username, password);
 
             // auto automaticlly login thse user after creating account
             if (userManager.LoginUser(username, password))
             {
-                cout << "Login Successful!\n";
+                cout << "<< Login Successful!\n";
                 return username;
             }
 
             cerr << "<<<< Auto login failed please login manually!\n";
             break;
         case 2:
-            cout << "Enter username: ";
+            cout << ">> Enter username: ";
             cin >> username;
-            cout << "Enter password: ";
+            cout << ">> Enter password: ";
             cin >> password;
             if (userManager.LoginUser(username, password))
             {
-                cout << "Login Successful!\n";
+                cout << "<< Login Successful!\n";
                 return username;
             }
             else
@@ -53,7 +53,7 @@ string InputHandler::MainHandler()
             cliinput.PrintScore();
             break;
         case 5:
-            cout << "Exiting the program\n";
+            cout << "<< Exiting the program\n";
             return "Exit";
         default:
             cout << "<<<< Invalid choice. Please try again\n";
@@ -121,7 +121,7 @@ void InputHandler::ScoreUser(int searchmode)
         int idx, finalscore;
         idx = userManager.SearchUser(username);
         finalscore = userManager.GetUserScore(idx);
-        cout << "User: " << username << "\n Score: " << finalscore << endl;
+        cout << "> User: " << username << "\n> Score: " << finalscore << endl;
         break;
     }
     case 2:
@@ -129,11 +129,11 @@ void InputHandler::ScoreUser(int searchmode)
         BSTNode *foundNode = bstview.search(username);
         if (foundNode != nullptr)
         {
-            cout << "User: " << username << "\n Score: " << foundNode->score << endl;
+            cout << "> User: " << username << "\n> Score: " << foundNode->score << endl;
         }
         else
         {
-            cout << username << " was not found in BST.\n";
+            cout << username << "<<<< was not found in BST.\n";
         }
         break;
     }

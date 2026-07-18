@@ -6,19 +6,21 @@ CliView::CliView(Usermanager &usermanager, MaxHeap &maxheap)
 
 void CliView::PrintMainMenu()
 {
-    std::cout << " ========== welcome to this game ==========\n";
-    std::cout << " please select an option:\n";
-    std::cout << " crate a new user: 1\n";
-    std::cout << " login: 2\n";
-    std::cout << " Show leaderboard: 3\n"; // to display all users by rating. Not just the top player.
-    std::cout << " Print score of desired user: 4\n";
-    std::cout << " exit: 5\n";
+    std::cout << " ====================== welcome to this game ======================\n";
+    std::cout << " >> please select an option:\n";
+    std::cout << " >>> 1: crate a new user:\n";
+    std::cout << " >>> 2: login:\n";
+    std::cout << " >>> 3: Show leaderboard:\n"; // to display all users by rating. Not just the top player.
+    std::cout << " >>> 4: Print score of desired user:\n";
+    std::cout << " >>> 5: exit:\n";
 }
 
 void CliView::PrintScore() // display the score of a desired player with linear search or BST DataType
 {
     int searchmode;
-    std::cout << "please select an mode: Linear Search (1) or BST Search (2)\n";
+    std::cout << ">> please select an mode:\n"
+              << ">>> 1: Linear Search\n"
+              << ">>> 2: or BST Search\n";
     cin >> searchmode;
 
     if (inputhandler != nullptr)
@@ -27,7 +29,7 @@ void CliView::PrintScore() // display the score of a desired player with linear 
     }
     else
     {
-        std::cout << "InputHandler is not connected to this view yet.\n";
+        std::cout << "<<<< InputHandler is not connected to this view yet.\n";
     }
 }
 
@@ -35,7 +37,7 @@ void CliView::PrintLeaderboard()
 {
     pair<string, long int> maxuser;
     maxuser = maxheapview.getTop();
-    std::cout << " Top Player: " << maxuser.first << "\n Score = " << maxuser.second << endl;
+    std::cout << "> Top Player: " << maxuser.first << "\n> Score = " << maxuser.second << endl;
 }
 
 string CliView::GetColorNode(char currentNode, char playerpos, char wolfpos)

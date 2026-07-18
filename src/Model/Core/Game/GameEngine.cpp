@@ -5,7 +5,7 @@ void gameEngine::GameLoop()
 {
     if (!fileChecker())
     {
-        cerr << "Save file could not be created.\n";
+        cerr << "<<<< Save file could not be created.\n";
         return;
     }
 
@@ -44,12 +44,12 @@ void gameEngine::GameLoop()
             switch (mode)
             {
             case true:
-                cout << "Dijkstra selected\n";
+                cout << "> Dijkstra selected\n";
                 dijkstra.dijkstraPrintPath(graph, player.getPosition(), 'V', wolf.getPosition());
                 path = dijkstra.getPath();
                 break;
             case false:
-                cout << "A* selected\n";
+                cout << "> A* selected\n";
                 astar.AStarprintPath(graph, player.getPosition(), 'V', wolf.getPosition());
                 path = astar.getPath();
                 break;
@@ -59,11 +59,11 @@ void gameEngine::GameLoop()
             {
                 if (stack.isEmpty())
                 {
-                    cout << "You have not done any move in the game \n";
+                    cout << "<<<< You have not done any move in the game \n";
                 }
                 else
                 {
-                    cout << "Undo selected\n";
+                    cout << "> Undo selected\n";
                     gamestate.undo(player, wolf, stack);
                 }
             }
@@ -82,7 +82,7 @@ void gameEngine::GameLoop()
                     {
                         cli.displayGraph(player.getPosition(), wolf.getPosition());
 
-                        cout << "game is finish.\n";
+                        cout << "> game is finish.\n";
                         int idx = usermanager.SearchUser(CurrentUser);
                         long int newscore = player.getScore() + usermanager.GetUserScore(idx);
 
@@ -96,7 +96,7 @@ void gameEngine::GameLoop()
                         return;
                     }
 
-                    cout << "The move was successful.\n";
+                    cout << "> The move was successful.\n";
                 }
             }
             else if (CurrentOrder == "EXIT")
@@ -116,7 +116,7 @@ void gameEngine::GameLoop()
             }
             else
             {
-                cout << "Invalid order selected\n";
+                cout << "<<<< Invalid order selected\n";
             }
         }
     }

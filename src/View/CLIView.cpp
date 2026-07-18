@@ -40,7 +40,11 @@ void Cliview::PrintLeaderboard()
 
 string Cliview::GetColorNode(char currentNode, char playerpos, char wolfpos)
 {
-    if (currentNode == playerpos)
+    if (currentNode == playerpos && currentNode == wolfpos)
+    {
+        return YELLOW + "(" + currentNode + ")" + RESET;
+    }
+    else if (currentNode == playerpos)
     {
         return RED + "(" + currentNode + ")" + RESET;
     }

@@ -74,6 +74,13 @@ void gameEngine::GameLoop()
 
                     if (gamestate.reachedDestination(player) || gamestate.wolfBlock(player, wolf))
                     {
+                    #ifdef _WIN32
+                        system("cls");
+                    #else
+                        system("clear");
+                    #endif
+                        cli.displayGraph(player.getPosition(), wolf.getPosition());
+                        
                         cout << "game is finish.";
                         int idx = usermanager.SearchUser(CurrentUser);
                         long int newscore = player.getScore() + usermanager.GetUserScore(idx);

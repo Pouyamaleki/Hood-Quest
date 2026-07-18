@@ -23,19 +23,19 @@ This project was developed as the final project for the **"Data Structures & Alg
 
 ## 📋 Table of Contents
 
-- [Overview](overview)
-- [Project Structure](project-structure)
-- [Key Features](key-features)
-- [Game Map](game-map)
-- [Installation & Setup](installation-setup)
-- [Game Guide](game-guide)
-- [How It Works](how-it-work)
-- [Technical Details](technical-details)
-- [Development Team](development-team)
-- [Licence](licence)
-- [Contact US](contact-us)
-- [Acknowlegment](acknowledgment)
-- [Show Your Support](show-your-support)
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Key Features](#key-features)
+- [Game Map](#game-map)
+- [Installation & Setup](#installation-setup)
+- [Game Guide](#game-guide)
+- [How It Works](#how-it-work)
+- [Technical Details](#technical-details)
+- [Development Team](#development-team)
+- [Licence](#licence)
+- [Contact US](#contact-us)
+- [Acknowlegment](#acknowledgment)
+- [Show Your Support](#show-your-support)
 
 <a id="project-structure"></a>
 
@@ -141,180 +141,24 @@ HOOD_QUEST/
 - **Persistent Storage**: User data automatically saved to `save.txt`
 - **Score Tracking**: Individual player scores maintained across sessions
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoodQuest - Tables</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+### 🧠 Advanced Algorithms
 
-        h2 {
-            color: #f0f6fc;
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 8px;
-        }
+| Algorithm | Purpose | Application |
+|-----------|---------|-------------|
+| **Dijkstra** | Shortest path finding | Recommends optimal route to destination |
+| **A*** | Heuristic-based pathfinding | Smarter route recommendation with estimated distances |
+| **BFS** | Breadth-first search | Wolf movement towards player |
 
-        h2 .emoji {
-            margin-right: 8px;
-        }
 
-        /* Table Styles */
-        .table-container {
-            overflow-x: auto;
-            margin: 16px 0 24px 0;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-        }
+### 📊 Data Structures
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            background-color: #161b22;
-            border-radius: 6px;
-        }
+| Structure | Usage |
+|-----------|-------|
+| **BST** | Fast user search and score updates |
+| **MaxHeap** | Leaderboard (top player display) |
+| **Hash Table** | Secure password storage |
+| **Stack** | Undo functionality (move history) |
 
-        thead {
-            background-color: #21262d;
-        }
-
-        thead th {
-            padding: 12px 16px;
-            text-align: left;
-            font-weight: 600;
-            color: #f0f6fc;
-            border-bottom: 2px solid #30363d;
-            font-size: 13px;
-            letter-spacing: 0.3px;
-        }
-
-        tbody td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #21262d;
-            color: #c9d1d9;
-            vertical-align: top;
-        }
-
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        tbody tr:hover {
-            background-color: #1c2128;
-        }
-
-        /* Bold text in tables */
-        .highlight {
-            color: #f0f6fc;
-            font-weight: 600;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            body {
-                padding: 16px;
-            }
-
-            table {
-                font-size: 13px;
-            }
-
-            thead th,
-            tbody td {
-                padding: 8px 12px;
-            }
-        }
-    </style>
-
-</head>
-<body>
-
-    <!-- ============================================ -->
-    <!-- 🧠 ADVANCED ALGORITHMS TABLE -->
-    <!-- ============================================ -->
-
-    <h2>🧠 Advanced Algorithms</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Algorithm</th>
-                    <th>Purpose</th>
-                    <th>Application</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">Dijkstra</span></td>
-                    <td>Shortest path finding</td>
-                    <td>Recommends optimal route to destination</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">A*</span></td>
-                    <td>Heuristic-based pathfinding</td>
-                    <td>Smarter route recommendation with estimated distances</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">BFS</span></td>
-                    <td>Breadth-first search</td>
-                    <td>Wolf movement towards player</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- ============================================ -->
-    <!-- 📊 DATA STRUCTURES TABLE -->
-    <!-- ============================================ -->
-
-    <h2>📊 Data Structures</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Structure</th>
-                    <th>Usage</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">BST</span></td>
-                    <td>Fast user search and score updates</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">MaxHeap</span></td>
-                    <td>Leaderboard (top player display)</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">Hash Table</span></td>
-                    <td>Secure password storage</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">Stack</span></td>
-                    <td>Undo functionality (move history)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</body>
-</html>
 
 ### 🎮 Game Mechanics
 
@@ -339,270 +183,40 @@ HOOD_QUEST/
 
 _The map displays all 19 nodes with weighted edges connecting them. Red indicates Red Riding Hood's position, and Blue indicates the Wolf's position._
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoodQuest - Tables</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+### 🧠 Advanced Algorithms
 
-        h2 {
-            color: #f0f6fc;
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 8px;
-        }
+| Algorithm | Purpose | Application |
+|-----------|---------|-------------|
+| **Dijkstra** | Shortest path finding | Recommends optimal route to destination |
+| **A*** | Heuristic-based pathfinding | Smarter route recommendation with estimated distances |
+| **BFS** | Breadth-first search | Wolf movement towards player |
 
-        h2 .emoji {
-            margin-right: 8px;
-        }
 
-        /* Table Styles */
-        .table-container {
-            overflow-x: auto;
-            margin: 16px 0 24px 0;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-        }
+### 📊 Data Structures
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            background-color: #161b22;
-            border-radius: 6px;
-        }
+| Structure | Usage |
+|-----------|-------|
+| **BST** | Fast user search and score updates |
+| **MaxHeap** | Leaderboard (top player display) |
+| **Hash Table** | Secure password storage |
+| **Stack** | Undo functionality (move history) |
 
-        thead {
-            background-color: #21262d;
-        }
 
-        thead th {
-            padding: 12px 16px;
-            text-align: left;
-            font-weight: 600;
-            color: #f0f6fc;
-            border-bottom: 2px solid #30363d;
-            font-size: 13px;
-            letter-spacing: 0.3px;
-        }
+### 🗺️ Map Legend
 
-        tbody td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #21262d;
-            color: #c9d1d9;
-            vertical-align: top;
-        }
+| Color | Entity |
+|-------|--------|
+| 🔴 **Red** | Red Riding Hood (Player) |
+| 🔵 **Blue** | The Wolf |
+| ⚪ **White** | Empty/Regular Node |
 
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
 
-        tbody tr:hover {
-            background-color: #1c2128;
-        }
+### 📍 Node Information
 
-        /* Bold text in tables */
-        .highlight {
-            color: #f0f6fc;
-            font-weight: 600;
-        }
-
-        /* Color indicators for legend */
-        .color-dot {
-            display: inline-block;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            margin-right: 6px;
-            vertical-align: middle;
-            border: 1px solid #30363d;
-        }
-
-        .color-red {
-            background-color: #ff4444;
-        }
-
-        .color-blue {
-            background-color: #4488ff;
-        }
-
-        .color-white {
-            background-color: #ffffff;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            body {
-                padding: 16px;
-            }
-
-            table {
-                font-size: 13px;
-            }
-
-            thead th,
-            tbody td {
-                padding: 8px 12px;
-            }
-        }
-    </style>
-
-</head>
-<body>
-
-    <!-- ============================================ -->
-    <!-- 🧠 ADVANCED ALGORITHMS TABLE -->
-    <!-- ============================================ -->
-
-    <h2>🧠 Advanced Algorithms</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Algorithm</th>
-                    <th>Purpose</th>
-                    <th>Application</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">Dijkstra</span></td>
-                    <td>Shortest path finding</td>
-                    <td>Recommends optimal route to destination</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">A*</span></td>
-                    <td>Heuristic-based pathfinding</td>
-                    <td>Smarter route recommendation with estimated distances</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">BFS</span></td>
-                    <td>Breadth-first search</td>
-                    <td>Wolf movement towards player</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- ============================================ -->
-    <!-- 📊 DATA STRUCTURES TABLE -->
-    <!-- ============================================ -->
-
-    <h2>📊 Data Structures</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Structure</th>
-                    <th>Usage</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">BST</span></td>
-                    <td>Fast user search and score updates</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">MaxHeap</span></td>
-                    <td>Leaderboard (top player display)</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">Hash Table</span></td>
-                    <td>Secure password storage</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">Stack</span></td>
-                    <td>Undo functionality (move history)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- ============================================ -->
-    <!-- 🗺️ MAP LEGEND TABLE -->
-    <!-- ============================================ -->
-
-    <h2>🗺️ Map Legend</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Color</th>
-                    <th>Entity</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <span class="color-dot color-red"></span>
-                        <span class="highlight">Red</span>
-                    </td>
-                    <td>Red Riding Hood (Player)</td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="color-dot color-blue"></span>
-                        <span class="highlight">Blue</span>
-                    </td>
-                    <td>The Wolf</td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="color-dot color-white"></span>
-                        <span class="highlight">White</span>
-                    </td>
-                    <td>Empty/Regular Node</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- ============================================ -->
-    <!-- 📍 NODE INFORMATION TABLE -->
-    <!-- ============================================ -->
-
-    <h2>📍 Node Information</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Node</th>
-                    <th>Location</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">V</span></td>
-                    <td>🏠 Grandma's House (Destination)</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">A-U</span></td>
-                    <td>Forest Nodes (Paths)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</body>
-</html>
+| Node | Location |
+|------|----------|
+| **V** | 🏠 Grandma's House (Destination) |
+| **A-U** | Forest Nodes (Paths) |
 
 <a id="installation-setup"></a>
 
@@ -646,201 +260,32 @@ make             # Compile the code
 
 ## 🎮 Game Guide
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoodQuest - Game Tables</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+### 🎮 Main Menu Options
 
-        h2 {
-            color: #f0f6fc;
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 8px;
-        }
+| Option | Description |
+|--------|-------------|
+| **1** | Create New User Account |
+| **2** | Login to Existing Account |
+| **3** | View Leaderboard |
+| **4** | Check User Score |
+| **5** | Exit Game |
 
-        .table-container {
-            overflow-x: auto;
-            margin: 16px 0 24px 0;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-        }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            background-color: #161b22;
-            border-radius: 6px;
-        }
+### 🕹️ Game Controls
 
-        thead {
-            background-color: #21262d;
-        }
+| Command | Description |
+|---------|-------------|
+| **A - V** | Move to adjacent node (must be connected by edge) |
+| **UNDO** | Revert to previous position (-2 points) |
+| **EXIT** | Save progress and exit game |
 
-        thead th {
-            padding: 12px 16px;
-            text-align: left;
-            font-weight: 600;
-            color: #f0f6fc;
-            border-bottom: 2px solid #30363d;
-            font-size: 13px;
-            letter-spacing: 0.3px;
-        }
 
-        tbody td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #21262d;
-            color: #c9d1d9;
-            vertical-align: top;
-        }
+### 🧩 Algorithm Selection
 
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        tbody tr:hover {
-            background-color: #1c2128;
-        }
-
-        .highlight {
-            color: #f0f6fc;
-            font-weight: 600;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 16px;
-            }
-            table {
-                font-size: 13px;
-            }
-            thead th,
-            tbody td {
-                padding: 8px 12px;
-            }
-        }
-    </style>
-
-</head>
-<body>
-
-    <!-- ============================================ -->
-    <!-- 🎮 MAIN MENU OPTIONS TABLE -->
-    <!-- ============================================ -->
-
-    <h2>🎮 Main Menu Options</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Option</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">1</span></td>
-                    <td>Create New User Account</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">2</span></td>
-                    <td>Login to Existing Account</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">3</span></td>
-                    <td>View Leaderboard</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">4</span></td>
-                    <td>Check User Score</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">5</span></td>
-                    <td>Exit Game</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- ============================================ -->
-    <!-- 🕹️ GAME CONTROLS TABLE -->
-    <!-- ============================================ -->
-
-    <h2>🕹️ Game Controls</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Command</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">A - V</span></td>
-                    <td>Move to adjacent node (must be connected by edge)</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">UNDO</span></td>
-                    <td>Revert to previous position (-2 points)</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">EXIT</span></td>
-                    <td>Save progress and exit game</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- ============================================ -->
-    <!-- 🧩 ALGORITHM SELECTION TABLE -->
-    <!-- ============================================ -->
-
-    <h2>🧩 Algorithm Selection</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Option</th>
-                    <th>Algorithm</th>
-                    <th>Best For</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">D</span></td>
-                    <td><span class="highlight">Dijkstra</span></td>
-                    <td>Guaranteed shortest path</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">A</span></td>
-                    <td><span class="highlight">A*</span></td>
-                    <td>Faster pathfinding with heuristic</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</body>
-</html>
+| Option | Algorithm | Best For |
+|--------|-----------|----------|
+| **D** | Dijkstra | Guaranteed shortest path |
+| **A** | A* | Faster pathfinding with heuristic |
 
 ### Game Flow
 
@@ -873,52 +318,52 @@ Total distance: 18
 ### Scoring System Flowchart
 
 ```
-          ┌────────────────────┐
-          │       START        │
-          └──────────┬─────────┘                      
-                     │                                
-                     ▼                                
-          ┌────────────────────┐                      
-          │    Player Move     │◄─────────────────────┐                      
-          └──────────┬─────────┘                      │
-                     │                                │
-                     ▼                                │
-          ┌────────────────────┐                      │
-          │ Is move on         │                      │
-          │ recommended path?  │                      │
-          └──────────┬─────────┘                      │
-                     │                                │
-          ┌──────────┴──────────┐                     │
-          ▼                     ▼                     │
-     ┌────────────┐      ┌────────────┐               │
-     │    YES     │      │     NO     │               │
-     │ +3 points  │      │ +1 point   │               │
-     └────────────┘      └────────────┘               │
-          │                     │                     │
-          └──────────┬──────────┘                     │
-                     │                                │
-                     ▼                                │
-          ┌────────────────────┐                      │
-          │     Wolf Move      │                      │
-          │    (50% chance)    │                      │
-          └──────────┬─────────┘                      │
-                     │                                │
-                     ▼                                │
-          ┌────────────────────┐                      │
-          │   Check win/lose   │                      │
-          │     condition      │                      │
-          └──────────┬─────────┘                      │
-                     │                                │
-          ┌──────────┴──────────┐                     │
-          ▼                     ▼                     │
-     ┌────────────┐      ┌────────────┐               │
-     │  Win/Lose  │      │  Continue  │               │
-     └────────────┘      └────────────┘               │
-          │                     │                     │
-          ▼                     └─────────────────────┘
-     ┌────────────┐
-     │    END     │
-     └────────────┘
+                ┌────────────────────┐
+                │       START        │
+                └──────────┬─────────┘                      
+                           │                                
+                           ▼                                
+                ┌────────────────────┐                      
+                │    Player Move     │◄─────────────────────┐                      
+                └──────────┬─────────┘                      │
+                           │                                │
+                           ▼                                │
+                ┌────────────────────┐                      │
+                │ Is move on         │                      │
+                │ recommended path?  │                      │
+                └──────────┬─────────┘                      │
+                           │                                │
+                ┌──────────┴──────────┐                     │
+                ▼                     ▼                     │
+            ┌────────────┐      ┌────────────┐              │
+            │    YES     │      │     NO     │              │
+            │ +3 points  │      │ +1 point   │              │
+            └────────────┘      └────────────┘              │
+                │                     │                     │
+                └──────────┬──────────┘                     │
+                           │                                │
+                           ▼                                │
+                ┌────────────────────┐                      │
+                │     Wolf Move      │                      │
+                │    (50% chance)    │                      │
+                └──────────┬─────────┘                      │
+                           │                                │
+                           ▼                                │
+                ┌────────────────────┐                      │
+                │   Check win/lose   │                      │
+                │     condition      │                      │
+                └──────────┬─────────┘                      │
+                           │                                │
+                ┌──────────┴──────────┐                     │
+                ▼                     ▼                     │
+            ┌────────────┐      ┌────────────┐              │
+            │  Win/Lose  │      │  Continue  │              │
+            └────────────┘      └────────────┘              │
+                  │                   │                     │
+                  ▼                   └─────────────────────┘
+            ┌────────────┐
+            │    END     │
+            └────────────┘
 
 ```
 
@@ -942,316 +387,29 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 ## Data Structure Operations
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Structures Complexity</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+### 📊 Data Structure Operations Complexity
 
-        h2 {
-            color: #f0f6fc;
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 8px;
-        }
-
-        .table-container {
-            overflow-x: auto;
-            margin: 16px 0 24px 0;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            background-color: #161b22;
-            border-radius: 6px;
-        }
-
-        thead {
-            background-color: #21262d;
-        }
-
-        thead th {
-            padding: 12px 16px;
-            text-align: left;
-            font-weight: 600;
-            color: #f0f6fc;
-            border-bottom: 2px solid #30363d;
-            font-size: 13px;
-            letter-spacing: 0.3px;
-        }
-
-        tbody td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #21262d;
-            color: #c9d1d9;
-            vertical-align: top;
-        }
-
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        tbody tr:hover {
-            background-color: #1c2128;
-        }
-
-        .highlight {
-            color: #f0f6fc;
-            font-weight: 600;
-        }
-
-        /* Code-like style for complexity */
-        .complexity {
-            font-family: 'SFMono', 'Consolas', 'Liberation Mono', monospace;
-            font-size: 13px;
-            color: #f0f6fc;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 16px;
-            }
-            table {
-                font-size: 13px;
-            }
-            thead th,
-            tbody td {
-                padding: 8px 12px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <h2>📊 Data Structure Operations Complexity</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Structure</th>
-                    <th>Search</th>
-                    <th>Insert</th>
-                    <th>Update</th>
-                    <th>Memory</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">BST</span></td>
-                    <td><span class="complexity">O(log n)</span></td>
-                    <td><span class="complexity">O(log n)</span></td>
-                    <td><span class="complexity">O(log n)</span></td>
-                    <td><span class="complexity">O(n)</span></td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">MaxHeap</span></td>
-                    <td><span class="complexity">O(n)</span></td>
-                    <td><span class="complexity">O(log n)</span></td>
-                    <td><span class="complexity">O(log n)</span></td>
-                    <td><span class="complexity">O(n)</span></td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">Hash</span></td>
-                    <td><span class="complexity">O(1) avg</span></td>
-                    <td><span class="complexity">O(1) avg</span></td>
-                    <td><span class="complexity">O(1) avg</span></td>
-                    <td><span class="complexity">O(n)</span></td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">Stack</span></td>
-                    <td><span class="complexity">O(n)</span></td>
-                    <td><span class="complexity">O(1)</span></td>
-                    <td><span class="complexity">O(1)</span></td>
-                    <td><span class="complexity">O(n)</span></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</body>
-</html>
+| Structure | Search | Insert | Update | Memory |
+|-----------|--------|--------|--------|--------|
+| **BST** | O(log n) | O(log n) | O(log n) | O(n) |
+| **MaxHeap** | O(n) | O(log n) | O(log n) | O(n) |
+| **Hash** | O(1) avg | O(1) avg | O(1) avg | O(n) |
+| **Stack** | O(n) | O(1) | O(1) | O(n) |
 
 <a id="development-team"></a>
 
 ## Development Team
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoodQuest - Developer Table</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+### 👥 Development Team
 
-        h2 {
-            color: #f0f6fc;
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 8px;
-        }
-
-        .table-container {
-            overflow-x: auto;
-            margin: 16px 0 24px 0;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            background-color: #161b22;
-            border-radius: 6px;
-        }
-
-        thead {
-            background-color: #21262d;
-        }
-
-        thead th {
-            padding: 12px 16px;
-            text-align: left;
-            font-weight: 600;
-            color: #f0f6fc;
-            border-bottom: 2px solid #30363d;
-            font-size: 13px;
-            letter-spacing: 0.3px;
-        }
-
-        tbody td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #21262d;
-            color: #c9d1d9;
-            vertical-align: top;
-        }
-
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        tbody tr:hover {
-            background-color: #1c2128;
-        }
-
-        .highlight {
-            color: #f0f6fc;
-            font-weight: 600;
-        }
-
-        /* Bullet list styling */
-        .contrib-list {
-            margin: 0;
-            padding-left: 0;
-            list-style: none;
-        }
-
-        .contrib-list li {
-            margin-bottom: 4px;
-            padding-left: 16px;
-            position: relative;
-        }
-
-        .contrib-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #f0f6fc;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 16px;
-            }
-            table {
-                font-size: 13px;
-            }
-            thead th,
-            tbody td {
-                padding: 8px 12px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <h2>👥 Development Team</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Developer</th>
-                    <th>Role</th>
-                    <th>Contributions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="highlight">[Pouya Maleki](https://github.com/Pouyamaleki)</span></td>
-                    <td>Game Engine &amp; Algorithms</td>
-                    <td>
-                        <ul class="contrib-list">
-                            <li>Dijkstra, A*, BFS implementation</li>
-                            <li>Game state management</li>
-                            <li>Movement logic</li>
-                            <li>Score system</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">[Abbas Ashoury](https://github.com/Abbasashoury)</span></td>
-                    <td>UI &amp; Data Management</td>
-                    <td>
-                        <ul class="contrib-list">
-                            <li>CLI interface design</li>
-                            <li>BST &amp; MaxHeap implementation</li>
-                            <li>Save/Load system</li>
-                            <li>Map visualization</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</body>
-</html>
+| Developer | Role | Contributions |
+|-----------|------|---------------|
+| **[Your Name]** | Game Engine & Algorithms | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Score system |
+| **[Partner's Name]** | UI & Data Management | • CLI interface design<br>• BST & MaxHeap implementation<br>• Save/Load system<br>• Map visualization |
 
 <a id="license"k></a>
 
-## Development Team
+## License
 
 📝 License
 This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/MIT_License) - see the LICENSE file for details.
@@ -1260,169 +418,12 @@ This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/M
 
 ## Contact Us
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoodQuest - Developer Contacts</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+### 📧 Contact & Social Links
 
-        h2 {
-            color: #f0f6fc;
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 8px;
-        }
-
-        .table-container {
-            overflow-x: auto;
-            margin: 16px 0 24px 0;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            background-color: #161b22;
-            border-radius: 6px;
-        }
-
-        thead {
-            background-color: #21262d;
-        }
-
-        thead th {
-            padding: 12px 16px;
-            text-align: left;
-            font-weight: 600;
-            color: #f0f6fc;
-            border-bottom: 2px solid #30363d;
-            font-size: 13px;
-            letter-spacing: 0.3px;
-        }
-
-        tbody td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #21262d;
-            color: #c9d1d9;
-            vertical-align: middle;
-        }
-
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        tbody tr:hover {
-            background-color: #1c2128;
-        }
-
-        .user-name {
-            color: #f0f6fc;
-            font-weight: 600;
-            font-size: 15px;
-        }
-
-        /* Link Styles */
-        a {
-            color: #58a6ff;
-            text-decoration: none;
-            transition: color 0.2s ease;
-            display: inline-block;
-            margin: 2px 0;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #79c0ff;
-        }
-
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .contact-links a {
-            display: inline-block;
-        }
-
-        /* Separator line */
-        .separator {
-            border-bottom: 1px solid #21262d;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 16px;
-            }
-            table {
-                font-size: 13px;
-            }
-            thead th,
-            tbody td {
-                padding: 8px 12px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <h2>👥 Developer Contacts</h2>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th style="width: 30%;">User</th>
-                    <th style="width: 70%;">Contacts</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- First Developer: Pouya Maleki -->
-                <tr>
-                    <td><span class="user-name">Pouya Maleki</span></td>
-                    <td>
-                        <div class="contact-links">
-                            <a href="https://github.com/Pouyamaleki" target="_blank">📌 GitHub: github.com/Pouyamaleki</a>
-                            <a href="mailto:pouyamaleki85@gmail.com">📧 Email: pouyamaleki85@gmail.com</a>
-                            <a href="https://www.linkedin.com/in/pouya-maleki-7982b2360/" target="_blank">💼 LinkedIn: linkedin.com/in/pouya-maleki-7982b2360</a>
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- Second Developer: Abbas Ashoury -->
-                <tr>
-                    <td><span class="user-name">Abbas Ashoury</span></td>
-                    <td>
-                        <div class="contact-links">
-                            <a href="https://github.com/your-username" target="_blank">📌 GitHub: github.com/your-username</a>
-                            <a href="abbasashoury84@gmail.com">📧 Email: your-email@example.com</a>
-                            <a href="https://linkedin.com/in/your-profile" target="_blank">💼 LinkedIn: linkedin.com/in/your-profile</a>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</body>
-</html>
-
+| Developer        | Links |
+|------------------|-------|
+| **Pouya Maleki** | [GitHub](https://github.com/Pouyamaleki)<br>[Email](mailto:pouyamaleki85@gmail.com)<br>[LinkedIn](https://www.linkedin.com/in/pouya-maleki-7982b2360/) |
+| **Abbas Ashoury** | [GitHub](https://github.com/Abbasashoury)<br>[Email](mailto:abbasashoury84@gmail.com)<br>[LinkedIn](https://www.linkedin.com/in/abbas-ashoury-2a7259288/) |
 
 <a id="acknowledgment"></a>
 

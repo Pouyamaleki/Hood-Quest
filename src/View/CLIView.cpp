@@ -88,5 +88,5 @@ void CliView::displayGraph(char playerpos, char wolfpos, const string &username,
     std::cout << "          5                                  3\n";
     std::cout << "           \\                                /\n";
     std::cout << "            \\--------------" << GetColorNode('V', playerpos, wolfpos) << "-------------/\n\n";
-    std::cout << "===========================================================\n";
+    std::cout << "================================================================\n";
 }

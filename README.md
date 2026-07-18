@@ -21,6 +21,8 @@ This project was developed as the final project for the **"Data Structures & Alg
 - Earn the highest score by following optimal paths
 - Compete with other players through the leaderboard system
 
+<br>
+
 ## 📋 Table of Contents
 
 - [Overview](#overview)
@@ -33,9 +35,10 @@ This project was developed as the final project for the **"Data Structures & Alg
 - [Technical Details](#technical-details)
 - [Development Team](#development-team)
 - [Licence](#licence)
-- [Contact US](#contact-us)
 - [Acknowlegment](#acknowledgment)
 - [Show Your Support](#show-your-support)
+
+<br>
 
 <a id="project-structure"></a>
 
@@ -151,6 +154,7 @@ HOOD_QUEST/
 | **A*** | Heuristic-based pathfinding | Smarter route recommendation with estimated distances |
 | **BFS** | Breadth-first search | Wolf movement towards player |
 
+---
 
 ### 📊 Data Structures
 
@@ -161,7 +165,7 @@ HOOD_QUEST/
 | **Hash Table** | Secure password storage |
 | **Stack** | Undo functionality (move history) |
 
-<br>
+---
 
 ### 🎮 Game Mechanics
 
@@ -182,7 +186,7 @@ HOOD_QUEST/
 
 ### In-Game Map Display
 
-![Game Map](screenshots/game_map.png)
+![Game Map](screenshots/Game_Map.png)
 
 _The map displays all 19 nodes with weighted edges connecting them. Red indicates Red Riding Hood's position, and Blue indicates the Wolf's position._
 
@@ -196,7 +200,7 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 | **A*** | Heuristic-based pathfinding | Smarter route recommendation with estimated distances |
 | **BFS** | Breadth-first search | Wolf movement towards player |
 
-<br>
+---
 
 ### 📊 Data Structures
 
@@ -207,7 +211,7 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 | **Hash Table** | Secure password storage |
 | **Stack** | Undo functionality (move history) |
 
-<br>
+---
 
 ### 🗺️ Map Legend
 
@@ -218,7 +222,7 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 | ⚪ **White** | Empty/Regular Node |
 | 🟡 **Yellow** | Hit Node (Wolf and Player are in the same Node)|
 
-<br>
+---
 
 ### 📍 Node Information
 
@@ -226,6 +230,8 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 |------|----------|
 | **V** | 🏠 Grandma's House (Destination) |
 | **A-U** | Forest Nodes (Paths) |
+
+---
 
 <br>
 
@@ -241,7 +247,7 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 - Any code editor like [**VSCode**](https://code.visualstudio.com/download)
 - **Terminal/Command Prompt** with ANSI color support - for colored display
 
-<br>
+---
 
 ### Windows Installation
 
@@ -252,7 +258,7 @@ git clone <repository url>
 cd Hood_Quest
 ```
 
-#### Run the Code
+#### How To Run the Code:
 
 ```bash
 mkdir build                    # Create the build Folder
@@ -287,7 +293,7 @@ make             # Compile the code
 | **4** | Check User Score |
 | **5** | Exit Game |
 
-<br>
+---
 
 ### 🕹️ Game Controls
 
@@ -297,7 +303,7 @@ make             # Compile the code
 | **UNDO** | Revert to previous position (-2 points) |
 | **EXIT** | Save progress and exit game |
 
-<br>
+---
 
 ### 🧩 Algorithm Selection
 
@@ -306,7 +312,7 @@ make             # Compile the code
 | **D** | Dijkstra | Guaranteed shortest path |
 | **A** | A* | Faster pathfinding with heuristic |
 
-<br>
+---
 
 ### Game Flow
 
@@ -318,6 +324,8 @@ make             # Compile the code
 6️⃣ **Avoid** the wolf at all costs!
 
 ---  
+
+<br>
 
 <a id="how-it-work"></a>
 
@@ -338,7 +346,9 @@ Total distance: 18
 
 ```
 
-### Scoring System Flowchart
+---
+
+### 📊 Scoring System Flowchart
 
 ```
                 ┌────────────────────┐
@@ -431,10 +441,12 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 | Developer | Role | Contributions |
 |-----------|------|---------------|
-| **[Your Name]** | Game Engine & Algorithms | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Score system |
-| **[Partner's Name]** | UI & Data Management | • CLI interface design<br>• BST & MaxHeap implementation<br>• Save/Load system<br>• Map visualization |
+| **[Pouya Maleki]** | Game Engine & Algorithms | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Graph and Stack systems |
+| **[Abbas Ashoury]** | UI & Data Management | • CLI interface design<br>• BST & MaxHeap implementation<br>• Save/Load system<br>• Map visualization |
 
 ---
+
+<br>
 
 <a id="license"></a>
 
@@ -445,23 +457,12 @@ This project is licensed under the MIT [License](https://en.wikipedia.org/wiki/M
 
 ---
 
-<a id="contact-us"></a>
-
-## 📧 Contact & Social Links
-
-| Developer        | Links |
-|------------------|-------|
-| **Pouya Maleki** | [GitHub](https://github.com/Pouyamaleki)<br>[Email](mailto:pouyamaleki85@gmail.com)<br>[LinkedIn](https://www.linkedin.com/in/pouya-maleki-7982b2360/) |
-| **Abbas Ashoury** | [GitHub](https://github.com/Abbasashoury)<br>[Email](mailto:abbasashoury84@gmail.com)<br>[LinkedIn](https://www.linkedin.com/in/abbas-ashoury-2a7259288/) |
-
----
-
 <a id="acknowledgment"></a>
 
 ## 🧠 Acknowlegment
 
 - **Professor**: Dr. Ali Javidani - Data Structure and Algorithms course  
-- **Univercity**: [bu-ali sina](www.basu.ac.ir) Univercity  
+- **Univercity**: [Bu-Ali Sina](www.basu.ac.ir) Univercity  
 - **Resources**:  
     - [GeeksforGeeks](https://www.geeksforgeeks.org) - Algorithms refrences  
     - [cpp Refrence](https://en.cppreference.com) - Documentation  

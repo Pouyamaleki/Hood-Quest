@@ -74,7 +74,7 @@ string InputHandler::CurrentHandler()
         cin.clear();
         cin.ignore(1000, '\n');
         cout << "Invalid input! Please enter a character.\n";
-        return '\0'; // invalid value
+        return ""; // invalid value
     }
 
     for (char &c : order)

@@ -7,7 +7,7 @@
 #include "BST.h"
 using namespace std;
 
-class Cliview;
+class CliView;
 
 class InputHandler
 {

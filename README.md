@@ -229,20 +229,6 @@ _The map displays all 19 nodes with weighted edges connecting them. Red indicate
 
 ---
 
-<a id="installation-setup"></a>
-
-## 🚀 Installation & Setup
-
-### Prerequisites
-
-- [**MinGW32**](https://sourceforge.net/projects/mingw/) - or any other C++ Compiler
-- [**CMake**](https://cmake.org/download/) - for easier Run
-- [**Git**](https://git-scm.com/install/) - to clone the codes
-- Any code editor like [**VSCode**](https://code.visualstudio.com/download)
-- **Terminal/Command Prompt** with ANSI color support - for colored display
-
----
-
 <a id="game-guide"></a>
 
 ## 🎮 Game Guide
@@ -394,6 +380,20 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 |-----------|------|---------------|
 | [**Pouya Maleki**](https://github.com/Pouyamaleki) | Game Engine, Algorithms & BackEnd Development | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Graph and Stack Data Structures<br>• Wolf and Player Implementation |
 | [**Abbas Ashoury**](https://github.com/Abbasashoury) | Game & Data Management, User management,UI & InputHandler(IO) | • GameEngine Source file implementation<br>• User Managament implementation<br>• Data Management<br>• Cli Interface Design<br>• Input Handling<br>• Save/Load System<br>• BST and Max Heap implementation |
+
+---
+
+<a id="installation-setup"></a>
+
+## 🚀 Installation & Setup
+
+### Prerequisites
+
+- [**MinGW32**](https://sourceforge.net/projects/mingw/) - or any other C++ Compiler
+- [**CMake**](https://cmake.org/download/) - for easier Run
+- [**Git**](https://git-scm.com/install/) - to clone the codes
+- Any code editor like [**VSCode**](https://code.visualstudio.com/download)
+- **Terminal/Command Prompt** with ANSI color support - for colored display
 
 ---
 

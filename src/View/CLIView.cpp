@@ -1,24 +1,24 @@
 #include "CLIView.h"
 #include "InputHandler.h"
 
-Cliview::Cliview(Usermanager &usermanager, MaxHeap &maxheap)
+CliView::CliView(Usermanager &usermanager, MaxHeap &maxheap)
     : usermanager(usermanager), maxheapview(maxheap) {}
 
-void Cliview::PrintMainMenu()
+void CliView::PrintMainMenu()
 {
-    cout << " ========== welcome to this game ==========\n";
-    cout << " please select an option:\n";
-    cout << " crate a new user: 1\n";
-    cout << " login: 2\n";
-    cout << " Show leaderboard: 3\n"; // to display all users by rating. Not just the top player.
-    cout << " Print score of desired user: 4\n";
-    cout << " exit: 5\n";
+    std::cout << " ========== welcome to this game ==========\n";
+    std::cout << " please select an option:\n";
+    std::cout << " crate a new user: 1\n";
+    std::cout << " login: 2\n";
+    std::cout << " Show leaderboard: 3\n"; // to display all users by rating. Not just the top player.
+    std::cout << " Print score of desired user: 4\n";
+    std::cout << " exit: 5\n";
 }
 
-void Cliview::PrintScore() // display the score of a desired player with linear search or BST DataType
+void CliView::PrintScore() // display the score of a desired player with linear search or BST DataType
 {
     int searchmode;
-    cout << "please select an mode: Linear Search (1) or BST Search (2)\n";
+    std::cout << "please select an mode: Linear Search (1) or BST Search (2)\n";
     cin >> searchmode;
 
     if (inputhandler != nullptr)
@@ -27,18 +27,18 @@ void Cliview::PrintScore() // display the score of a desired player with linear 
     }
     else
     {
-        cout << "InputHandler is not connected to this view yet.\n";
+        std::cout << "InputHandler is not connected to this view yet.\n";
     }
 }
 
-void Cliview::PrintLeaderboard()
+void CliView::PrintLeaderboard()
 {
     pair<string, long int> maxuser;
     maxuser = maxheapview.getTop();
-    cout << " Top Player: " << maxuser.first << "\n Score = " << maxuser.second << endl;
+    std::cout << " Top Player: " << maxuser.first << "\n Score = " << maxuser.second << endl;
 }
 
-string Cliview::GetColorNode(char currentNode, char playerpos, char wolfpos)
+string CliView::GetColorNode(char currentNode, char playerpos, char wolfpos)
 {
     if (currentNode == playerpos && currentNode == wolfpos)
     {
@@ -55,35 +55,35 @@ string Cliview::GetColorNode(char currentNode, char playerpos, char wolfpos)
     return WHITE + "(" + currentNode + ")" + RESET;
 }
 
-void Cliview::displayGraph(char playerpos, char wolfpos)
+void CliView::displayGraph(char playerpos, char wolfpos)
 {
-    cout << "\033[2J\033[H";
+    std::cout << "\033[2J\033[H";
 
-    cout << "====================== HOODQUEST MAP ======================\n";
-    cout << "  " << RED << "[Red Riding Hood: " << playerpos << "]" << RESET
-         << "   " << BLUE << "[Wolf: " << wolfpos << "]" << RESET << "\n";
-    cout << "===========================================================\n\n";
+    std::cout << "====================== HOODQUEST MAP ======================\n";
+    std::cout << "  " << RED << "[Red Riding Hood: " << playerpos << "]" << RESET
+              << "   " << BLUE << "[Wolf: " << wolfpos << "]" << RESET << "\n";
+    std::cout << "===========================================================\n\n";
 
-    cout << "     " << GetColorNode('B', playerpos, wolfpos) << "----------2----------" << GetColorNode('C', playerpos, wolfpos) << "----------5----------" << GetColorNode('D', playerpos, wolfpos) << "\n";
-    cout << "      /                                                \\\n";
-    cout << "     3                                                  1\n";
-    cout << "    /                                                    \\\n";
-    cout << " " << GetColorNode('A', playerpos, wolfpos) << "-------6------" << GetColorNode('F', playerpos, wolfpos) << "---------4----------" << GetColorNode('G', playerpos, wolfpos) << "-------3------" << GetColorNode('E', playerpos, wolfpos) << "\n";
-    cout << "                  /                      |  \\\n";
-    cout << "                 6                       5   4\n";
-    cout << "                /                        |    \\\n";
-    cout << "              " << GetColorNode('J', playerpos, wolfpos) << "-----3-----" << GetColorNode('K', playerpos, wolfpos) << "----2----" << GetColorNode('W', playerpos, wolfpos) << "-3-" << GetColorNode('M', playerpos, wolfpos) << "\n";
-    cout << "               \\              \\               /\n";
-    cout << "                5              3             1\n";
-    cout << "                 \\              \\           /\n";
-    cout << "   " << GetColorNode('O', playerpos, wolfpos) << "-----3-----" << GetColorNode('P', playerpos, wolfpos) << "-----1-----" << GetColorNode('R', playerpos, wolfpos) << "---2---" << GetColorNode('S', playerpos, wolfpos) << "\n";
-    cout << "     \\                          |          \\\n";
-    cout << "      2                         4           6\n";
-    cout << "       \\                        |            \\\n";
-    cout << "       " << GetColorNode('Q', playerpos, wolfpos) << "-----------5---------" << GetColorNode('T', playerpos, wolfpos) << "-----2-----" << GetColorNode('U', playerpos, wolfpos) << "\n";
-    cout << "         \\                                    /\n";
-    cout << "          5                                  3\n";
-    cout << "           \\                                /\n";
-    cout << "            \\--------------" << GetColorNode('V', playerpos, wolfpos) << "-------------/\n\n";
-    cout << "===========================================================\n";
+    std::cout << "     " << GetColorNode('B', playerpos, wolfpos) << "----------2----------" << GetColorNode('C', playerpos, wolfpos) << "----------5----------" << GetColorNode('D', playerpos, wolfpos) << "\n";
+    std::cout << "      /                                                \\\n";
+    std::cout << "     3                                                  1\n";
+    std::cout << "    /                                                    \\\n";
+    std::cout << " " << GetColorNode('A', playerpos, wolfpos) << "-------6------" << GetColorNode('F', playerpos, wolfpos) << "---------4----------" << GetColorNode('G', playerpos, wolfpos) << "-------3------" << GetColorNode('E', playerpos, wolfpos) << "\n";
+    std::cout << "                  /                      |  \\\n";
+    std::cout << "                 6                       5   4\n";
+    std::cout << "                /                        |    \\\n";
+    std::cout << "              " << GetColorNode('J', playerpos, wolfpos) << "-----3-----" << GetColorNode('K', playerpos, wolfpos) << "----2----" << GetColorNode('W', playerpos, wolfpos) << "-3-" << GetColorNode('M', playerpos, wolfpos) << "\n";
+    std::cout << "               \\              \\               /\n";
+    std::cout << "                5              3             1\n";
+    std::cout << "                 \\              \\           /\n";
+    std::cout << "   " << GetColorNode('O', playerpos, wolfpos) << "-----3-----" << GetColorNode('P', playerpos, wolfpos) << "-----1-----" << GetColorNode('R', playerpos, wolfpos) << "---2---" << GetColorNode('S', playerpos, wolfpos) << "\n";
+    std::cout << "     \\                          |          \\\n";
+    std::cout << "      2                         4           6\n";
+    std::cout << "       \\                        |            \\\n";
+    std::cout << "       " << GetColorNode('Q', playerpos, wolfpos) << "-----------5---------" << GetColorNode('T', playerpos, wolfpos) << "-----2-----" << GetColorNode('U', playerpos, wolfpos) << "\n";
+    std::cout << "         \\                                    /\n";
+    std::cout << "          5                                  3\n";
+    std::cout << "           \\                                /\n";
+    std::cout << "            \\--------------" << GetColorNode('V', playerpos, wolfpos) << "-------------/\n\n";
+    std::cout << "===========================================================\n";
 }

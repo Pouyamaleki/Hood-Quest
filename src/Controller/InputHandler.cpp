@@ -1,7 +1,7 @@
 #include "InputHandler.h"
 #include "CLIView.h"
 
-InputHandler::InputHandler(Usermanager &userManager, BST &bst, Cliview &cli)
+InputHandler::InputHandler(Usermanager &userManager, BST &bst, CliView &cli)
     : cliinput(cli), userManager(userManager), bstview(bst) {}
 
 string InputHandler::MainHandler()

@@ -1,21 +1,21 @@
 #include "Dijkstra.h"
 
 // dijkstra result struct implementation
-struct dijkstra::dijkstraResult
+struct Dijkstra::dijkstraResult
 {
     map<char, int> distance;
     map<char, char> previous;
 };
 
 // path finder result struct implementation
-struct dijkstra::pathFinderResult
+struct Dijkstra::pathFinderResult
 {
     vector<char> path;
     int totalweight;
 };
 
 // dijkstra algorithm function implementation
-dijkstra::dijkstraResult dijkstra::dijkstraAlgorithm(const Graph &graph, char from, char wolfPosition)
+Dijkstra::dijkstraResult Dijkstra::dijkstraAlgorithm(const Graph &graph, char from, char wolfPosition)
 {
     // create a new graph to remove the wolf position
     Graph newgraph;
@@ -131,7 +131,7 @@ dijkstra::dijkstraResult dijkstra::dijkstraAlgorithm(const Graph &graph, char fr
 }
 
 // path finder function implementation
-dijkstra::pathFinderResult dijkstra::pathFinder(const Graph &graph, char from, char destinationNode, char wolfPosition)
+Dijkstra::pathFinderResult Dijkstra::pathFinder(const Graph &graph, char from, char destinationNode, char wolfPosition)
 {
     // result variable to store and use the dijkstra data
     dijkstraResult result = dijkstraAlgorithm(graph, from, wolfPosition);
@@ -162,13 +162,13 @@ dijkstra::pathFinderResult dijkstra::pathFinder(const Graph &graph, char from, c
 }
 
 // get path method implementation
-vector<char> dijkstra::getPath() const
+vector<char> Dijkstra::getPath() const
 {
     return dijkstraPath;
 }
 
 // print path function implementation
-void dijkstra::dijkstraPrintPath(const Graph &graph, char from, char destinationNode, char wolfPosition)
+void Dijkstra::dijkstraPrintPath(const Graph &graph, char from, char destinationNode, char wolfPosition)
 {
     // initialize the needed variables
     pathFinderResult result = pathFinder(graph, from, destinationNode, wolfPosition); // get the pathfinder output
@@ -184,7 +184,7 @@ void dijkstra::dijkstraPrintPath(const Graph &graph, char from, char destination
     }
 
     // dijkstra output
-    cout << GREEN << "dijkstra recomended path: " << endl;
+    cout << GREEN << "Dijkstra recomended path: " << endl;
     for (size_t i = 0; i < path.size(); i++)
     {
         cout << path[i];

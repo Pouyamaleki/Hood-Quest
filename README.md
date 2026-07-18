@@ -392,8 +392,8 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 | Developer | Role | Contributions |
 |-----------|------|---------------|
-| [**Pouya Maleki**](https://github.com/Pouyamaleki) 
-| [**Abbas Ashoury**](https://github.com/Abbasashoury) 
+| [**Pouya Maleki**](https://github.com/Pouyamaleki) | Game Engine, Algorithms & BackEnd Development | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Graph and Stack Data Structures<br>• Wolf and Player Implementation |
+| [**Abbas Ashoury**](https://github.com/Abbasashoury)
 
 ---
 

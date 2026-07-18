@@ -45,6 +45,7 @@ This project was developed as the final project for the **"Data Structures & Alg
 
 ## 📂 Project Structure
 
+This project follows the **Model-View-Controller (MVC)** architectural pattern to ensure a clean separation of concerns, maintainability, and scalability.
 
 ```
 HOOD_QUEST/
@@ -85,6 +86,10 @@ HOOD_QUEST/
 │   │
 │   └── 📂View/
 │       └── 📄CLIView.h
+│
+├── 📂screenshots
+│   ├── 📷Game_Map.png
+│   └── 📷Leaderboard.png
 │
 ├── 📂src/
 │   │

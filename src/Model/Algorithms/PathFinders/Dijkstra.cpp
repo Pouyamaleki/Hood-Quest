@@ -92,7 +92,7 @@ Dijkstra::dijkstraResult Dijkstra::dijkstraAlgorithm(const Graph &graph, char fr
 
         catch (runtime_error &x)
         {
-            cerr << "Error: " << x.what() << endl;
+            cerr << "<<<< Error: " << x.what() << endl;
         }
     }
 
@@ -148,12 +148,12 @@ void Dijkstra::dijkstraPrintPath(const Graph &graph, char from, char destination
     // check if there is a path or no
     if (path.empty())
     {
-        cout << "there is not any possible path !!!!!!" << endl;
+        cout << "<<<< there is not any possible path !!!!!!" << endl;
         return;
     }
 
     // dijkstra output
-    cout << GREEN << "Dijkstra recomended path: " << endl;
+    cout << GREEN << "> Dijkstra recomended path: " << endl;
     for (size_t i = 0; i < path.size(); i++)
     {
         cout << path[i];
@@ -162,5 +162,5 @@ void Dijkstra::dijkstraPrintPath(const Graph &graph, char from, char destination
             cout << " -> ";
         }
     }
-    cout << RESET << endl << "total distance with the recommended path is: " << totalDistance << endl;
+    cout << RESET << endl << "> total distance with the recommended path is: " << totalDistance << endl;
 }

@@ -74,7 +74,6 @@ bool Move::diceMove()
         return true;
     }
 
-    cout << "dice number is odd! wolf can not move" << endl;
     return false;
 }
 
@@ -89,10 +88,10 @@ bool Move::movePlayer(const Graph &graph, Player &player, Wolf &wolf, char nextP
         // create path algorithm variable
         char pathAlgorithm = ' ';
 
-        // if condition to check the path is empty or no
-        if (!path.empty())
+        // if condition to check the path is bigger than 1 or no
+        if (!path.size() > 1)
         {
-            pathAlgorithm = path.front();
+            pathAlgorithm = path[1];
         }
 
         // if consition to campare the Blocks
@@ -117,7 +116,6 @@ void Move::moveWolf(const Graph &graph, Wolf &wolf, Player &player)
     {
         char nextMove = wolfNextPosition(graph, player.getPosition(), wolf.getPosition());
         wolf.setPosition(nextMove);
-        cout << "wolf moved to " << nextMove << " Block" << endl;
         return;
     }
 }

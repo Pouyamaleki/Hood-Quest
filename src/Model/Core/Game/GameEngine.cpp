@@ -104,8 +104,8 @@ void gameEngine::GameLoop()
 
                 save(usermanager, "..\\src\\Controller\\save.txt");
 
-                cout << "=========Game state saved successfully=========.\n";
-                cout << "================Exiting the game===============\n";
+                cout << "===========Game state saved successfully===========\n";
+                cout << "==================Exiting the game=================\n";
                 return;
             }
             else

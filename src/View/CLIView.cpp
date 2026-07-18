@@ -61,10 +61,10 @@ void CliView::displayGraph(char playerpos, char wolfpos, const string &username,
 {
     std::cout << "\033[2J\033[H";
 
-    std::cout << "======================== HOODQUEST MAP ========================\n";
+    std::cout << "======================== HOOD QUEST MAP ========================\n";
     std::cout << " " << RED << "[Red Riding Hood: " << playerpos << "]" << RESET
               << "  " << BLUE << "[Wolf: " << wolfpos << "]" << RESET
-              << "  Username: " << YELLOW << username << RESET << " -> Score: " << YELLOW << score << RESET << "\n";
+              << "  Username: " << YELLOW << username << RESET << "  Score: " << YELLOW << score << RESET << "\n";
     std::cout << "===============================================================\n\n";
 
     std::cout << "     " << GetColorNode('B', playerpos, wolfpos) << "----------2----------" << GetColorNode('C', playerpos, wolfpos) << "----------5----------" << GetColorNode('D', playerpos, wolfpos) << "\n";

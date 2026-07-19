@@ -378,8 +378,8 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 
 | Developer | Role | Contributions |
 |-----------|------|---------------|
-| [**Pouya Maleki**](https://github.com/Pouyamaleki) | Game Engine, Algorithms & BackEnd Development | • Dijkstra, A*, BFS implementation<br>• Game state management<br>• Movement logic<br>• Graph and Stack Data Structures<br>• Wolf and Player Implementation |
-| [**Abbas Ashoury**](https://github.com/Abbasashoury) | Game & Data Management, User management, Output & InputHandler(IO) | • GameEngine Source file implementation<br>• User & Data Managament<br>• Cli Interface Design<br>• Save/Load System<br>• BST and Max Heap implementation |
+| [**Pouya Maleki**](https://github.com/Pouyamaleki) | **Back-End & Algorithm Architect** | •**Core Back-End Logic:** Designed and implemented the entire game engine logic, including game state management, turn-based progression, win/loss conditions, and the real-time game flow (excluding 'GameEngine.cpp', which was handled by the teammate).<br>• **Player Pathfinding Algorithms:** Developed and optimized **A*** and **Dijkstra** algorithms to recommend the shortest and smartest paths for the Player (Red Riding Hood) to reach Grandma's house (Node V), with A* using Euclidean distance as a heuristic for faster convergence.<br>• **Enemy AI(Wolf) Movment:** Implemented **BFS (Breadth-First Search)** for the Wolf's movement logic, enabling the enemy to chase the player step-by-step through the forest based on the shortest unweighted path.<br>• **Data Structure Engineering:** Designed and implemented **Graph** (for map modeling and pathfinding) and **Stack** (for move history and Undo functionality).<br>• **Character Logic:**  Engineered the behavioral logic for both _Wolf_ and _Player_ classes, including movement rules, collision detection, and turn-based interaction.<br>• **Performance Optimization:** Reduced pathfinding overhead through efficient memory management and heuristic tuning. |
+| [**Abbas Ashoury**](https://github.com/Abbasashoury) | **Front-End & System Integration** | • **Front-End Development:** Designed and implemented the complete CLI interface (Input Handler, Output Display, and User Interaction).<br>• **User Managment:** Developed the secure hashing system, User Manager, and authentication logic.<br>• **Data Structure Engineering:** Implemented **Binary Search Trees (BST)** for efficient user data indexing and **Max Heap** for priority-based leaderboard management.<br>• **Persistence Layer:** Built the Save/Load Manager to serialize game states and user data.<br>• **System Integration:** Wrote the main 'GameEngine.cpp' file to integrate the back-end logic with the front-end interface, ensuring seamless communication between modules.<br>• **UI/UX Design:** Created the color-coded map display and interactive menu systems. |
 
 ---
 
@@ -428,7 +428,7 @@ This project is licensed under the MIT License
 Feel Free to:  
 - Use
 - Modify
-- Distribute
+- Distribute  
 The program under the conditions of MIT License
 see the [LICENSE](LICENSE) text more for details.
 

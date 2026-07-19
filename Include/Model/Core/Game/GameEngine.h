@@ -22,7 +22,7 @@ class gameEngine
 {
 private:
 public:
-    void GameLoop();
+    void GameLoop(); // Hood Quest main loop
 };
 
 #endif

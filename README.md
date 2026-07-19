@@ -428,7 +428,8 @@ This project is licensed under the MIT License
 Feel Free to:  
 - Use
 - Modify
-- Distribute  
+- Distribute
+
 The program under the conditions of MIT License
 see the [LICENSE](LICENSE) text more for details.
 

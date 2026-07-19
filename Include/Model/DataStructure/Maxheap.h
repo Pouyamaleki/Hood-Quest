@@ -19,13 +19,13 @@ private:
     void heapifyDown(int);
 
 public:
-    void insert(const string &, long int);
-    int search(const string &) const;
-    void updateScore(const string &, long int);
+    void insert(const string &, long int); // insert method
+    int search(const string &) const; // search method
+    void updateScore(const string &, long int); // update the player score method
 
-    bool MaxHeaIssEmpty() const;
-    pair<string, long int> getTop() const;
-    void clear();
+    bool MaxHeapIsEmpty() const; // a method to check if the max HEap is empty or no
+    pair<string, long int> getTop() const; // get the top member method
+    void clear(); // a method to clear the max heap
 };
 
 #endif

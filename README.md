@@ -400,8 +400,8 @@ Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes le
 ### Windows Installation
 
 ```bash
-git clone <repository url>
-cd Hood_Quest
+git clone [repository_url]     # Clone the Repository
+cd Hood_Quest                  # Move to Hood_Quest Folder
 mkdir build                    # Create the build Folder
 cd build                       # Move to build Folder
 cmake .. -G "MinGW Makefiles"  # Generate make files in build Folder

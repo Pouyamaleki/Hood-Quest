@@ -3,6 +3,7 @@
 // convert to hash method implementation
 size_t Hash::ConvertToHash(const string &pass)
 {
+    // hash the entered string
     size_t hash = 0;
     for (char c : pass)
     {

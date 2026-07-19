@@ -9,6 +9,6 @@ class Hash
 {
 private:
 public:
-    size_t ConvertToHash(const string &);
+    size_t ConvertToHash(const string &); // hash the password string
 };
 #endif

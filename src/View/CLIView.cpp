@@ -1,9 +1,11 @@
 #include "CLIView.h"
 #include "InputHandler.h"
 
+// cliview onstructor implementation
 CliView::CliView(Usermanager &usermanager, MaxHeap &maxheap)
     : usermanager(usermanager), maxheapview(maxheap) {}
 
+// print main menu method implementation
 void CliView::PrintMainMenu()
 {
     std::cout << " ====================== welcome to this game ======================\n";
@@ -15,8 +17,10 @@ void CliView::PrintMainMenu()
     std::cout << " >>> 5: exit\n";
 }
 
-void CliView::PrintScore() // display the score of a desired player with linear search or BST DataType
+// print score method implementation
+void CliView::PrintScore()
 {
+    // ask the User to use which to search in the players
     int searchmode;
     std::cout << ">> please select an mode:\n"
               << ">>> 1: Linear Search\n"
@@ -33,15 +37,19 @@ void CliView::PrintScore() // display the score of a desired player with linear 
     }
 }
 
+// print leader board method implementation
 void CliView::PrintLeaderboard()
 {
+    // variables to store the top player
     pair<string, long int> maxuser;
     maxuser = maxheapview.getTop();
     std::cout << "> Top Player: " << maxuser.first << "\n> Score = " << maxuser.second << endl;
 }
 
+// get colored node method implementation
 string CliView::GetColorNode(char currentNode, char playerpos, char wolfpos)
 {
+    // check the player and wolf positions
     if (currentNode == playerpos && currentNode == wolfpos)
     {
         return YELLOW + "(" + currentNode + ")" + RESET;
@@ -57,6 +65,7 @@ string CliView::GetColorNode(char currentNode, char playerpos, char wolfpos)
     return WHITE + "(" + currentNode + ")" + RESET;
 }
 
+// display graph method implementation
 void CliView::displayGraph(char playerpos, char wolfpos, const string &username, long int score)
 {
     std::cout << "\033[2J\033[H";

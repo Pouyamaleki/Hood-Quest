@@ -17,11 +17,12 @@ private:
     BST &bstview;
 
 public:
+    // Input handler constructor
     InputHandler(Usermanager &userManager, BST &bst, CliView &cli);
 
-    string MainHandler();
-    string CurrentHandler();
-    bool SelectModeofAlghorithms();
+    string MainHandler(); // handle the login system
+    string CurrentHandler(); // handel the input from the user
+    bool SelectModeofAlghorithms(); // select between A* and dijkstra
     void ScoreUser(int); // We get both the username and the search type
 };
 #endif

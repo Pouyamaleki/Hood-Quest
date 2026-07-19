@@ -1,12 +1,15 @@
 #include "InputHandler.h"
 #include "CLIView.h"
 
+// input handler constructor implementation
 InputHandler::InputHandler(Usermanager &userManager, BST &bst, CliView &cli)
     : cliinput(cli), userManager(userManager), bstview(bst) {}
 
+// main handler method implementation
 string InputHandler::MainHandler()
 {
     int choice;
+    // a while loop for the main menu
     while (true)
     {
         string username, password;
@@ -14,6 +17,7 @@ string InputHandler::MainHandler()
         cin >> choice;
         switch (choice)
         {
+        // case 1 for the username and password to create account
         case 1:
             cout << ">> Enter username: ";
             cin >> username;
@@ -30,6 +34,7 @@ string InputHandler::MainHandler()
 
             cerr << "<<<< Auto login failed please login manually!\n";
             break;
+        // case 2 for the username and password for login system 
         case 2:
             cout << ">> Enter username: ";
             cin >> username;
@@ -46,9 +51,11 @@ string InputHandler::MainHandler()
                      << endl;
                 break;
             }
+        // case 3 to print the leaderboard
         case 3:
             cliinput.PrintLeaderboard();
             break;
+        // case4 to print a special player score
         case 4:
             cliinput.PrintScore();
             break;
@@ -60,8 +67,11 @@ string InputHandler::MainHandler()
         }
     }
 }
+
+// current handler method implementation
 string InputHandler::CurrentHandler()
 {
+    // print what to do after choosing the algorithm
     string order;
     cout << ">> Please enter your next move:\n"
          << ">>> Move (Type node name).\n"
@@ -87,6 +97,7 @@ string InputHandler::CurrentHandler()
     return order;
 }
 
+// select mod of algorithm method implementation
 bool InputHandler::SelectModeofAlghorithms()
 {
     char mode;
@@ -108,6 +119,7 @@ bool InputHandler::SelectModeofAlghorithms()
     }
 }
 
+// score user method implementation
 void InputHandler::ScoreUser(int searchmode)
 {
     string username;
@@ -116,6 +128,7 @@ void InputHandler::ScoreUser(int searchmode)
 
     switch (searchmode)
     {
+    // case 1 to show the entered name score with a normal algorithm
     case 1:
     {
         int idx, finalscore;
@@ -124,6 +137,7 @@ void InputHandler::ScoreUser(int searchmode)
         cout << "> User: " << username << "\n> Score: " << finalscore << endl;
         break;
     }
+    // case 2 to use the bst to show the score
     case 2:
     {
         BSTNode *foundNode = bstview.search(username);

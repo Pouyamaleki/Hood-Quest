@@ -430,8 +430,8 @@ Feel Free to:
 - Modify
 - Distribute
 
-The program under the conditions of MIT License
-see the [LICENSE](LICENSE) text more for details.
+The program under the conditions of MIT License.
+see the [LICENSE](LICENSE) text for more details.
 
 ---
 

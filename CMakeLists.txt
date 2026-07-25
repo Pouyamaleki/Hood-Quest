@@ -37,7 +37,7 @@ ${SOURCE_DIR}/src/Model/DataStructure/Stack.cpp
 ${SOURCE_DIR}/src/Model/Users/Hash.cpp
 ${SOURCE_DIR}/src/Model/Users/User.cpp
 ${SOURCE_DIR}/src/Model/Users/UserManager.cpp
-${SOURCE_DIR}/src/view/CLIView.cpp
+${SOURCE_DIR}/src/View/CLIView.cpp
 )
 
 # initialize the header files
@@ -59,7 +59,7 @@ ${INCLUDE_DIR}/Model/DataStructure/Stack.h
 ${INCLUDE_DIR}/Model/Users/Hash.h
 ${INCLUDE_DIR}/Model/Users/User.h
 ${INCLUDE_DIR}/Model/Users/UserManager.h
-${INCLUDE_DIR}/view/CLIView.h
+${INCLUDE_DIR}/View/CLIView.h
 )
 
 # create the executable file
@@ -78,5 +78,5 @@ target_include_directories(Hood_Quest
     ${INCLUDE_DIR}/Model/Core/Game
     ${INCLUDE_DIR}/Model/DataStructure
     ${INCLUDE_DIR}/Model/Users
-    ${INCLUDE_DIR}/view
+    ${INCLUDE_DIR}/View
 )

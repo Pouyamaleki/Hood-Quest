@@ -10,7 +10,7 @@
 #include "BST.h"
 #include "Maxheap.h"
 #include "Player.h"
-#include "WOlf.h"
+#include "Wolf.h"
 #include "Graph.h"
 #include "Stack.h"
 #include "Dijkstra.h"
